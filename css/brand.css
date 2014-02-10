@@ -898,16 +898,16 @@ a.btn_default{ display:block;}
 .three_column .section:nth-child(2){ padding-right:15px;}
 .three_column .section:nth-child(3){ padding:0 15px;}
 .three_column .section:nth-child(4){ padding-left:15px;}
-.content_page .region h1{ font-size:36px; line-height:1; padding-bottom:36px;}
-.content_page .region h2{ font-size:28px;line-height:1; padding-bottom:20px;}
-.content_page .region h3{ font-size:20px;line-height:1;padding-bottom:20px;}
-.content_page .region h4{ font-size:28px;line-height:1;}
-.content_page .region p{ line-height:1.25; padding-bottom:10px;}
-.content_page .region p:last-child{ padding:0;}
-.content_page .region p a{ color:#009966;}
-.content_page .region table td{text-align: left;padding: 10px;}
-.content_page .region table tr:nth-child(even){ background:#f4f5f6;}
-.content_page .region .fancy_content .section{ border-left:4px solid #009966; padding-left:20px;}
+.rich_text .region h1{ font-size:36px; line-height:1; padding-bottom:36px;}
+.rich_text .region h2{ font-size:28px;line-height:1; padding-bottom:20px;}
+.rich_text .region h3{ font-size:20px;line-height:1;padding-bottom:20px;}
+.rich_text .region h4{ font-size:28px;line-height:1;}
+.rich_text .region p{ line-height:1.25; padding-bottom:10px;}
+.rich_text .region p:last-child{ padding:0;}
+.rich_text .region p a{ color:#009966;}
+.rich_text .region table td{text-align: left;padding: 10px;}
+.rich_text .region table tr:nth-child(even){ background:#f4f5f6;}
+.rich_text .region .fancy_content .section{ border-left:4px solid #009966; padding-left:20px;}
 .image_left{ float:left; margin:15px 15px 15px 0;}
 .image_right{ float:right;margin:15px 0 15px 15px;}
 .text_left{ text-align:left;}
