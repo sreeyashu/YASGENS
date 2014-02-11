@@ -197,7 +197,7 @@ transition: all .4s ease-in-out;}
 .content_col{ width:100%; float:left; margin-right: -26.25em;}
 .fluid{ margin-right: 26.25em; min-height:415px;}
 .margin_col{ width:300px;margin-left:25px;}
-.margin_col .ls-cmp-wrap{ margin-bottom:20px;}
+.margin_ad, .teaser_module, .margin_headline{ margin-bottom:20px;}
 .service_col{ width:70px; float:left; margin-left:25px; position:relative;}
 
 
@@ -511,6 +511,8 @@ transition: all .2s ease-in-out;}
 /* Hello icon */
 .hello_icon{ background: url(images/sprite.svg) no-repeat; padding:9px; background-position:-190px -3px; margin:-2px 0 0 5px;display:none;float:left;}
 
+/* Product list */
+.productlist_header{}
 /*Contact us*/
 .contact_us { line-height:1; }
 .h_contactus { background-color:#009966; color:#FFFFFF; }
@@ -901,7 +903,7 @@ a.btn_default{ display:block;}
 .rich_text .region h1{ font-size:36px; line-height:1; padding-bottom:36px;}
 .rich_text .region h2{ font-size:28px;line-height:1; padding-bottom:20px;}
 .rich_text .region h3{ font-size:20px;line-height:1;padding-bottom:20px;}
-.rich_text .region h4{ font-size:28px;line-height:1;}
+.rich_text .region h4{ font-size:18px;line-height:1;}
 .rich_text .region p{ line-height:1.25; padding-bottom:10px;}
 .rich_text .region p:last-child{ padding:0;}
 .rich_text .region p a{ color:#009966;}
@@ -973,7 +975,7 @@ a.btn_default{ display:block;}
 
 @media all and (max-width: 767px) {
 	/* Standard elements */
-	
+	.content_block #accountList, .content_block #cardList{ margin:0;}
 	/** WCM **/
 	.user_message{ line-height:30px;}
 	.user_message p{ font-size:18px;}
@@ -995,7 +997,7 @@ a.btn_default{ display:block;}
 	.legal_msg, .legal_lnks{ width:100%; float:left; padding:10px 0 0 0;}
 	.title_txt{ border-bottom:1px dotted #444; padding-bottom:10px;}
 	.link_title{ padding-bottom:12px;}
-	.content_wrapper{ padding:10px 10px 60px 10px;}
+	.content_wrapper{ padding:10px 0 60px 0;}
 	.user_message{ text-align:center; font-size:16px; padding:20px;}
 	
 	/* Module Header */
