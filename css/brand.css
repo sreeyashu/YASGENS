@@ -407,7 +407,7 @@ transition: all .4s ease-in-out;}
 
 .eb_tabs {width: 100%;margin: 0;padding: 0;display: table;}
 .tab_fst {margin-right: 6px;}
-.eb_tab_txt { width:215px;float: left;cursor: pointer;border-bottom: none;}
+.eb_tab_txt { width:215px;float: left;cursor: pointer;border-bottom: none; min-height:52px;}
 .eb_tab_txt__inner {text-decoration: none;padding: 19px 20px 16px 20px;text-transform: uppercase;font-size: 16px;text-align: center;display: block;}
 .eb_tab_txt.active {position: relative;top: 1px;background: #ffffff;color: #252429;}
 .eb_tab_txt.active span {color: #242529;}
@@ -443,7 +443,8 @@ transition: all .2s ease-in-out;}
 /* Common */
 .group_icons{  font-size:30px; float:left;}
 .list_wrapper{ padding:0 30px; display:inline-block; width:100%;}
-.item_group{ font-size:18px;font-family: 'BnppSans-r', sans-serif; position:relative;border-bottom:1px solid #d8dbde;}
+.item_group{ font-size:18px;font-family: 'BnppSans-r', sans-serif; position:relative;border-top:1px solid #d8dbde;}
+.product_groups:first-child .item_group{ border:none;}
 .item_group__inner{ padding:20px 0; display:table; width:100%; position:relative;}
 
 /* Group Columns*/
@@ -453,7 +454,6 @@ transition: all .2s ease-in-out;}
 .group_coltwo h4{padding:8px 0 8px 0px; display:inline-block;}
 /* Currency Overlay */
 .currency_overlay{ font-size:12px;font-family: 'BnppSans-l', sans-serif; position:absolute; top:17px; right:-11px; text-align:right; border:1px solid #d8dbde;display:none; z-index:999;}
-.savings_accounts .currency_overlay{ top:27px;}
 .currency_overlay h4, .currency_header span{display:inline-block; font-size:18px;font-family: 'BnppSans-r', sans-serif;}
 .currency_overlay p span{ margin:0 2px;}
 .currency_overlay .currency_header span{ padding-left:2px;}
@@ -467,10 +467,10 @@ transition: all .2s ease-in-out;}
 .list_header h2{ padding:5px 30px;}
 .list_icon{ font-size:25px; float:left; margin-right:25px;line-height: 18px; padding:8px 0;}
 .list_item{ width:100%;}
-.list_wrapper_inner{ border-bottom:1px solid #d8dbde;}
+.list_wrapper_inner{ border-top:1px solid #d8dbde;}
 .list_item__header{ padding:15px 0; width:100%;}
 .list_content_col1{ float:left; }
-.laccounts .list_content_col1,.lcards .list_content_col1{max-width:50%;}
+.laccounts .list_content_col1,.lcards .list_content_col1{width:50%;}
 .listiban_group{ display:table;}
 .list_item__header:hover .list_content_col1 h3{ text-decoration:underline;}
 .list_content_col1 h3{font-family: 'BnppSans-r', sans-serif; color:#009966;font-size:18px; line-height:20px; float:left;text-transform:uppercase;}
@@ -482,7 +482,7 @@ transition: all .2s ease-in-out;}
 .list_content_col2 span{ padding-left:5px;}
 .list_item__details{ border-bottom:1px solid #d8dbde; padding-left:50px;}
 .listiban_detail {color: #242529;font-size: 14px;padding-top: 3px;line-height: 20px;}
-.product_groups:last-child .list_item:last-child .list_wrapper_inner:last-child{ border-bottom:none;}
+.product_groups:last-child .list_group:last-child .list_wrapper_inner:last-child{ border-bottom:none;}
 /* Content three */
 .content_details{ width:100%;}
 .content_details p{ padding:5px 0 20px 0; text-transform:uppercase; line-height:22px;}
@@ -516,8 +516,6 @@ transition: all .2s ease-in-out;}
 /* Hello icon */
 .hello_icon{ background: url(images/sprite.svg) no-repeat; padding:9px; background-position:-190px -3px; margin:-2px 0 0 5px;display:none;float:left;}
 
-/* Product list */
-.productlist_header{}
 /*Contact us*/
 .contact_us { line-height:1; }
 .h_contactus { background-color:#009966; color:#FFFFFF; }
@@ -676,7 +674,8 @@ a.btn_default{ display:inline-block;}
 .list_details{ width:100%; padding: 20px 0 0 0; ; display:table;}
 .list_details:last-child{ border:none;}
 .listitem_details{ width:80%; float:left;line-height: 1.25em;word-break: break-word;}
-.listitem_details p{ display:inline-block;}
+.listitem_details p{ display:inline-block; float:left;}
+.listitem_details span{ float:left;}
 /* Detail screen with boder bottom for each Item */
 .border_list{ padding:20px 0; border-bottom:1px solid #d8dbde;}
 .border_list:first-child{ padding-top:0;}
@@ -684,10 +683,7 @@ a.btn_default{ display:inline-block;}
 
 
 /* Transactions */
-.transactions .list_content_col1 h3, .transactions .listiban_detail{ font-size:20px;}
 .transactions .list_item__details{ border:none;}
-.transactions .list_item:last-child .list_wrapper_inner{ border-bottom:0;}
-.transactions .list_group:last-child .list_item:last-child .list_wrapper_inner{ border-bottom:1px solid #d8dbde;}
 .load_more{ width:100%; text-align:center;}
 .load_btn{ padding:30px 0;margin: auto;}
 .nomore_transactions{ text-align:center; border-top: 1px solid #d8dbde; padding:15px 0;}
@@ -696,9 +692,9 @@ a.btn_default{ display:inline-block;}
 .search_block{ padding:25px 30px 20px; display:table; width:100%;}
 .search_field{ width:60%;}
 .search_field .default_input_field {padding-right:85px;}
-.search_wipe{border-left: 0;color: #666666;font-size: 10px;right: 48px; position:absolute; top:0; padding:15px 0 10px 0; display:none;}
-.search_wipe span{border-right: 1px solid #D8DBDE; padding:8px 16px;}
-.search_icon {font-size: 22px; color:#363939;right: 12px; position:absolute; top:0;right:0; padding:11px;}
+.search_wipe{border-left: 0;color: #666666;font-size: 10px;right: 42px; position:absolute; top:0; padding:16px; display:none;}
+.search_icon {font-size: 22px; color:#363939;right: 12px; position:absolute; top:0;right:0; padding:10px 10px 10px 0px;}
+.search_icon span{border-left: 1px solid #D8DBDE; padding:2px 0px 2px 10px;}
 .search_filter{ position:relative;}
 .search_filter .show_filters {padding: 13px 0; cursor:pointer;}
 .search_filter .dropdown_arrow::after{ left:0;}
@@ -781,9 +777,8 @@ a.btn_default{ display:inline-block;}
 .fontcon-calendar{ z-index:999 !important;;}
 
 /* Confirm Screen */
-.ucr_highlight p{ color:#186494; font-family:'BnppSans-r', sans-serif;}
+.ucr_highlight p,.amount_highlight{ color:#186494; font-family:'BnppSans-r', sans-serif;}
 .confirmation_details__amount{ width:100%; display:table;}
-.amount_highlight{ color:#186494; font-family:'BnppSans-r', sans-serif;margin-right:4px;}
 .confirm_amount .amount_highlight{margin-right:0px;}
 .alias_name{ color:#76767b; display:table; padding-top:4px;}
 .alias_name label{ float:left;}
@@ -1036,6 +1031,7 @@ a.btn_default{ display:inline-block;}
 	.currency_overlay{ top:50px;}
 	.savings_accounts .currency_overlay { top:60px;}
 	.list_content_col1{ width:100%; }
+	.laccounts .list_content_col1, .lcards .list_content_col1{ width:100%;}
 	.list_content_col2{ width:100%; padding-top:15px; max-width:none;}
 	.list_content_col2 h3{ font-size:16px;}
 	.list_item__details{ padding-left:34px;}
