@@ -142,9 +142,10 @@ transition: all .4s ease-in-out;}
 .login_bg .service__icon{ color:#ffffff;}
 .service__icon{ font-size:62px;}
 .service_navigation .ls-cmp-wrap:first-child{ width:auto; position:absolute; right:30px; top:170px;}
-.service_cmp{ text-align:center; margin-bottom:13px;cursor:pointer;}
-.service_cmp a{-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out;}
-.service_cmp a:hover{ color:#008578;}
+.service_cmp{ text-align:center; margin-bottom:13px;cursor:pointer;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out;}
+.service_cmp a:hover, .service_cmp.active a{ color:#008578;}
+.service_cmp.active .fontcon-contactus::before{ content:'\e620';}
+.service_cmp.active .fontcon-faq::before{ content:'\e618';}
 .service_cmp:last-child{ margin:0;}
 .service_cmp p{ padding-top:5px;}
 .login_bg .service_cmp p{ display:none;}
@@ -1232,6 +1233,8 @@ html,body, .easybanking{ width:319px;}
 .service_col{ display:none;}
 }
 @media all and (min-width: 1510px) {
+	/* Margin right left 
+	.site_header_inner, .main_wrapper{ max-width:1510px; margin:0 auto;}*/
 .meta_nav_user{ display:block;}
 .content_col{ margin-right:-40.65em;}
 .fluid{ margin-right:40.65em;}
@@ -1239,8 +1242,10 @@ html,body, .easybanking{ width:319px;}
 /* Service component */
 .meta_nav_logout{ float:left;}
 .main_wrapper .service_cmp{ position:relative; margin-bottom:20px; background:#d1d7e1; text-align:left;height: 170px; overflow:hidden; cursor:pointer;}
-.main_wrapper .service_cmp:hover{ background:#008578;}
-.main_wrapper .service_cmp:hover p{ text-decoration:underline; color:#ffffff; padding-bottom:2px;}
+.main_wrapper .service_cmp:hover,.main_wrapper .service_cmp.active { background:#008578;}
+.main_wrapper .service_cmp:hover p,.main_wrapper .service_cmp.active p{ text-decoration:underline; color:#ffffff; padding-bottom:2px;}
+.main_wrapper .service_cmp:hover .fontcon-contactus::before,.main_wrapper .service_cmp.active .fontcon-contactus::before{ content:'\e620';}
+.main_wrapper .service_cmp:hover .fontcon-faq::before, .main_wrapper .service_cmp.active .fontcon-faq::before{ content:'\e618';}
 .main_wrapper .service_cmp.selected_service{ background:#009966;}
 .main_wrapper .service_cmp:hover .service__icon{ color:#ffffff;}
 .main_wrapper .service_cmp__links{padding: 25px 15px 15px 25px;display: table;width: 100%;}
@@ -1250,5 +1255,3 @@ html,body, .easybanking{ width:319px;}
 .main_wrapper .content_menu .nav_cmp:hover p{ text-decoration:none;}
 }
 
-@media print {
-}
