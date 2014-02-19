@@ -612,18 +612,19 @@ transition: all .2s ease-in-out;}
 .save_profile{ padding-top:13px; display:table; width:100%;}
 .identification_fields_alias{ padding-top:20px; display:none;}
 .identification__navigation{ padding:30px 0;}
-.ucr_btn{ background:rgba(255,255,255,0.8); opacity:0.3; margin:0;}
+.ucr_btn{ background:#ffffff; opacity:0.3; margin:0;}
 a.btn_default{ display:inline-block;}
 .identification_btn_active{ opacity:1;}
-.identification_btn_active:hover{background:rgba(255,255,255,0.7);}
+.ucr_btn:hover{background:rgba(255,255,255,0.9);}
 .save_profile__check{ float:left;}
 .save_profile__text{font-family: 'BnppSans-r', sans-serif; margin:-2px 0 0 6px; float:left; width:90%;}
 
 /* Logout */
 
-.logout_info{ width:730px; margin:20% auto 0 auto;color:#ffffff;}
-.logout_info h2{font-size:2.25em;line-height:1;padding:0.20em 0 0.54em 0;}
-.logout_info .action_btns{padding:1.875em 0;}
+.logout_msg{ width:730px; margin:20% auto 0 auto;color:#ffffff; border-bottom:1px solid #ffffff;}
+.logout_msg h1{padding:0.20em 0 0.54em 0 !important;}
+.wcm-btns-zone{ width:730px; margin:0 auto;}
+.logout_btn .btns_zone{ padding:30px 0;}
 
 /* Known Profile */
 .select_profile{ position:relative;}
@@ -659,6 +660,8 @@ a.btn_default{ display:inline-block;}
 .intermediate_content h4{padding-bottom:45px; text-transform:uppercase; font-size:36px; line-height:36px;}
 .intermediate_btns{ padding:30px 0;}
 .btns_zone{ padding:30px; width:100%; display:table;}
+.zone_btn{background: #ffffff; margin:0;}
+.zone_btn:hover{background: rgba(255,255,255,0.9);}
 .intermediate_btns span{padding:9px 20px; line-height:42px;}
 
 /* e-statements */
@@ -923,6 +926,13 @@ a.btn_default{ display:inline-block;}
 .text_justify{ text-align:justify;}
 .text_center{ text-align:center;}
 
+/* viewport header */
+.viewport_header{ width:100%; color:#ffffff; padding:15px 0; display:none;}
+.viewport_header.accounts{ background:#729f08;}
+.viewport_header.cards{ background:#009e83;}
+.viewport_icon{ display:inline-block; padding:9px 25px 4px 25px; margin-right:20px; font-size:12px; border-right: 1px dotted #ffffff; cursor:pointer;}
+.viewport_header h4{ display:inline-block; font-size:18px; text-transform:uppercase;}
+
 /*Print Styles */
 .print .collapse{display:block !important;}
 .print .view_more, .print .action_group, .print .load_more, .print .complete_transaction{display:none !important;}
@@ -1078,12 +1088,14 @@ html,body, .easybanking{ width:319px;}
 .list_header h2{ padding:5px 10px;}
 .group_colone { width:100%;}
 
+/* viewport */
+.viewport_header{ display:block;}
 /* Login */
 .authentication{ width:365px;}
 .authentication__information{ display:none;}
 .identification__inner{ padding:10px;}
-.logout_info{ width:300px;}
-.logout_info h2 { font-size:1.125em;font-family: 'BnppSans-r', sans-serif;}
+.logout_msg{ width:300px;}
+.logout_msg.rich_text .region h1 { font-size:1.125em;}
 .intermediate_messages{width:365px;}
 .intermediate_content{ padding:10px;}
 .intermediate_content h4{ font-size:18px; padding-bottom:15px;}
@@ -1091,6 +1103,7 @@ html,body, .easybanking{ width:319px;}
 .login_bg .lnk_primary{ padding:13px 0 13px 10px;}
 .default_input_field.ucr_signature__input{ margin:0;}
 .login_bg .ucr_action_content{ width:80%;}
+.wcm-btns-zone{ width:300px;}
 
 /* SEPA */
 .error_summary {margin:0;}
