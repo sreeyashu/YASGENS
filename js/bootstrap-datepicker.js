@@ -1330,9 +1330,9 @@
 		},
 		headTemplate: '<thead>'+
 							'<tr>'+
-								'<th class="prev"><i class="calendar_icon fontcon-calendar-arrow-left"/></th>'+
+								'<th class="prev"><i class="arrow_icon fontcon-calendar-arrow-left"/></th>'+
 								'<th colspan="5" class="datepicker-switch"></th>'+
-								'<th class="next"><i class="calendar_icon fontcon-calendar-arrow-right"/></th>'+
+								'<th class="next"><i class="arrow_icon fontcon-calendar-arrow-right"/></th>'+
 							'</tr>'+
 						'</thead>',
 		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',

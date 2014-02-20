@@ -330,9 +330,9 @@ transition: all .4s ease-in-out;}
 .default_dropdown_content {max-height: 200px;overflow-x: hidden;overflow-y: auto;}
 
 /* Drop box groups */
-.default_dropdown_box .main-group {background: #f4f5f6;border-bottom: 1px solid #d8dbde;padding: 8px 12px 6px 12px; font-size:14px;}
+.default_dropdown_box .main-group {background: #f4f5f6;border-bottom: 1px solid #d8dbde;padding: 8px 12px 6px 12px; font-size:16px;text-transform:uppercase;color: #252429;font-family: 'BnppSans-r', sans-serif;}
 .optgroup:first-child {padding-top: 3px;border-top: 0 none;}
-.optgroup-header {color: #76767b;border-bottom: 1px solid #d8dbde;font-size: 14px;text-transform: uppercase;cursor: default;padding: 5px 8px;}
+.optgroup-header {color: #252429;border-bottom: 1px solid #d8dbde;font-size: 16px;text-transform: uppercase;cursor: default;padding: 10px 8px 6px 8px; text-transform:uppercase;}
 .optgroup-option{padding:0;}
 .optgroup-option .listiban_group h3, .optgroup-amount h3{ font-size:16px;}
 .optgroup-iban{ float:left;}
@@ -367,7 +367,7 @@ transition: all .4s ease-in-out;}
 .module_row label{ float:left; margin:11px 5px 0 0; text-transform:uppercase; white-space:nowrap; min-width:10px;}
 .module_semirow{ text-align:right; color:#ffffff;margin-top: 4px;}
 .module_semirow span{ display:inline-block;}
-.module_title, .module_slected_value{font-size: 2.25em;text-transform: uppercase;color: white;line-height: 1.14em;font-weight: 100;float: left; white-space:normal;}
+.module_title, .module_slected_value{font-size: 2.25em;text-transform: uppercase;color: #ffffff;line-height: 1.14em;font-weight: 100;float: left; }
 .module_slected_value{font-size: 1.875em; float:right; margin-right:-2px;}
 .refresh{ cursor:pointer; padding:10px 0;font-weight:600; float:left;}
 .icon_refresh{ color:#ffffff !important; font-size:1em; border-left:1px dotted #ffffff;padding: 2px 4px 2px 10px; margin-left:10px;}
@@ -393,15 +393,11 @@ transition: all .4s ease-in-out;}
 .flyout_active .show_listitems{  opacity:1; display:table}
 .flyout_list_items .header_l1{ font-size:20px; padding:0; border-bottom:none; border-top:1px solid #d8dbde;}
 .flyout_list_items .accordion_l1__inner{ padding:15px 0;}
-.flyout_list_items .item_group{ font-size:16px;}
 .flyout_list_items .item_group__inner{ padding:15px 0;}
 .flyout_list_items  .group_coltwo h4{ padding:2px 0 2px 0px;}
-.flyout_list_items .list_content_col1, .flyout_list_items .list_content_col2{ max-width:none; float:none;}
+.flyout_list_items .list_content_col1, .flyout_list_items .list_content_col2{ max-width:none; width:100%;}
 .flyout_list_items .list_content_col2{padding-top: 15px}
-.flyout_list_items .list_content_col1 h3{ font-size:18px !important;}
 .flyout_list_items .listiban_detail{ font-size:14px !important;}
-.flyout_list_items .list_item{ border-bottom:1px solid #d8dbde; cursor:pointer;}
-.flyout_list_items .list_item:last-child, .flyout_list_items .list_item:first-child{ border:none;}
 .item_list{height:300px; overflow:scroll; padding:0 20px 0px 20px;}
 .module_tab_content{ background:#ffffff; min-height:415px;}
 
@@ -592,6 +588,13 @@ transition: all .2s ease-in-out;}
 .cards_menu{background:#009E83;}
 .accounts_menu:hover, .accounts_menu.active{background:#668F07;}
 .cards_menu:hover, .cards_menu.active{background:#008E76;}
+.accounts_menu.active::after{position: absolute;top: 50%;right:-10px;display: block;width: 0;height: 0;margin-top: -3px;border-left: 10px solid #668F07;border-top: 9px solid transparent;border-bottom: 9px solid transparent;content: "";}
+.cards_menu.active::after{position: absolute;top: 50%;right:-10px;display: block;width: 0;height: 0;margin-top: -3px;border-left: 10px solid #008E76;border-top: 9px solid transparent;border-bottom: 9px solid transparent;content: "";}
+
+/* Products page specific */
+.laccounts, lcards{ background:#ffffff; min-height:354px;}
+.accordion_main:last-child .header_l1{ border-bottom:2px solid #d8dbde;}
+.accordion_main:last-child .header_l1.dropdown-active{ border-bottom:none;}
 
 /* Identification */
 .authentication{ width:730px; background-color:transparent; margin:auto; display:table;}
@@ -764,7 +767,8 @@ a.btn_default{ display:inline-block;}
 .select_message__struct input {height: 44px;}
 /* Specific to TO field SEPA */
 .to_field .optgroup {padding: 0; }
-.to_field .optgroup-header, .to_field .default_dropdown_box [data-selectable] {padding-left: 24px; }
+.to_field .optgroup-header{padding-left: 12px; }
+.to_field .default_dropdown_box [data-selectable] {padding-left: 20px; }
 .eb_tab_content {border: 1px solid #d2d8e1;}
 .eb_tab_content__inner {padding: 20px 12px;}
 .eb_unknown_content {display: table;width: 100%;}
