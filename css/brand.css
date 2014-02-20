@@ -88,7 +88,7 @@ html, body {width: 100%;height: 100%;}
 .navigation_inner{ padding-top:1.125em;}
 .navigation_control{padding-left:3.75em;}
 .navigation_control li{ box-sizing:border-box; float:left; font-size:1.12em; text-transform:uppercase; padding:0 1.1em; border-left:1px dotted #d8dbde; position: relative;}
-.navigation_control li a{ padding-bottom:1em;border-bottom:5px solid transparent;-webkit-transition: all .4s ease-in-out;
+.navigation_control li a{ padding-bottom:0.83em;border-bottom:5px solid transparent;-webkit-transition: all .4s ease-in-out;
 -moz-transition: all .4s ease-in-out;
 -o-transition: all .4s ease-in-out;
 transition: all .4s ease-in-out;}
