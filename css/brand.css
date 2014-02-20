@@ -415,16 +415,13 @@ transition: all .4s ease-in-out;}
 .accordion_main{ width:100%;}
 .accordion_header{ cursor:pointer;}
 .header_l1.dropdown_arrow:after{ right:30px;}
-.header_l1{ width:100%; border-top:2px solid #d8dbde; text-transform:uppercase;font-size:24px; line-height:17px; cursor:pointer; position:relative; padding-top:5px;}
+.header_l1{ width:100%; border-top:2px solid #d8dbde; text-transform:uppercase;font-size:24px; line-height:17px; cursor:pointer; position:relative; padding-top:5px; color:#009966;}
 .content_l1, .content_l2{border-top:1px solid #d8dbde;}
 .header_col{ width: 50%; float:left;}
 .header_coltwo{ padding-right:20px; text-align:right; color:#242529;}
 
 /* Custome */
 .laccounts .header_l1, .account_transactions .header_l1{ color:#729f08;}
-.lcards .header_l1, .cards_transactions .header_l1{ color:#009966;}
-.laccounts .header_l1.dropdown-active, .account_transactions .header_l1.dropdown-active, .lcards .header_l1.dropdown-active, .cards_transactions .header_l1.dropdown-active, .zoomit .header_l1.dropdown-active{ color:#242425;}
-.zoomit .header_l1{ color:#b0036c;}
 
 .header_l1 h4{ display:inline;-webkit-transition: all .2s ease-in-out;
 -moz-transition: all .2s ease-in-out;
@@ -433,6 +430,7 @@ transition: all .2s ease-in-out;}
 .accordion_l1__inner{ padding:25px 30px;display: table;width: 100%; line-height:1;}
 .accordion_main:nth-child(1) .header_l1{ border-top:none;}
 /* Level two */
+.header_l2{ color:#009966; font-size:18px;}
 .header_l2 h3{ display:inline;}
 .accordion_l2__inner{ padding:25px 0;border-top: 1px solid #d8dbde;}
 .estatements_list_item:first-child .accordion_l2__inner {border: none;}
@@ -510,7 +508,7 @@ transition: all .2s ease-in-out;}
 
 /* IA Modules */
 /* Hello icon */
-.hello_icon{ background: url(images/sprite.svg) no-repeat; padding:9px; background-position:-190px -3px; margin:-2px 0 0 5px;display:none;float:left;}
+.hello_icon{ background: url(images/sprite.svg) no-repeat; padding:9px; background-position:-190px -3px; margin:0 0 0 5px;display:none;float:left;}
 
 /*Contact us*/
 .contact_us { line-height:1; }
