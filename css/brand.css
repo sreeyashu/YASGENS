@@ -401,15 +401,13 @@ transition: all .4s ease-in-out;}
 .flyout_list_items .header_l1{ font-size:20px;}
 .flyout_list_items .accordion_list:first-child .header_l1{border:none;}
 .flyout_list_items .accordion_l1__inner{ padding:15px 0;}
-.flyout_list_items .item_group { border-top:none;}
-.flyout_list_items .item_group__inner{ padding:15px 0;}
 .flyout_list_items .group_colone{ width:100%;}
 .flyout_list_items .group_coltwo h4{ padding:2px 0 2px 0px;}
 .flyout_list_items .list_content_col1, .flyout_list_items .list_content_col2{ max-width:none; width:100%;}
 .flyout_list_items .list_content_col2{padding-top: 10px}
 .flyout_list_items .listiban_detail{ font-size:14px !important;}
 .item_list{height:300px; overflow:scroll; padding:0 20px 0px 20px;}
-
+.flyout_list_items .listiban_detail span:nth-child(2){ display:none;} /* Temporary */
 
 /* standard Tabs */
 
@@ -476,7 +474,7 @@ transition: all .2s ease-in-out;}
 .list_icon{ font-size:25px; float:left; margin-right:25px;line-height: 18px; padding:8px 0;}
 .list_item{ width:100%;}
 .list_wrapper_inner{ border-top:1px solid #d8dbde;}
-.list_item__header{ padding:15px 0; width:100%;}
+.list_item__header{ padding:15px 0 9px 0; width:100%;}
 .list_content_col1{ float:left;}
 .laccounts .list_content_col1,.lcards .list_content_col1{width:50%;}
 .listiban_group{ display:table;}
@@ -1013,7 +1011,6 @@ html,body, .easybanking{ width:319px;}
 .result_btn div:first-child {margin-bottom: 10px;margin-right: 0;}
 .result_btn div, .result_btn button {width: 100%;margin: 0;}
 .eb_tabs .eb_tab_txt span {font-size: 14px;}
-.fontcon-M2:before {top: 40px;}
 /* Zoom IT */
 .zoomit .right_navigation_btn,.zoomit .left_navigation_btn{ width:100%;}
 .zoomit .right_navigation_btn .btn_default{ width:100%; margin:0;}
