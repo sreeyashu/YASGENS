@@ -136,7 +136,7 @@ transition: all .4s ease-in-out;}
 /* Service navigation */
 .login_bg .service__icon{ color:#ffffff;}
 .service__icon{ font-size:62px;}
-.service_navigation .ls-cmp-wrap:first-child{ width:auto; position:absolute; right:30px; top:170px;}
+.service_navigation .ls-cmp-wrap:first-child{ width:auto; position:absolute; right:30px; top:138px;}
 .service_cmp{ text-align:center; margin-bottom:13px;cursor:pointer;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out;}
 .service_cmp a:hover, .service_cmp.active a{ color:#008578;}
 .service_cmp.active .fontcon-contactus::before{ content:'\e620';}
@@ -147,6 +147,7 @@ transition: all .4s ease-in-out;}
 .login_bg .wcm-faq{ width:300px; float:right;border:1px solid #d8dbde; min-height:789px; position:absolute; right:0; opacity:0; top:80px; z-index:-999;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .content_row{ width:76.4%;}
+
 
 /* Cookies */
 .wcm-cookies{ position:relative;}
@@ -355,7 +356,8 @@ transition: all .4s ease-in-out;}
 /* Module header */
 .h_functions{background: #861a61;}
 .functions_tabs{background: #b0036c;}
-.h_services, .faq_header, .h_faq { background-color:#009966;}
+.h_services{ background-color:#009966;}
+.login_bg .h_services{ background:#ffffff;}
 .h_accounts{ background:#729f08;}
 .h_cards{ background:#009e83;}
 .module_header{ width:100%;min-height:136px;padding:30px;}
@@ -486,6 +488,7 @@ transition: all .2s ease-in-out;}
 .list_item__details{padding-left:50px;}
 .listiban_detail {color: #242529;font-size: 14px;padding-top: 3px;line-height: 20px;}
 .product_groups:last-child .list_group:last-child .list_wrapper_inner:last-child{ border-bottom:none;}
+.short_account_type{ display:none;}
 /* Content three */
 .content_details{ width:100%;}
 .content_details p{ padding:5px 0 20px 0; text-transform:uppercase; line-height:22px;}
@@ -521,9 +524,8 @@ transition: all .2s ease-in-out;}
 
 /*Contact us*/
 .contact_us { line-height:1; }
-.h_contactus { background-color:#009966; color:#FFFFFF; }
-.login_bg .contact_us{ width:730px; margin:0 auto;}
-.login_bg .h_contactus{ background-color:#ffffff; border-bottom:2px solid #729f08;}
+.login_bg .contact_us, .login_bg .wcm-faq-page{ width:730px; margin:0 auto;}
+.login_bg .h_services{ background-color:#ffffff; border-bottom:2px solid #729f08;}
 .login_bg .module_title{ color:#1f1f1f;}
 .contactus_content { width:100%; background:#fff; }
 .contactus_content_inner { padding:30px; }
@@ -549,7 +551,7 @@ transition: all .2s ease-in-out;}
 .faq_answer { line-height:22px; padding-bottom:20px; padding-left:0; border-bottom:1px solid #d8dbde;}
 
 /* FAQ Widget */
-.widget{ background:#ffffff;}
+.widget{ background:#ffffff;display:none;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;}
 .faq-widget .faq_answer{ border-bottom:0;}
 .faq-widget .dropdown_arrow:after{ right:25px;}
@@ -632,7 +634,7 @@ a.btn_default{ display:inline-block;}
 .select_profile{ position:relative;}
 .selected_profile_data{ height:90px;}
 .selected_profile{ padding-top:20px;}
-.selected_profile_details{ padding:5px 0; width:100%; display:table; font-size:14px;}
+.selected_profile_details{ padding:5px 0; width:100%; display:table; }
 .profile_label{ float:left; margin-right:4px; display:inline;}
 .selected_profile_info .profile_label{font-family: 'BnppSans-r',sans-serif; color:#ffffff;}
 .profile_info{ display:inline-block; margin-left:6px;}
@@ -706,7 +708,7 @@ a.btn_default{ display:inline-block;}
 .search_filter{ position:relative;}
 .search_filter .show_filters {padding: 13px 0; cursor:pointer;}
 .search_filter .dropdown_arrow::after{ left:0;}
-.search_counter{ padding-top:20px; display:none;}
+.search_counter{ padding-top:20px; display:none; width:100%; float:left;}
 
 .filter_block{padding: 0 30px;width:100%;display:none; position:relative;}
 .filter_inner_block{display: table;}
@@ -949,7 +951,7 @@ a.btn_default{ display:inline-block;}
 .print .print_head_date{ text-align:right; width:100%; margin-top:16px; }
 .print .print_details_inner{ font-family: 'BnppSans-r',sans-serif; font-size: 20px;}
 .print .print_copy_inner{ padding:60px 0 0px 50px; }
-.print .transactions_title, .print .selected_details__info, .print .module_row, .print .module_slected_value{color:#242529 !important;width:auto !important;}
+.print .cards_title,.print .accounts_title, .print .selected_details__info, .print .module_row, .print .module_slected_value{color:#242529 !important;width:auto !important;}
 .print .print_logo { background: url("sprite.svg") no-repeat scroll -1px 1px rgba(0, 0, 0, 0); display: block; height: 40px; width: 185px; }
 .print_inner{ padding:30px; font-family: 'BnppSans-l',sans-serif; }
 .print_header{ width:100%; display:table; }
@@ -982,13 +984,13 @@ html,body, .easybanking{ width:319px;}
 .margin_teaser_link .module_icon{ display:none;}
  }
 @media all and (min-width: 480px) and (max-width: 767px) {
-.login_bg .severity_message,.login_bg .meta-info, .wcm-authentication{  width:365px; margin:auto;}
+.login_bg .severity_message,.login_bg .meta-info, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{  width:365px; margin:auto;}
 .margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:5px;}
 .margin_col .ls-cmp-wrap:nth-child(even){ padding-left:5px;}
 }
 @media all and (max-width: 479px) {
 /* WCM */
-.login_bg .severity_message, .login_bg .meta-info, .wcm-authentication{ width:300px;}
+.login_bg .severity_message, .login_bg .meta-info, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{ width:300px;}
 .margin_col .ls-cmp-wrap{ width:100% !important;}
 .margin_col .ls-cmp-wrap:nth-child(even) {padding: 0;}
 /* Login */
@@ -1059,7 +1061,7 @@ html,body, .easybanking{ width:319px;}
 /* Fluout */
 .flyout_selection{ width:199px;}
 .flyout_active{ width:250px;}
-.transactions_title, .zoomit_title{ font-size:1em;}
+.functions_title, .cards_title, .accounts_title{ font-size:1em;}
 .flyout_selection .hello_icon{ margin-top:0;}
 .flyout_selection .dropdown_arrow:after{ top:9px; right:6px;}
 .selected_details__info p{ font-size:12px;}
@@ -1089,6 +1091,8 @@ html,body, .easybanking{ width:319px;}
 .action_group{ padding:15px 0;}
 .list_header h2{ padding:5px 10px;}
 .group_colone { width:100%;}
+.long_account_type{ display:none;}
+.short_account_type{ display:inline-block;}
 
 /* viewport */
 .viewport_header{ display:block;}
@@ -1104,9 +1108,9 @@ html,body, .easybanking{ width:319px;}
 .intermediate_content h4{ font-size:18px; padding-bottom:15px;}
 .new_profile .right_navigation, .new_profile .ucr_btn, .known_profile .right_navigation, .known_profile .ucr_btn{ width:100%; margin:0;} 
 .login_bg .lnk_primary{ padding:13px 0 13px 10px;}
+.login_bg .wcm-btns-zone .lnk_primary{ padding:0;}
 .default_input_field.ucr_signature__input{ margin:0;}
 .login_bg .ucr_action_content{ width:80%;}
-.wcm-btns-zone{ width:300px;}
 .meta-info .region h3{ font-size:16px;}
 .meta-info .region h1{ font-size:28px;}
 .selected_profile_details{font-size:14px;}
@@ -1172,6 +1176,7 @@ html,body, .easybanking{ width:319px;}
 .search_block{ padding: 25px 10px 20px;}
 .filter_block{ padding:0 10px;}
 .filter_inner_block{ overflow:scroll;}
+.no_filters .search_field{ width:100%;}
 
 /* contactus */
 .contactus_content_inner { padding:20px 10px 10px; }
@@ -1185,7 +1190,6 @@ html,body, .easybanking{ width:319px;}
 .module_list p { font-size:15px; padding:0 0 8px; }
 .module_contact { padding:1px 0 0; }
 .module_contact .contact_date span { font-size:12px; }
-.login_bg .contact_us{ width:97%; margin:0 auto}
 .btns_zone{ padding:30px 10px;}
 
 /* FAQ */
