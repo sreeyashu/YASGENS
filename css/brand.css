@@ -102,11 +102,10 @@ transition: all .4s ease-in-out;}
 .meta_navigation{ float:right; padding-top:1.12em; font-size:0.875em; color:#76767b;}
 .meta_nav_user{ float:left; border-right:1px dotted #d8dbde; padding-right:0.94em; margin-right:0.94em; display:none;}
 .meta_nav_user span:first-child{ margin-right:0.25em}
-.meta_nav_service{ float:left;}
+.meta_nav_service, .meta_nav_logout{ float:left;}
 .meta_nav_logout a{ color:#76767b;}
 .meta_nav_logout a:hover span, .meta_icon:hover{ color:#008578;}
 .meta_logout{ margin-right:10px;}
-.meta_nav_service{ margin-right:0.75em;}
 .meta_icon{ color:#3a393e;}
 .meta_icons_s{ display:none; float:left; border-right: 1px dotted #d8dbde; padding:0 0.85em;}
 /** Navigation header Ends**/
@@ -326,14 +325,15 @@ transition: all .4s ease-in-out;}
 .default_dropdown_box {background: #ffffff;border: 1px solid #d0d0d0;-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);position: absolute;z-index: 10;margin: -1px 0 0 0;color: #76767b;line-height: 22px;}
 .default_dropdown_box [data-selectable] {border-bottom: 1px solid #d8dbde;overflow: hidden;cursor: pointer;padding: 8px 12px;}
 .default_dropdown_content {max-height: 200px;overflow-x: hidden;overflow-y: auto;}
-.option.active{ background:#f4f5f6;}
+.option.active, .list_item.active { background:#f4f5f6;}
+.default_dropdown_box .list_item__header{ padding:0; display:table}
+.default_dropdown_box .highlight{ background:#e5e9ef;}
 
 /* Drop box groups */
 .default_dropdown_box .main-group {background: #f4f5f6;border-bottom: 1px solid #d8dbde;padding: 8px 12px 6px 12px; font-size:16px;text-transform:uppercase;color: #252429;font-family: 'BnppSans-r', sans-serif;}
 .optgroup:first-child {padding-top: 3px;border-top: 0 none;}
 .optgroup-header {color: #252429;border-bottom: 1px solid #d8dbde;font-size: 16px;text-transform: uppercase;cursor: default;padding: 10px 8px 6px 8px; text-transform:uppercase;}
 .optgroup-option{padding:0;}
-.optgroup-option .listiban_group h3, .optgroup-amount h3{ font-size:16px;}
 .optgroup-iban{ float:left;}
 
 /* Text area */
@@ -471,7 +471,7 @@ transition: all .2s ease-in-out;}
 /* List Group */
 .list_header{ background:#f4f4f4; border-top:1px solid #d8dbde; border-bottom: 1px solid #d8dbde;}
 .list_header h2{ padding:5px 30px;}
-.list_icon{ font-size:25px; float:left; margin-right:25px;line-height: 18px; padding:8px 0;}
+.list_icon{ font-size:25px; float:left; margin-right:25px;line-height: 18px;}
 .list_item{ width:100%;}
 .list_wrapper_inner{ border-top:1px solid #d8dbde;}
 .list_item__header{ padding:15px 0 9px 0; width:100%;}
@@ -590,7 +590,7 @@ transition: all .2s ease-in-out;}
 .cards_menu{background:#009E83;}
 .accounts_menu:hover, .accounts_menu.active{background:#668F07;}
 .cards_menu:hover, .cards_menu.active{background:#008E76;}
-.accounts_menu.active::after{position: absolute;top: 50%;right:-10px;display: block;width: 0;height: 0;margin-top: -3px;border-left: 10px solid #668F07;border-top: 9px solid transparent;border-bottom: 9px solid transparent;content: "";}
+.accounts_menu.active::after{position: absolute;top: 50%;right:-9px;display: block;width: 0;height: 0;margin-top: -3px;border-left: 10px solid #668F07;border-top: 9px solid transparent;border-bottom: 9px solid transparent;content: "";}
 .cards_menu.active::after{position: absolute;top: 50%;right:-10px;display: block;width: 0;height: 0;margin-top: -3px;border-left: 10px solid #008E76;border-top: 9px solid transparent;border-bottom: 9px solid transparent;content: "";}
 
 /* Products page specific */
@@ -770,6 +770,7 @@ a.btn_default{ display:inline-block;}
 .select_message__structured, .select_message__freetext, .select_message__eurostructured {margin-top: 30px; }
 .select_message__struct input {height: 44px;}
 /* Specific to TO field SEPA */
+.optgroup-option .listiban_group h3, .optgroup-amount h3{ font-size:16px;}
 .to_field .optgroup {padding: 0; }
 .to_field .optgroup-header{padding-left: 12px; }
 .to_field .default_dropdown_box [data-selectable] {padding-left: 20px; }
@@ -855,7 +856,6 @@ a.btn_default{ display:inline-block;}
 .zoomit .flyout_active .flyout_container{ left:20px;}
 .zoomit .flyout_active .selected_details__info{ padding-right:0px;}
 .zoomit .list_group:first-child .list_header{ border-top:none;}
-.zoomit .list_icon{ padding:6px 0;}
 .zoomit .extra_contentdetails{ border-bottom:none;}
 .zoomit .left_navigation_btn{ padding:14px 0;}
 .zoomit_map .action_btns{ padding:30px; margin:0;}
@@ -896,7 +896,7 @@ a.btn_default{ display:inline-block;}
 .disabled .hello_icon{ background-position:-210px -3px;}
 
 /* Loading */
-.progressing{width: 100%; height: 100%; position: absolute; z-index:10000;top:0; left:0; text-align:center; background:rgba(229,233,239, 0.5); line-height:1; display:none;}
+.progressing{width: 100%; height: 100%; position: absolute; z-index:999;top:0; left:0; text-align:center; background:rgba(229,233,239, 0.5); line-height:1; display:none;}
 .progressing_inner{ width:150px; height:150px;background:url(images/animgif.gif) no-repeat 50% 35%, #ffffff; margin:20% auto 20px;}
 .progressing p{font-family: 'BnppSans-r', sans-serif; font-size:18px; color:#242529; padding-top:100px;}
 
@@ -979,7 +979,7 @@ html,body, .easybanking{ width:319px;}
 .content_page_detail{ margin:0 auto;}
 .table .content_column{ width:300px; overflow:scroll; margin:auto;}
 }
-@media all and (min-width: 479px) and (max-width: 640px) {
+@media all and (min-width: 480px) and (max-width: 640px) {
 .link_senstive{ margin-left:7.5em;}
 .margin_teaser_link{ width:120px;}
 .margin_teaser_link .module_icon{ display:none;}
@@ -1241,6 +1241,7 @@ html,body, .easybanking{ width:319px;}
 .menu_indicator{ top:4px; left:66px;}
 /* Meta data */
 .meta_navigation{ padding:10px 0;}
+.meta_nav_service{ margin-right:0.75em;}
 .meta_icons_s{ display:block;}
 .meta_icons_l{padding-right:2px;}
 .meta_logout{ display:none;}
@@ -1253,10 +1254,13 @@ html,body, .easybanking{ width:319px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;}
 .service_col{ display:none;}
 }
+@media all and (min-width:1024px){
+	/*.meta_nav_user{ display:block;}*/
+	}
 @media all and (min-width: 1510px) {
 	/* Margin right left 
 	.site_header_inner, .main_wrapper{ max-width:1510px; margin:0 auto;}*/
-.meta_nav_user{ display:block;}
+.meta_nav_user{ display:block;}	
 .content_col{ margin-right:-40.65em;}
 .fluid{ margin-right:40.65em;}
 .service_col{ width:300px;}
