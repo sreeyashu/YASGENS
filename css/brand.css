@@ -116,7 +116,7 @@ transition: all .4s ease-in-out;}
 /* Error & Welcome Messages */
 .warning_area{ position:fixed; width:100%; top:5em; z-index:999;}
 .wcm-severity-message{ width:100%;}
-.login_bg .meta-info{ width:730px; margin:0 auto;color:#ffffff;}
+.login_bg #metaInfo{ width:730px; margin:0 auto;color:#ffffff;}
 .login_bg .severity_message{ width:730px; margin:auto; padding-bottom:12px;}
 .login_bg .ia_alert{ padding-top:20px;}
 .login_bg .alert_message_content p {color: #e53012; padding:2px 0;}
@@ -376,7 +376,7 @@ transition: all .4s ease-in-out;}
 .tabs_row{padding:0 10px;}
 
 /* Tabs */
-.default_tab{width: 186px;border: 1px solid #d2d8e1;color: #009966; border-bottom:none;}
+.default_tab{border: 1px solid #d2d8e1;color: #009966; border-bottom:none;}
 .accounts_module_tab{ background:#5b7f06;color:#ffffff;font-weight:600;}
 .cards_module_tab{ background:#008578;color:#ffffff;font-weight:600;}
 .functions_module_tab{ background:#6d1d52; color:#ffffff; font-weight:600;}
@@ -398,7 +398,7 @@ transition: all .4s ease-in-out;}
 .flyout_selection .dropdown-active:after {border-color: transparent transparent #252429 transparent; right:24px; top:34px;}
 .flyout_list_items{ float:left;  opacity:0; position:absolute; top:110px; display:none; border-top:1px solid #d8dbde; width:100%;}
 .flyout_active .show_listitems{  opacity:1; display:table}
-.flyout_list_items .header_l1{ font-size:20px;}
+.flyout_list_items .header_l1{ font-size:20px; cursor:default;}
 .flyout_list_items .accordion_list:first-child .header_l1{border:none;}
 .flyout_list_items .accordion_l1__inner{ padding:15px 0;}
 .flyout_list_items .group_colone{ width:100%;}
@@ -406,12 +406,12 @@ transition: all .4s ease-in-out;}
 .flyout_list_items .list_content_col1, .flyout_list_items .list_content_col2{ max-width:none; width:100%;}
 .flyout_list_items .list_content_col2{padding-top: 10px}
 .flyout_list_items .listiban_detail{ font-size:14px !important;}
-.item_list{height:300px; overflow:scroll; padding:0 20px 0px 20px;}
+.flyout_list_items .item_list{height:300px; overflow:scroll; padding:0 20px 0px 20px;}
 .flyout_list_items .listiban_detail span:nth-child(2){ display:none;} /* Temporary */
 
 /* standard Tabs */
 
-.eb_tabs {margin: 0;padding: 0;display: table; border-spacing: 4px 0;}
+.eb_tabs {margin: 0;padding: 0;display: table; border-spacing: 4px 0; position:relative; left:-4px;}
 .tab_fst {margin-right: 6px;}
 .eb_tab_txt { min-width:100px;max-width:165px;cursor: pointer;border-bottom: none; min-height:52px; display:table-cell; vertical-align:middle;}
 .eb_tab_txt__inner {text-decoration: none;padding: 19px 20px 16px 20px;text-transform: uppercase;font-size: 16px;display: block;}
@@ -603,8 +603,8 @@ a.btn_default{ display:inline-block;}
 
 /* Logout */
 
-.logout_msg{ width:730px; margin:10% auto 0 auto;color:#ffffff; border-bottom:1px solid #ffffff;}
-.logout_msg h1{padding:0.20em 0 0.54em 0 !important;}
+#logoutMsg{ width:730px; margin:10% auto 0 auto;color:#ffffff; border-bottom:1px solid #ffffff;}
+#logoutMsg h1{padding:0.20em 0 0.54em 0 !important;}
 .wcm-btns-zone{ width:730px; margin:0 auto;}
 .logout_btn .btns_zone{ padding:30px 0;}
 
@@ -639,8 +639,9 @@ a.btn_default{ display:inline-block;}
 .contract_active{ background:rgba(255,255,255,0.6);}
 
 /* Intermediate screens*/
-.intermediate_messages{width:730px; margin:100px auto 60px auto; background:rgba(255,255,255,0.3);}
-.intermediate_content{padding:30px;line-height: 24px;}
+#sercurity_msg{display:none;width:730px; margin:100px auto 60px auto;background:rgba(255,255,255,0.3);padding:30px;line-height: 24px;}
+.intermediate_messages{width:730px; margin:100px auto 60px auto; }
+.intermediate_content{padding:30px;line-height: 24px;background:rgba(255,255,255,0.3);}
 .intermediate_content h4{padding-bottom:45px; text-transform:uppercase; font-size:36px; line-height:36px;}
 .intermediate_btns{ padding:30px 0;}
 .btns_zone{ padding:30px; width:100%; display:table;}
@@ -659,12 +660,14 @@ a.btn_default{ display:inline-block;}
 .detail_group{ padding:30px 0; border-top: 1px solid #d8dbde;}
 .detail_group_title{font-family: 'BnppSans-r', sans-serif; font-size:18px;}
 .details .detail_group:nth-child(2){ padding:0 0 30px 0; border:none;}
-.details_label{ width:20%; float:left;font-family: 'BnppSans-r', sans-serif;}
+.details_label{ width:20%; float:left;font-family: 'BnppSans-r', sans-serif; margin-right:25px;}
 .list_details{ width:100%; padding: 20px 0 0 0; ; display:table;}
 .list_details:last-child{ border:none;}
-.listitem_details{ width:80%; float:left;line-height: 1.25em;word-break: break-word;}
+.listitem_details{ width:75%; float:left;line-height: 1.25em;word-break: break-word;}
 .listitem_details p{ display:inline-block; float:left;}
 .listitem_details span{ float:left;}
+
+.balance_details p{ width:100%;}
 /* Detail screen with boder bottom for each Item */
 .border_list, .border_bottom{ padding:20px 0; border-bottom:1px solid #d8dbde;}
 .border_list:first-child, .border_bottom:first-child{ padding-top:0;}
@@ -839,7 +842,7 @@ a.btn_default{ display:inline-block;}
 .zoomit_map .action_btns{ padding:30px; margin:0;}
 
 /* Light box overlays */
-.overlay, .logout_overlay{ width: 100%; height: 100%; position: absolute; z-index:9999; background-color: rgba(229, 233, 239, 0.95); display:none; top:0; left:0;}
+.overlay, .logout_overlay{ width: 100%; height: 100%; position: absolute; z-index:9999; background-color: rgba(229, 233, 239, 0.95); display:none; top:0; left:0; position:fixed;}
 .overlay_inner{ padding:35px; }
 .overlay_container{ margin: 0 auto; }
 .overlay_header{ width:100%; background:#009966; position: relative; color:#ffffff; }
@@ -911,8 +914,8 @@ a.btn_default{ display:inline-block;}
 .text_right{ text-align:right;}
 .text_justify{ text-align:justify;}
 .text_center{ text-align:center;}
-.meta-info .region h3{ font-size:25px; padding-bottom:6px;}
-.meta-info .region h1{ font-size:46px; padding-bottom:20px;}
+#metaInfo h3{ font-size:25px; padding-bottom:6px;}
+#metaInfo h1{ font-size:46px; padding-bottom:20px;}
 
 /* viewport header */
 .viewport_header{ width:100%; color:#ffffff; padding:15px 0; display:none;}
@@ -966,13 +969,13 @@ html,body, .easybanking{ width:319px;}
 .margin_teaser_link .module_icon{ display:none;}
  }
 @media all and (min-width: 480px) and (max-width: 767px) {
-.login_bg .severity_message,.login_bg .meta-info, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{  width:365px; margin:0 auto;}
+.login_bg .severity_message,.login_bg #metaInfo, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{  width:365px; margin:0 auto;}
 .margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:5px;}
 .margin_col .ls-cmp-wrap:nth-child(even){ padding-left:5px;}
 }
 @media all and (max-width: 479px) {
 /* WCM */
-.login_bg .severity_message, .login_bg .meta-info, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{ width:300px;}
+.login_bg .severity_message, .login_bg #metaInfo, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{ width:300px;}
 .margin_col .ls-cmp-wrap{ width:100% !important;}
 .margin_col .ls-cmp-wrap:nth-child(even) {padding: 0;}
 /* Login */
@@ -984,8 +987,6 @@ html,body, .easybanking{ width:319px;}
 .pin_ok{ top:74px;}
 
 /* Other */
-.eb_tab_txt {width: 138px;}
-.default_tab{ width:132px;}
 .transaction_tab, .new_tab{ width:158px;}
 .details_tab, .history_tab{ width:138px;}
 .result_btn.navigation_btns {width: 100%;}
@@ -1082,8 +1083,8 @@ html,body, .easybanking{ width:319px;}
 .authentication__information{ display:none;}
 .identification__inner{ padding:20px 10px;}
 .authentication__information .identification__inner{ padding:10px;}
-.logout_msg{ width:300px;}
-.logout_msg.rich_text .region h1 { font-size:1.125em;}
+#logoutMsg{ width:300px;}
+#logoutMsg.rich_text .region h1 { font-size:1.125em;}
 .intermediate_messages{width:365px;}
 .intermediate_content{ padding:10px;}
 .intermediate_content h4{ font-size:18px; padding-bottom:15px;}
@@ -1092,8 +1093,8 @@ html,body, .easybanking{ width:319px;}
 .login_bg .wcm-btns-zone .lnk_primary{ padding:0;}
 .default_input_field.ucr_signature__input{ margin:0;}
 .login_bg .ucr_action_content{ width:80%;}
-.meta-info .region h3{ font-size:16px;}
-.meta-info .region h1{ font-size:28px;}
+#metaInfo h3{ font-size:16px;}
+#metaInfo h1{ font-size:28px;}
 .selected_profile_details{font-size:14px;}
 
 /* SEPA */
@@ -1235,12 +1236,10 @@ html,body, .easybanking{ width:319px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;}
 .service_col{ display:none;}
 }
-@media all and (min-width:1024px){
-	/*.meta_nav_user{ display:block;}*/
+@media all and (min-width:1280px){
+	body, .site_header__inner{ max-width:1280px; margin:0 auto;}
 	}
 @media all and (min-width: 1510px) {
-	/* Margin right left 
-	.site_header_inner, .main_wrapper{ max-width:1510px; margin:0 auto;}*/
 .meta_nav_user{ display:block;}	
 .content_col{ margin-right:-40.65em;}
 .fluid{ margin-right:40.65em;}
