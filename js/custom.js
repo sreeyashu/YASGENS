@@ -1,5 +1,14 @@
 $(document).ready(function() {
 	
+	$('input[type="text"]').focus(
+    function(){
+        $(this).parent('div').addClass('focusra');
+    }).blur(
+    function(){
+        $(this).parent('div').removeClass('focusra');
+    });
+	
+	
 	$('.yashprint').on('click', function() {
 		window.print();
 	});
