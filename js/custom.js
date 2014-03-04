@@ -2,10 +2,10 @@ $(document).ready(function() {
 	
 	$('input[type="text"]').focus(
     function(){
-        $(this).parent('div').addClass('focusra');
+        $(this).parent('div').addClass('focus');
     }).blur(
     function(){
-        $(this).parent('div').removeClass('focusra');
+        $(this).parent('div').removeClass('focus');
     });
 	
 	
