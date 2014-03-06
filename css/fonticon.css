@@ -170,3 +170,6 @@
 .fontcon-not-executed:before {
 	content: "\e631";
 }
+.fontcon-favourite:before {
+	content: "\e626";
+}
