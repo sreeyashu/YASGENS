@@ -101,7 +101,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				}
 				else {
 					// the same remark as above applies : empty strings (like title="") are considered content and will be shown. Do not define any attribute at all if you want to initialize the plugin without content at start.
-					var t = self.$el.attr('title');
+					var t = self.$el.attr('data-title');
 					if(typeof t === 'undefined') t = null;
 					
 					self.setContent(t);
@@ -112,7 +112,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				
 				self.$el
 					// strip the title off of the element to prevent the default tooltips from popping up
-					.removeAttr('title')
+					.removeAttr('data-title')
 					// to be able to find all instances on the page later (upon window events in particular)
 					.addClass('tooltipstered');
 
@@ -279,8 +279,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 						var extraTime = self.options.speed;
 						
 						// disable horizontal scrollbar to keep overflowing tooltips from jacking with it and then restore it to its previous value
-						self.bodyOverflowX = $('body').css('overflow-x');
-						$('body').css('overflow-x', 'hidden');
+						//self.bodyOverflowX = $('body').css('overflow-x');
+						//$('body').css('overflow-x', 'hidden');
 						
 						// get some other settings related to building the tooltip
 						var animation = 'tooltipster-' + self.options.animation,
@@ -1057,7 +1057,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 								
 								self.$el
 									.removeClass('tooltipstered')
-									.attr('title', stringifiedContent)
+									.attr('data-title', stringifiedContent)
 									.removeData('tooltipster')
 									.off('.'+ self.namespace);
 								break;
