@@ -173,3 +173,9 @@
 .fontcon-favourite:before {
 	content: "\e626";
 }
+.fontcon-timeout:before {
+	content: "\e632";
+}
+.fontcon-attention:before {
+	content: "\e633";
+}
