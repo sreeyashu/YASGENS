@@ -158,9 +158,6 @@
 .fontcon-calendar-arrow-right:before {
 	content: "\e62d";
 }
-.fontcon-download:before {
-	content: "\e62e";
-}
 .fontcon-executed:before {
 	content: "\e62f";
 }
@@ -178,4 +175,7 @@
 }
 .fontcon-attention:before {
 	content: "\e633";
+}
+.fontcon-download:before {
+	content: "\e62e";
 }
