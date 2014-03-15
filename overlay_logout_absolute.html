@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div class="easybanking">
-                <div class="overlay small">
+                <div class="overlay small" style="display:block">
                     <div class="overlay_inner">
                         <div class="overlay_container">
                             <div class="overlay_header">
@@ -33,7 +33,10 @@
                             	<div class="region">
                                 	<div class="section">
                                     	<h3>Your session is about to time out in:</h3>
-                                        <p id="timeout"><span>00:23</span><span>Seconds</span></p>
+                                        <div class="section">
+                                            <p id="timeout">00:23</p>
+                                            <p>Seconds</p>
+                                        </div>
                                         <p>Do you still want to stay logged in?</p>
                                     </div>
                                 </div>
