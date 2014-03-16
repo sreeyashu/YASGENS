@@ -1,19 +1,5 @@
 $(document).ready(function() {
-//ontouchstart="touchStart(event,'picture-frame');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"
-var obj=$('body');
-alert("HII"+obj);
-$('.easybanking').on('touchmove',function(event){
-	alert("Hii22"+event.targetTouches.length);
-		
-		if (event.targetTouches.length == 1) {
-    var touch = event.targetTouches[0];
-    // Place element where the finger is
-	alert("touched at"+touch.pageX +"  "+touch.pageY );
-  }
-		
-		
-	});
-	
+$('.fixed_nav').stickyMojo({footerID: '.footer', contentID: 'main_wrapper'});
 
 var didScroll;
 var lastScrollTop = 0;
@@ -24,8 +10,9 @@ var navbarHeight = 0//$('.site_header').outerHeight();
 
 
 
-/*$(window).scroll(function(event){
+$(window).scroll(function(event){
     didScroll = true;
+	
 });
 
 setInterval(function() {
@@ -34,7 +21,7 @@ setInterval(function() {
         didScroll = false;
     }
 }, 250);
-*/
+
 function hasScrolled() {
     var st = $(this).scrollTop();
     if(Math.abs(lastScrollTop - st) <= delta)

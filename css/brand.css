@@ -119,7 +119,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 #metaInfo .level1{ padding:2.2em 0 1.25em 0;}
 #metaInfo h3{ font-size:25px; padding-bottom:6px;}
 #metaInfo h1{ font-size:46px;}
-.login_bg .severity_message{ width:730px; margin:auto; padding-bottom:12px;}
+.login_bg .severity_message{ width:730px; margin:0 auto; padding-bottom:12px;}
 .login_bg .ia_alert{ padding-top:20px;}
 .login_bg .alert_message_content h2{ color:#242529;font-family: 'BnppSans-r', sans-serif;padding:2px 0;}
 .login_bg .contact_us .alert_messages{ color:#ffffff;}
@@ -186,7 +186,8 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .fade.in {opacity: 1;}
 .fade {opacity: 0;-webkit-transition: opacity .15s linear;transition: opacity .15s linear;}
 .error_icon{ font-size:35px; float:left; width:6%;}
-.attempt_error{ color:#ffffff !important; margin-top:100px;}
+.serverity_message.attempt_error{ margin-top:100px;}
+.attempt_error .alert_messages{ color:#ffffff !important;}
 .attempt_error .error_icon, .attempt_error .fontcon-information{ display:none;}
 .attempt_error .alert_messages__inner p{ width:100%;}
 /** T2 Template non-authenticated part ends **/
@@ -412,7 +413,6 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .flyout_list_items .list_content_col2{padding-top: 10px}
 .flyout_list_items .listiban_detail{ font-size:14px !important;}
 .flyout_list_items .item_list{height:300px; overflow:scroll; padding:0 20px 0px 20px;}
-.flyout_list_items .listiban_detail span:nth-child(2){ display:none;} /* Temporary */
 
 /* standard Tabs */
 .default_tab .eb_tab_txt__inner:hover{ text-decoration:underline;}
@@ -560,7 +560,7 @@ transition: all .2s ease-in-out;}
 
 
 /* FAQ Widget */
-.widget{ background:#ffffff;position:absolute;width:300px; min-height:400px; right:97px; top:0;display:none;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
+.widget{ background:#ffffff;width:300px; position:relative;height:500px;right:325px; margin-top:-158px; overflow:hidden;top:0;display:none;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
 .login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:76px; z-index:-999;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;}
@@ -677,6 +677,7 @@ a.btn_default{ display:inline-block;}
 .list_details:last-child{ border:none;}
 .listitem_details{ width:75%; float:left;line-height: 1.25em;word-break: break-word; display:inherit;}
 .listitem_details p{ display:inline-block; float:left;}
+.listitem_details p:nth-child(2){ font-size:14px;}
 .listitem_details span{ float:left;}
 
 .balance_details p{ width:100%;}
@@ -780,7 +781,7 @@ a.btn_default{ display:inline-block;}
 .unknown_labels {font-family: 'BnppSans-l', sans-serif;font-size: 16px;padding-bottom: 10px;display: block;}
 .info_message {color: #ffffff;padding: 15px;background: #138ee4;position: relative;display: none;}
 .info_message__text {display: inline-block;width: 95%;}
-.fontcon-calendar{ z-index:999 !important;;}
+.fontcon-calendar{ z-index:999 !important; font-size:25px;}
 
 /* Confirm Screen */
 .ucr_highlight p,.amount_highlight{ color:#186494; font-family:'BnppSans-r', sans-serif;}
@@ -855,13 +856,13 @@ a.btn_default{ display:inline-block;}
 
 /* Light box overlays */
 /* New oberlay */
-.overlay{ width: 100%; height: 100%; position: absolute; z-index:9999; background-color: rgba(229, 233, 239, 0.95); top:0; left:0; position:fixed;}
+.overlay{ width: 100%; height: 100%; position: absolute; z-index:9999; background-color: rgba(229, 233, 239, 0.95); top:0; left:0; position:fixed; display:none;}
 .large{position:relative;}
 .large .overlay_inner{ max-width:1280px;}
 .small .overlay_inner{ max-width:780px; margin:0 auto;}
 .small .region{ min-height:90px;}
 .overlay_inner{ padding:35px;}
-.overlay_container{ margin: 0 auto;}
+.overlay_container{ margin: 0 auto; display:none;}
 .overlay_header{ width:100%; background:#009966; position: relative; color:#ffffff;}
 .overlay_header_inner{ padding:30px;}
 .overlay_icon{font-size: 60px;color: #ffffff;transform:rotate(180deg);-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg); margin:0;}
@@ -978,7 +979,9 @@ a.btn_default{ display:inline-block;}
 .print .h_col{ width:50%;}
 
 .ucr_img{ background: url(images/ucr_img.png) no-repeat; width:85px; height:80px;position:absolute; right:80px; top:-10px;}
-
+.fixed_nav{ position:absolute; top:0; background-color:transparent;}
+.fixed_nav.fixed {position: fixed !important;left: auto;top:135px;}
+.fixed_nav.fixed.bottom {top: auto;bottom: 0;position: absolute !important;}
 
 @media all and (max-width: 319px) {
 html,body, .easybanking{ width:319px;}
@@ -991,27 +994,18 @@ html,body, .easybanking{ width:319px;}
 .content_page_detail{ margin:0 auto;}
 .table .content_column{ width:300px; overflow:scroll; margin:auto;}
 }
-@media all and (min-width: 480px) and (max-width: 640px) {
-.link_senstive{ margin-left:7.5em;}
-.margin_teaser_link{ width:120px;}
-.margin_teaser_link .module_icon{ display:none;}
- }
-@media all and (min-width: 480px) and (max-width: 767px) {
-.login_bg .severity_message,.login_bg #metaInfo, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{  width:365px; margin:0 auto;}
-.margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:5px;}
-.margin_col .ls-cmp-wrap:nth-child(even){ padding-left:5px;}
-}
 @media all and (max-width: 479px) {
 /* WCM */
 .login_bg .severity_message, .login_bg #metaInfo, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{ width:300px;}
-.margin_col .ls-cmp-wrap{ width:100% !important;}
-.margin_col .ls-cmp-wrap:nth-child(even) {padding: 0;}
 /* Login */
 .authentication, .authentication__identification, .identification_contract, .authentication__details, .identification_ucr{ width:300px !important;}
 .intermediate_messages{ width:300px !important;}
 
 /*Enter details*/
 .selected-item { font-size:12px;}
+/* margin col*/
+.margin_col .ls-cmp-wrap{ width:100% !important;}
+
 /* UCR */
 .m2_icon{ top:44px;}
 .pin_ok{ top:74px;}
@@ -1035,12 +1029,28 @@ html,body, .easybanking{ width:319px;}
 .filter_content__range, .filter_popup .datepicker{ width:280px;}
 .filter_content__specific, .filter_content__range{ padding-top:20px;}
 }
-
+@media all and (min-width: 480px) and (max-width: 640px) {
+.link_senstive{ margin-left:7.5em;}
+.margin_teaser_link{ width:120px;}
+.margin_teaser_link .module_icon{ display:none;}
+ }
+@media all and (min-width: 480px) and (max-width: 767px) {
+.login_bg .severity_message,.login_bg #metaInfo, .wcm-authentication, .login_bg .contact_us, .login_bg .wcm-faq-page, .wcm-btns-zone{  width:365px; margin:0 auto;}
+.home .margin_col .ls-cmp-wrap:nth-child(odd){ padding-left:5px; padding-right:10px;}
+.home .margin_col .ls-cmp-wrap:nth-child(even){ padding-right:5px; padding-left:10px;}
+.margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:5px;}
+.margin_col .ls-cmp-wrap:nth-child(even){ padding-left:5px;}
+}
 @media all and (max-width: 767px) {
 .content_row{ margin-left:-300px;}
 /* Standard elements */
 .home .content_block{ float:left; position:absolute; z-index:999;}
 .content_block #accountList, .content_block #cardList{ margin:0;}
+
+.margin_col .ls-cmp-wrap{ padding:0 10px;}
+.home .margin_col{padding-top:0;}
+.home .margin_col .ls-cmp-wrap:nth-child(1){ padding:0 !important; width:100%;}
+
 
 /** WCM **/
 .wcm-language { padding:12px 0 6px 0;}
@@ -1119,6 +1129,8 @@ html,body, .easybanking{ width:319px;}
 .intermediate_messages{width:365px;}
 .intermediate_content{ padding:10px;}
 .intermediate_content h4{ font-size:18px; padding-bottom:15px;}
+.intermediate_btns .btn_default, .intermediate_btns .right_navigation{ margin:0; width:100%;}
+.intermediate_btns .btn_default:first-child{ margin-bottom:12px}
 .new_profile .right_navigation, .new_profile .ucr_btn, .known_profile .right_navigation, .known_profile .ucr_btn{ width:100%; margin:0;} 
 .login_bg .lnk_primary{ padding:13px 0 13px 10px;}
 .login_bg .wcm-btns-zone .lnk_primary{ padding:0;}
@@ -1236,9 +1248,9 @@ html,body, .easybanking{ width:319px;}
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
 .content_wrapper{ padding:30px;}
-.margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:10px;}
-.margin_col .ls-cmp-wrap:nth-child(even){ padding-left:10px;}
 .user_message{ padding:30px 30px 0 30px;}
+.margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:5px;}
+.margin_col .ls-cmp-wrap:nth-child(even){ padding-left:5px;}
 }
 @media all and (max-width: 1023px) {
 .site_header{ height:60px;}
@@ -1266,9 +1278,10 @@ html,body, .easybanking{ width:319px;}
 .main_wrapper, .login_bg{ padding-top:60px;}
 .warning_area{ top:60px;}
 .content_col, .fluid{ margin-right:0;}
-.margin_col{ width:100%; margin:0; padding-top:20px;}
-.margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;}
 .service_col{ display:none;}
+/* Margin col */
+.margin_col{ width:100%; margin:0; padding-top:20px;}
+.margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;;}
 }
 @media all and (min-width:1280px){
 	body, .site_header__inner{ max-width:1280px; margin:0 auto;}

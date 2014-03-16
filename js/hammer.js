@@ -1,135 +1,145 @@
+(function($) {
+  $.fn.extend({
+    stickyMojo: function(options) {
 
-	// TOUCH-EVENTS SINGLE-FINGER SWIPE-SENSING JAVASCRIPT
-	// Courtesy of PADILICIOUS.COM and MACOSXAUTOMATION.COM
-	
-	// this script can be used with one or more page elements to perform actions based on them being swiped with a single finger
+      // Exit if there are no elements to avoid errors:
+      if (this.length === 0) {
+        return this;
+      }
+	  var stickyheaders = $('.site_header').outerHeight(true) + $('.warning_area').outerHeight(true);
+	  var innerpadding = $('.content_wrapper').innerWidth() - $('.content_wrapper .ls-colo-body').outerWidth();
+	  var topValue = stickyheaders + innerpadding;
+      var settings = $.extend({
+        'footerID': '',
+        'contentID': '',
+        'orientation': $(this).css('float')
+      }, options);
 
-	var triggerElementID = null; // this variable is used to identity the triggering element
-	var fingerCount = 0;
-	var startX = 0;
-	var startY = 0;
-	var curX = 0;
-	var curY = 0;
-	var deltaX = 0;
-	var deltaY = 0;
-	var horzDiff = 0;
-	var vertDiff = 0;
-	var minLength = 72; // the shortest distance the user may swipe
-	var swipeLength = 0;
-	var swipeAngle = null;
-	var swipeDirection = null;
-	
-	// The 4 Touch Event Handlers
-	
-	// NOTE: the touchStart handler should also receive the ID of the triggering element
-	// make sure its ID is passed in the event call placed in the element declaration, like:
-	// <div id="picture-frame" ontouchstart="touchStart(event,'picture-frame');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+      var sticky = {
+        'el': $(this),
+        'stickyLeft': $(settings.contentID).outerWidth() + $(settings.contentID).offset.left,
+        'stickyTop2': $(this).offset().top,
+        'stickyHeight': $(this).outerHeight(true),
+        'contentHeight': $(settings.contentID).outerHeight(true),
+        'win': $(window),
+        'breakPoint': $(this).outerWidth(true) + $(settings.contentID).outerWidth(true),
+        'marg': parseInt($(this).css('margin-top'), 10)
+      };
 
-	function touchStart(event,passedName) {
-		// disable the standard ability to select the touched object
-		event.preventDefault();
-		// get the total number of fingers touching the screen
-		fingerCount = event.touches.length;
-		// since we're looking for a swipe (single finger) and not a gesture (multiple fingers),
-		// check that only one finger was used
-		if ( fingerCount == 1 ) {
-			// get the coordinates of the touch
-			startX = event.touches[0].pageX;
-			startY = event.touches[0].pageY;
-			// store the triggering element ID
-			triggerElementID = passedName;
-		} else {
-			// more than one finger touched so cancel
-			touchCancel(event);
-		}
-	}
+      var errors = checkSettings();
+      cacheElements();
 
-	function touchMove(event) {
-		event.preventDefault();
-		if ( event.touches.length == 1 ) {
-			curX = event.touches[0].pageX;
-			curY = event.touches[0].pageY;
-		} else {
-			touchCancel(event);
-		}
-	}
-	
-	function touchEnd(event) {
-		event.preventDefault();
-		// check to see if more than one finger was used and that there is an ending coordinate
-		if ( fingerCount == 1 && curX != 0 ) {
-			// use the Distance Formula to determine the length of the swipe
-			swipeLength = Math.round(Math.sqrt(Math.pow(curX - startX,2) + Math.pow(curY - startY,2)));
-			// if the user swiped more than the minimum length, perform the appropriate action
-			if ( swipeLength >= minLength ) {
-				caluculateAngle();
-				determineSwipeDirection();
-				processingRoutine();
-				touchCancel(event); // reset the variables
-			} else {
-				touchCancel(event);
-			}	
-		} else {
-			touchCancel(event);
-		}
-	}
+      return this.each(function() {
+        buildSticky();
+      });
 
-	function touchCancel(event) {
-		// reset the variables back to default values
-		fingerCount = 0;
-		startX = 0;
-		startY = 0;
-		curX = 0;
-		curY = 0;
-		deltaX = 0;
-		deltaY = 0;
-		horzDiff = 0;
-		vertDiff = 0;
-		swipeLength = 0;
-		swipeAngle = null;
-		swipeDirection = null;
-		triggerElementID = null;
-	}
-	
-	function caluculateAngle() {
-		var X = startX-curX;
-		var Y = curY-startY;
-		var Z = Math.round(Math.sqrt(Math.pow(X,2)+Math.pow(Y,2))); //the distance - rounded - in pixels
-		var r = Math.atan2(Y,X); //angle in radians (Cartesian system)
-		swipeAngle = Math.round(r*180/Math.PI); //angle in degrees
-		if ( swipeAngle < 0 ) { swipeAngle =  360 - Math.abs(swipeAngle); }
-	}
-	
-	function determineSwipeDirection() {
-		if ( (swipeAngle <= 45) && (swipeAngle >= 0) ) {
-			swipeDirection = 'left';
-		} else if ( (swipeAngle <= 360) && (swipeAngle >= 315) ) {
-			swipeDirection = 'left';
-		} else if ( (swipeAngle >= 135) && (swipeAngle <= 225) ) {
-			swipeDirection = 'right';
-		} else if ( (swipeAngle > 45) && (swipeAngle < 135) ) {
-			swipeDirection = 'down';
-		} else {
-			swipeDirection = 'up';
-		}
-	}
-	
-	function processingRoutine() {
-		var swipedElement = document.getElementById(triggerElementID);
-		if ( swipeDirection == 'left' ) {
-			// REPLACE WITH YOUR ROUTINES
-			swipedElement.style.backgroundColor = 'orange';
-		} else if ( swipeDirection == 'right' ) {
-			// REPLACE WITH YOUR ROUTINES
-			swipedElement.style.backgroundColor = 'green';
-		} else if ( swipeDirection == 'up' ) {
-			// REPLACE WITH YOUR ROUTINES
-			swipedElement.style.backgroundColor = 'maroon';
-		} else if ( swipeDirection == 'down' ) {
-			// REPLACE WITH YOUR ROUTINES
-			//swipedElement.style.backgroundColor = 'purple';
-			$('.site_header').removeClass('nav-up').addClass('nav-down');
-			alert(1);
-		}
-	}
+      function buildSticky() {
+        if (!errors.length) {
+          sticky.el.css('left', sticky.stickyLeft);
 
+          sticky.win.bind({
+            'load': stick,
+            'scroll': stick,
+            'resize': function() {
+              sticky.el.css('left', sticky.stickyLeft);
+              stick();
+            }
+          });
+        } else {
+          if (console && console.warn) {
+            console.warn(errors);
+          } else {
+            alert(errors);
+          }
+        }
+      }
+
+      // Caches the footer and content elements into jquery objects
+      function cacheElements() {
+        settings.footerID = $(settings.footerID);
+        settings.contentID = $(settings.contentID);
+      }
+	
+      //  Calcualtes the limits top and bottom limits for the sidebar
+      function calculateLimits() {
+        return {
+          limit: settings.footerID.offset().top - sticky.stickyHeight,
+          windowTop: sticky.win.scrollTop() + topValue,
+          stickyTop: sticky.stickyTop2 - sticky.marg
+        }
+      }
+
+      // Sets sidebar to fixed position
+      function setFixedSidebar() {
+        sticky.el.css({
+          position: 'fixed',
+          top: 110
+        });
+      }
+
+      // Determines the sidebar orientation and sets margins accordingly
+      function checkOrientation() {
+        if (settings.orientation === "left") {
+          settings.contentID.css('margin-left', sticky.el.outerWidth(true));
+        } else {
+          sticky.el.css('margin-left', settings.contentID.outerWidth(true));
+        }
+      }
+
+      // sets sidebar to a static positioned element
+      function setStaticSidebar() {
+        sticky.el.css({
+          'position': 'relative',
+          'margin-left': '0px',
+		  'top':'0'
+        });
+        settings.contentID.css('margin-left', '0px');
+      }
+
+      // initiated to stop the sidebar from intersecting the footer
+      function setLimitedSidebar(diff) {
+        sticky.el.css({
+          top: diff
+        });
+      }
+
+      //determines whether sidebar should stick and applies appropriate settings to make it stick
+      function stick() {
+        var tops = calculateLimits();
+        var hitBreakPoint = tops.stickyTop < tops.windowTop && (sticky.win.width() >= sticky.breakPoint);
+
+        if (hitBreakPoint) {
+          setFixedSidebar();
+          checkOrientation();
+        } else {
+          setStaticSidebar();
+        }
+        if (tops.limit < tops.windowTop) {
+          var diff = tops.limit - tops.windowTop;
+          setLimitedSidebar(diff);
+        }
+      }
+
+      // verifies that all settings are correct
+      function checkSettings() {
+        var errors = [];
+        for (var key in settings) {
+          if (!settings[key]) {
+            errors.push(settings[key]);
+          }
+        }
+        ieVersion() && errors.push("NO IE 7");
+        return errors;
+      }
+
+      function ieVersion() {
+        if(document.querySelector) {
+          return false;
+        }
+        else {
+          return true;
+        }
+      }
+    }
+  });
+})(jQuery);
