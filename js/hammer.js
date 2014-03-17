@@ -64,23 +64,24 @@
       function calculateLimits() {
         return {
           limit: settings.footerID.offset().top - sticky.stickyHeight,
-          windowTop: sticky.win.scrollTop() + topValue,
+          windowTop: sticky.win.scrollTop(),
           stickyTop: sticky.stickyTop2 - sticky.marg
         }
       }
 
       // Sets sidebar to fixed position
       function setFixedSidebar() {
-        sticky.el.css({
-          position: 'fixed',
-          top: 110
-        });
+        sticky.el.addClass('sticky').removeClass('unsticky')
+		//css({
+//          position: 'fixed',
+//          top: 110
+//        });
       }
 
       // Determines the sidebar orientation and sets margins accordingly
       function checkOrientation() {
         if (settings.orientation === "left") {
-          settings.contentID.css('margin-left', sticky.el.outerWidth(true));
+         settings.contentID.css('margin-left', sticky.el.outerWidth(true));
         } else {
           sticky.el.css('margin-left', settings.contentID.outerWidth(true));
         }
@@ -88,12 +89,14 @@
 
       // sets sidebar to a static positioned element
       function setStaticSidebar() {
-        sticky.el.css({
-          'position': 'relative',
-          'margin-left': '0px',
-		  'top':'0'
-        });
-        settings.contentID.css('margin-left', '0px');
+        sticky.el.addClass('unsticky').removeClass('sticky')
+		
+		//css({
+//          'position': 'relative',
+//          'margin-left': '0px',
+//		  'top':'0px'
+//        });
+        //settings.contentID.css('margin-left', '0px');
       }
 
       // initiated to stop the sidebar from intersecting the footer
@@ -106,11 +109,11 @@
       //determines whether sidebar should stick and applies appropriate settings to make it stick
       function stick() {
         var tops = calculateLimits();
-        var hitBreakPoint = tops.stickyTop < tops.windowTop && (sticky.win.width() >= sticky.breakPoint);
+        var hitBreakPoint = (tops.stickyTop) < tops.windowTop && (sticky.win.width() >= sticky.breakPoint);
 
         if (hitBreakPoint) {
           setFixedSidebar();
-          checkOrientation();
+          //checkOrientation();
         } else {
           setStaticSidebar();
         }
