@@ -25,6 +25,11 @@ define(['selectize', 'underscore','picker.date', 'rivets','transition', 'collaps
 
             }
         };
+		//*
+		$(".amount_field input").on("blur", function(e) {
+			console.log(e.type);
+		});
+		//*/
         rivets.options = {
             bypass: true
         };

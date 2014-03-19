@@ -64,18 +64,17 @@
       function calculateLimits() {
         return {
           limit: settings.footerID.offset().top - sticky.stickyHeight,
-          windowTop: sticky.win.scrollTop(),
+          windowTop: sticky.win.scrollTop() + 120,
           stickyTop: sticky.stickyTop2 - sticky.marg
         }
       }
 
       // Sets sidebar to fixed position
       function setFixedSidebar() {
-        sticky.el.addClass('sticky').removeClass('unsticky')
-		//css({
-//          position: 'fixed',
-//          top: 110
-//        });
+        sticky.el.css({
+          position: 'fixed',
+          top: 110
+        });
       }
 
       // Determines the sidebar orientation and sets margins accordingly
@@ -89,13 +88,10 @@
 
       // sets sidebar to a static positioned element
       function setStaticSidebar() {
-        sticky.el.addClass('unsticky').removeClass('sticky')
-		
-		//css({
-//          'position': 'relative',
-//          'margin-left': '0px',
-//		  'top':'0px'
-//        });
+        sticky.el.css({
+          'position': 'fixed',
+		  'top':'110px'
+        });
         //settings.contentID.css('margin-left', '0px');
       }
 
