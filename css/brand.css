@@ -38,6 +38,12 @@ h1,h2,h3,h4,h5,h6{ font-weight:normal;}
 a{ text-decoration:none; color:#252429;}
 a[href^=tel] { pointer-events: none; cursor: default; text-decoration:none;color:#252429; }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 /* Body styles */
 html, body {width: 100%;height: 100%; background: #eef1f5;}
 .easybanking {
@@ -301,6 +307,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .btn_arrow_right, .arrow-left {padding-right: 11px;}
 /* Btn Right & Left Alignment */
 .right_navigation_btn, .left_navigation_btn {display: table;}
+.right_navigation_bt button{ float:right;}
 /* standard Links Model */
 .lnk_primary {font-size:1em;color: #009966;margin-right: 20px;cursor: pointer;font-family: 'BnppSans-r', sans-serif;}
 .lnk_primary:hover {color: #008578;text-decoration: underline;}
@@ -570,7 +577,7 @@ transition: all .2s ease-in-out;}
 
 /* Content menu */
 .content_block{ width:100%;}
-.content_block #accountList, .content_block #cardList{ margin-left:177px; display:none; position:absolute; width:100%; left:100%;}
+.content_block #accountList, .content_block #cardList{ margin-left:177px;}
 .content_menu { float:left;}
 .content_menu_items{width:177px; height:177px; cursor:pointer;margin-bottom:0;}
 .content_menu__links{padding:30px 20px; height:100%; position:relative; -webkit-transition:all .6s ease-in-out; -moz-transition:all .6s ease-in-out; -o-transition:all .6s ease-in-out; transition:all .6s ease-in-out;}
@@ -690,7 +697,7 @@ a.btn_default{ display:inline-block;}
 /* Transactions */
 .load_more{ width:100%; text-align:center;border-top:1px solid #d8dbde;}
 .load_btn{ padding:30px 0;margin: auto;}
-.nomore_transactions{ text-align:center; border-top: 1px solid #d8dbde; padding:15px 0;}
+.notavailable{ text-align:center; border-top: 1px solid #d8dbde; padding:15px 0;}
 
 /* Transaction search */
 .search_block{ padding:25px 30px 20px; display:table; width:100%;}
@@ -871,7 +878,8 @@ a.btn_default{ display:inline-block;}
 .overlay_btn{ display:table; width:100%; padding-top:30px;}
 .small .section .section p{ display:inline-block; font-size:24px;}
 #timeout{ margin-right:6px;}
-#overlayLogoutAbsolute .overlay_close, #overlayLogoutRelative .overlay_close{ display:none;}
+.overlayLogoutAbsolute .popup_close, .overlayLogoutRelative .popup_close{ display:none;}
+.overlay_inner .rich_text{ background:#ffffff; padding:30px;}
 
 /* Commons colors/borders/style */
 .outflow_amount{ color:#e53012;}
@@ -944,7 +952,7 @@ a.btn_default{ display:inline-block;}
 .print .print_inner{ padding:5px;}
 .print .print_header{ width:100%; display: table; margin-bottom:60px;}
 .print .logo:after{ width:11.7em; height:2.5em; content: url('images/print_logo.png');}
-.print .logo img, .print .nomore_transactions, .print .action_group, .print .load_more{ display:none;}
+.print .logo img, .print .notavailable, .print .action_group, .print .load_more{ display:none;}
 .print .print_details_inner{width:100%; display: table; padding-top:100px;}
 .print .cards_title, .print .accounts_title, .print .selected_details__info{color:#252429 !important;}
 .print .list_item__header{ display:table;}
