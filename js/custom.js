@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('body').removeAttr("style");
-	$(".input_card").mask('++++ 0000/0000/0000/0000/0 ++++');
-	 $(".input_client").mask('00000 00000');
+	$(".f1").mask('++++ 0000/0000/0000/0000/0 ++++');
+	 $(".f2").mask('00000 00000');
 //$('.fixed_nav').stickyMojo({footerID: '.footer', contentID: '.content_col'});
 
 (function() {

@@ -104,7 +104,9 @@
             },
             events: function() {
                 el.on('keydown.mask', function() {
+					
                     old_value = p.val();
+					console.log(p.val());
                 });
                 el.on('keyup.mask', p.behaviour);
                 el.on("paste.mask drop.mask", function() {
