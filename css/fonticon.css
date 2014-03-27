@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'bnpiconfont';
-	src:url('fonts/bnpiconfont.eot?-eudx66');
-	src:url('fonts/bnpiconfont.eot?#iefix-eudx66') format('embedded-opentype'),
-		url('fonts/bnpiconfont.woff?-eudx66') format('woff'),
-		url('fonts/bnpiconfont.ttf?-eudx66') format('truetype'),
-		url('fonts/bnpiconfont.svg?-eudx66#bnpiconfont') format('svg');
+	src:url('fonts/bnpiconfont.eot');
+	src:url('fonts/bnpiconfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/bnpiconfont.woff') format('woff'),
+		url('fonts/bnpiconfont.ttf') format('truetype'),
+		url('fonts/bnpiconfont.svg#bnpiconfont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -128,7 +128,7 @@
 .fontcon-faq:before {
 	content: "\e616";
 }
-.fontcon-faq-header:before {
+.fontcon-header-faq:before {
 	content: "\e617";
 }
 .fontcon-faq-active:before {
@@ -149,7 +149,7 @@
 .fontcon-contactus:before {
 	content: "\e61e";
 }
-.fontcon-contactus-header:before {
+.fontcon-header-contactus:before {
 	content: "\e61f";
 }
 .fontcon-contactus-active:before {
