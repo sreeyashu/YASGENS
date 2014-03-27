@@ -76,6 +76,7 @@
 
                 // IE Support
                 if (dSel && !~navigator.appVersion.indexOf("MSIE 10")) {
+					console.log(" navigator" + navigator.appVersion);
                     ctrl.focus();
                     sel = dSel.createRange ();
                     sel.moveStart ('character', -ctrl.value.length);
@@ -84,6 +85,8 @@
                 // Firefox support
                 else if (cSelStart || cSelStart === '0') {
                     pos = cSelStart;
+					console.log(cSelStart);
+					//console.log(" navigator" + navigator.appVersion);
                 }
                 
                 return pos;
@@ -104,11 +107,11 @@
             },
             events: function() {
                 el.on('keydown.mask', function() {
-					
+					console.log("keydown" + p.getCaret());
                     old_value = p.val();
-					console.log(p.val());
+					console.log("oldValue:" + old_value);
                 });
-                el.on('keyup.mask', p.behaviour);
+                el.on('input keyup.mask', p.behaviour);
                 el.on("paste.mask drop.mask", function() {
                     setTimeout(function() {
                         el.keydown().keyup();
@@ -130,17 +133,25 @@
                 if ($.inArray(keyCode, jMask.byPassKeys) === -1) {
 
                     var changeCaret, caretPos = p.getCaret();
+					//console.log("before Mark caret position:" + caretPos);
+					//console.log("before Mark value:" + p.val());
                     if (caretPos < p.val().length) {
                         changeCaret = true;
+						//console.log(p.val());
                     }
 
                     var new_val = p.getMasked();
-                    if (new_val !== p.val())               
-                        p.val(new_val);
+                    if (new_val !== p.val())  {
+						//caretPos = p.getCaret();
+						  p.val(new_val);
+						  //console.log("after mask caret position" + new_val);
+					}
+                      
 
                     // change caret but avoid CTRL+A
                     if (changeCaret && !(keyCode === 65 && e.ctrlKey)) {
-                        p.setCaret(caretPos);     
+                       // p.setCaret(caretPos); 
+						//console.log("after mask caret position" + caretPos);  
                     }
 
                     return p.callbacks(e);

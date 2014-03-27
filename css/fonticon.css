@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'bnpiconfont';
-	src:url('fonts/bnpiconfont.eot');
-	src:url('fonts/bnpiconfont.eot?#iefix') format('embedded-opentype'),
-		url('fonts/bnpiconfont.woff') format('woff'),
-		url('fonts/bnpiconfont.ttf') format('truetype'),
-		url('fonts/bnpiconfont.svg#bnpiconfont') format('svg');
+	src:url('fonts/bnpiconfont.eot?-eudx66');
+	src:url('fonts/bnpiconfont.eot?#iefix-eudx66') format('embedded-opentype'),
+		url('fonts/bnpiconfont.woff?-eudx66') format('woff'),
+		url('fonts/bnpiconfont.ttf?-eudx66') format('truetype'),
+		url('fonts/bnpiconfont.svg?-eudx66#bnpiconfont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,45 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.fontcon-current-account:before {
+	content: "\e60c";
+}
+.fontcon-download:before {
+	content: "\e61b";
+}
+.fontcon-Print:before {
+	content: "\e62e";
+}
+.fontcon-attention:before {
+	content: "\e633";
+}
+.fontcon-timeout:before {
+	content: "\e632";
+}
+.fontcon-favourite:before {
+	content: "\e626";
+}
+.fontcon-not-executed:before {
+	content: "\e631";
+}
+.fontcon-expire:before {
+	content: "\e630";
+}
+.fontcon-executed:before {
+	content: "\e62f";
+}
+.fontcon-calendar-arrow-right:before {
+	content: "\e62d";
+}
+.fontcon-calendar-arrow-left:before {
+	content: "\e62c";
+}
+.fontcon-personage:before {
+	content: "\e62b";
+}
+.fontcon-arrow-left:before {
+	content: "\e62a";
+}
 .fontcon-youtube:before {
 	content: "\e600";
 }
@@ -58,9 +97,6 @@
 }
 .fontcon-refresh:before {
 	content: "\e60b";
-}
-.fontcon-print:before {
-	content: "\e60c";
 }
 .fontcon-pdf:before {
 	content: "\e60d";
@@ -104,9 +140,6 @@
 .fontcon-expand:before {
 	content: "\e61a";
 }
-.fontcon-current-account:before {
-	content: "\e61b";
-}
 .fontcon-csv:before {
 	content: "\e61c";
 }
@@ -121,6 +154,9 @@
 }
 .fontcon-contactus-active:before {
 	content: "\e620";
+}
+.fontcon-collapse:before {
+	content: "\e621";
 }
 .fontcon-close:before {
 	content: "\e622";
@@ -142,40 +178,4 @@
 }
 .fontcon-add:before {
 	content: "\e629";
-}
-.fontcon-collapse:before {
-	content: "\e621";
-}
-.fontcon-arrow-left:before {
-	content: "\e62a";
-}
-.fontcon-personage:before {
-	content: "\e62b";
-}
-.fontcon-calendar-arrow-left:before {
-	content: "\e62c";
-}
-.fontcon-calendar-arrow-right:before {
-	content: "\e62d";
-}
-.fontcon-executed:before {
-	content: "\e62f";
-}
-.fontcon-expire:before {
-	content: "\e630";
-}
-.fontcon-not-executed:before {
-	content: "\e631";
-}
-.fontcon-favourite:before {
-	content: "\e626";
-}
-.fontcon-timeout:before {
-	content: "\e632";
-}
-.fontcon-attention:before {
-	content: "\e633";
-}
-.fontcon-download:before {
-	content: "\e62e";
 }
