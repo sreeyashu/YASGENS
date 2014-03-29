@@ -1,9 +1,35 @@
 $(document).ready(function() {
+	
+	
 	$('body').removeAttr("style");
+	/* we need this only on touch devices */
+if (Modernizr.touch) {
+    /* cache dom references */ 
+    var $body = jQuery('body'); 
+
+    /* bind events */
+    $(document)
+    .on('focus', 'input', function(e) {
+        $body.addClass('fixfixed');
+    })
+    .on('blur', 'input', function(e) {
+        $body.removeClass('fixfixed');
+    });
+} 
+
+function isTouchDevice(){
+    return typeof window.ontouchstart !== 'undefined';
+}
+alert(isTouchDevice());
+	
+	
+	
 	$('.fixed_nav').stickyMojo({footerID: '.footer', contentID: '.content_col'});
 	$(".f1").mask('++++ 0000/0000/0000/0000/0 ++++');
 	 $(".f2").mask('00000 00000');
 
+
+	
 
 (function() {
   if (navigator.userAgent.match(/IEMobile\/10\.0/)) {

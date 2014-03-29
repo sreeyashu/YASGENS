@@ -38,7 +38,6 @@ h1,h2,h3,h4,h5,h6{ font-weight:normal;}
 a{ text-decoration:none; color:#252429;}
 a[href^=tel] { pointer-events: none; cursor: default; text-decoration:none;color:#252429; }
 
-
 /* Body styles */
 html, body {width: 100%;height: 100%; background: #eef1f5;}
 .easybanking {
@@ -59,9 +58,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
         -ms-text-size-adjust: none;
         -moz-text-size-adjust: none;
         -webkit-font-smoothing: antialiased;
-        font-smoothing: antialiased;
-		-webkit-overflow-scrolling: touch;
-		overflow-scrolling: touch;
+        font-smoothing: antialiased;	
 }
 .no_scroll{ overflow:hidden; width:100%;}
 /*** WCM Styles ***/
@@ -71,10 +68,13 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .site_header{ width:100%; height:80px; position:fixed; top:0; left:0;z-index:9999;}
 .site_header__inner{ padding: 1.25em 2.18em;background:#ffffff;}
 .nav-up {top: -80px;}
+
+.fixfixed .site_header{ position:absolute; top:0;}
+.fixfixed .warning_area{ position:absolute; top:80px;}
 /* Brand Logo*/
 .site_logotype{ float:left;}
 .brand_logo{ background:url(images/sprite.svg) no-repeat;background-position:-1px 1px; width:11.7em; height:2.5em; display:block;}
-
+.no-svg .brand_logo{background:url(images/sprite.png) no-repeat;background-position:-1px 1px;}
 /* Language selection*/
 .wcm-language{ float:right;font-size:1em; padding:0.56em 0;}
 .language-change li:first-child{ border:none;}
@@ -300,25 +300,27 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 /* Primary & Secondary Arrow Btns */
 .btn_arrow_right, .arrow-left {padding-right: 11px;}
 /* Btn Right & Left Alignment */
+.right_navigation_btn{text-align:right;}
 .right_navigation_btn, .left_navigation_btn {display: table;}
-.right_navigation_bt button{ float:right;}
 /* standard Links Model */
 .lnk_primary {font-size:1em;color: #009966;margin-right: 20px;cursor: pointer;font-family: 'BnppSans-r', arial;}
 .lnk_primary:hover {color: #008578;text-decoration: underline;}
-.login_bg .lnk_primary{ color:#ffffff;padding: 13px 0; display:block;}
-.login_bg .lnk_primary:hover{color:#ffffff;}
 
 /* Standard Input Field */
 .default_input_control .default_input_field, .default_input_control .default_input_field input {cursor: pointer;}
 .default_input_control .default_input_field.focus, .default_input_control .default_input_field.focus input {cursor: text;}
-.default_input_field {border: 1px solid #d8dbde;background: #ffffff;position: relative;z-index: 1;width: 100%;padding: 11px 12px;cursor: pointer;height: 44px;}
+.default_input_field {border: 1px solid #d8dbde;background: #ffffff;position: relative;z-index: 1;width: 100%;cursor: pointer;height: 44px;}
 .default_input_field > * {display: -moz-inline-stack;display: inline-block;*display: inline;vertical-align: baseline;zoom: 1;}
 .default_input_field.disabled, .default_input_field.disabled * {cursor: default !important;}
 
 .default_input_field::after {display: block;clear: left;content: ' ';}
-.default_input_field > input {width: 100%;max-height: none !important;min-height: 0 !important;padding: 0 !important;margin: 0 1px !important;text-indent: 0 !important;background: none !important;border: 0 none !important;-webkit-box-shadow: none !important;box-shadow: none !important;-webkit-user-select: auto !important;height: 22px;line-height: 22px;color: #76767b;}
+.default_input_field > input {width: 100%;max-height: none !important;min-height: 0 !important;margin: 0 1px !important;text-indent: 0 !important;background: none !important;border: 0 none !important;-webkit-box-shadow: none !important;box-shadow: none !important;-webkit-user-select: auto !important;height: 44px;line-height: 22px;color: #76767b;padding: 11px 12px;}
 .default_input_field.focus, textarea:focus{ border:#008578 solid 1px !important;}
 input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;}
+
+.select-account .default_input_field{ padding:12px;}
+.select-account .default_input_field > input{ width:auto; padding:0; height:22px;line-height: 22px;}
+.default_input_field.has-options.has-items > input{ width:2px !important;}
 
 .default_input_field.dropdown_arrow {background: url(./images/dropdown_strip.png) no-repeat right center, #ffffff;}
 .dropdown_arrow:after {border-color: #252429 transparent transparent transparent;position: absolute;top: 50%;right: 15px;display: block;width: 0;height: 0;margin-top: -3px;border-style: solid;border-width: 6px 6px 0 6px;content: ' ';}
@@ -342,7 +344,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Text area */
 .default_text_area {width: 100%;}
-.default_text_area textarea {border: 1px solid #ccc;font-size: 16px;color: #76767b;width: 100%;resize: vertical;padding: 6px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px;-webkit-appearance: none;}
+.default_text_area textarea {border: 1px solid #ccc;font-size: 16px;color: #76767b;width: 100%;resize: vertical;padding: 6px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px;-webkit-appearance: none; font-family: 'BnppSans-l', arial;}
 .default_text_area textarea:focus {border-color: #ccc;}
 .default_text_area .text_count {color: #76767b;margin-right: 4px;}
 .eurostructured_remaining{color: #76767b;}
@@ -388,12 +390,12 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .functions_module_tab{ background:#6d1d52; color:#ffffff; font-weight:600;}
 
 /* Flyout */
-.flyout_selection{ width:368px; position:relative;}
+.flyout_selection{ width:368px; position: relative;}
 .selected_details{width:100%;}
 .selected_details__account{ display:table;}
 .selected_details__account .hello_icon{ margin-top:5px;}
 .accounts_title, .cards_title, .functions_title{font-size: 1.875em;text-transform: uppercase;color: white;line-height: 1.14em; cursor:pointer; float:left; white-space:nowrap; min-width:126px;}
-.flyout_active .flyout_container{ width:100%;background:#ffffff; height:415px; position:absolute; z-index:999;-webkit-transition: height .4s ease-in-out;-moz-transition: height .4s ease-in-out;-o-transition: height .4s ease-in-out;transition: height .4s ease-in-out; top:-20px;left:-20px;border:1px solid #d8dbde; /*min-height:120px;*/}
+.flyout_active .flyout_container{ width:100%;background:#ffffff; height:415px; position:absolute; z-index:999;-webkit-transition: height .4s ease-in-out;-moz-transition: height .4s ease-in-out;-o-transition: height .4s ease-in-out;transition: height .4s ease-in-out; top:-20px;left:-20px;border:1px solid #d8dbde; /*min-height:120px;*/ overflow-y:scroll;}
 .flyout_active .selected_details{ padding:20px 40px 20px 20px;}
 .flyout_active .accounts_info,.flyout_active .accounts_title{ color:#729f08;}
 .flyout_active .cards_info, .flyout_active .cards_title{ color:#009e83}
@@ -532,7 +534,7 @@ transition: all .2s ease-in-out;}
 /* IA Modules */
 /* Hello icon */
 .hello_icon{ background: url(images/sprite.svg) no-repeat; padding:9px; background-position:-190px -3px; margin:0 0 0 5px;display:none;float:left;}
-
+.no-svg .hello_icon{ background: url(images/sprite.png) no-repeat;background-position:-190px -3px;}
 /*Contact us*/
 .contact_us { line-height:1;}
 .login_bg .contact_us, .login_bg .faq-page{ width:730px; margin:100px auto 0 auto;}
@@ -589,6 +591,7 @@ transition: all .2s ease-in-out;}
 .accordion_main:last-child .header_l1.dropdown-active{ border-bottom:none;}
 
 /* Identification */
+/*Basics*/
 #login_overlayer{ min-height:400px;}
 .authentication{ width:730px; background-color:transparent; margin:auto; display:table;}
 .identification__inner{ padding:30px;}
@@ -614,6 +617,10 @@ a.btn_default{ display:inline-block;}
 .ucr_btn:hover{background:rgba(255,255,255,0.9);}
 .save_profile__check{ float:left;}
 .save_profile__text{font-family: 'BnppSans-r', arial; margin:-2px 0 0 6px; float:left; width:90%;}
+.login_bg .lnk_primary{ color:#ffffff;display:block;}
+.login_bg .lnk_primary:hover{color:#ffffff;}
+.identification_contract .lnk_primary, .identification_ucr .lnk_primary{padding: 13px 0;}
+
 
 /* Logout */
 
@@ -693,7 +700,8 @@ a.btn_default{ display:inline-block;}
 /* Transactions */
 .load_more{ width:100%; text-align:center;border-top:1px solid #d8dbde;}
 .load_btn{ padding:30px 0;margin: auto;}
-.notavailable{ text-align:center; border-top: 1px solid #d8dbde; padding:15px 0;}
+.notavailable{ text-align:center;padding:15px 0;}
+.transactions .notavailable{border-top: 1px solid #d8dbde;}
 
 /* Transaction search */
 .search_block{ padding:25px 30px 20px; display:table; width:100%;}
@@ -808,7 +816,6 @@ a.btn_default{ display:inline-block;}
 .fontcon-circle-done {font-size: 30px;color: #85b909;position: relative;top: 3px;right: 13px;}
 .resultfrom_info {margin-top: 25px;font-size: 16px;line-height: 26px;}
 .resultfrom_info label {font-family: 'BnppSans-r', arial;display: block;}
-.result_btn.navigation_btns {width: auto;float: right;}
 .result_navigation {display: inline-block;width: 100%;}
 .resultfrom__iban p{ display:inline-block;}
 
@@ -899,7 +906,7 @@ a.btn_default{ display:inline-block;}
 
 /* About us & Other */
 .content_page{ background:#ffffff; padding:40px 30px 30px 30px;display: table; width:100%;}
-.login_bg .content_page{ width:730px; margin:100px auto 60px auto;}
+.login_bg .content_page{ width:730px; margin:100px auto 0;}
 .content_page_title{ width:100%; display:table; height:60px;}
 .content_page .module_header{ min-height:100px;}
 .content_page_detail{ display:table;}
@@ -983,6 +990,16 @@ html,body, .easybanking{ width:319px;}
 /* WCM */
 .wcm-authentication, .login_bg .severity_message .alert_messages{ width:300px;}
 .login_bg .content_page{margin:20px auto 10px;}
+
+/* buttons */
+.right_navigation_btn, .right_navigation_btn .btn_default{ width:100%; margin:0;}
+.right_navigation_btn .btn_default:first-child{ margin-bottom:10px;}
+.identification_ucr .right_navigation_btn{ width:auto;}
+
+/* Log out*/
+#logoutMsg{ width:100%; border-bottom:none; margin-top:20%;}
+#logoutMsg h1 { font-size:1.125em;font-family: 'BnppSans-r', arial;}
+
 /* Login */
 .authentication, .authentication__identification, .identification_contract, .authentication__details, .identification_ucr{ width:300px !important;}
 
@@ -999,16 +1016,11 @@ html,body, .easybanking{ width:319px;}
 .transaction_tab, .new_tab{ width:158px;}
 .details_tab, .history_tab{ width:138px;}
 .result_btn.navigation_btns {width: 100%;}
-.result_btn div:first-child {margin-bottom: 10px;margin-right: 0;}
-.result_btn div, .result_btn button {width: 100%;margin: 0;}
+.result_btn div:first-child {margin-bottom: 10px;margin-right: 0;} 
+
 .eb_tabs .eb_tab_txt span {font-size: 14px;}
 /* Zoom IT */
-.zoomit .right_navigation_btn,.zoomit .left_navigation_btn{ width:100%;}
-.zoomit .right_navigation_btn .btn_default{ width:100%; margin:0;}
-.zoomit_map .right_navigation_btn .btn_default{ width:auto;}
-.zoomit_map .right_navigation_btn{ width:auto;}
-.zoomit .left_navigation_btn{ margin:0;}
-.zoomit .right_navigation_btn button:first-child{ margin-bottom:10px;}
+.zoomit_map .right_navigation_btn, .zoomit_map .right_navigation_btn button, .sendmoney_confirmation .right_navigation_btn, .sendmoney_confirmation .right_navigation_btn button{ width:auto;}
 /* Filter */
 .filter_content_inner{padding: 10px;}
 .filter_content__range, .filter_popup .datepicker{ width:280px;}
@@ -1026,10 +1038,16 @@ html,body, .easybanking{ width:319px;}
 .home .margin_col .ls-cmp-wrap:nth-child(even){ padding-right:5px; padding-left:10px;}
 .margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:5px;}
 .margin_col .ls-cmp-wrap:nth-child(even){ padding-left:5px;}
+#logoutMsg{ width:100%;}
+#logoutMsg h1 { font-size:1.125em;font-family: 'BnppSans-r', arial;}
 }
 @media all and (max-width: 767px) {
+.touch .login_bg{background-attachment: local;}
+.fixfixed .warning_area{ position:absolute; top:60px;}
+
 .login_bg{ padding:60px 10px 0 10px;}
-.login_bg .content_page, .login_bg #metaInfo, .login_bg .contact_us, .login_bg .faq-page, .wcm-btns-zone, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
+.login_bg .content_page, .login_bg #metaInfo, .login_bg .contact_us, .login_bg .faq-page, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
+.wcm-btns-zone{ width:100%;}
 
 .content_row{ margin-left:-300px;}
 /* Standard elements */
@@ -1099,7 +1117,7 @@ html,body, .easybanking{ width:319px;}
 .extra_contentdetails ul{ padding:2px 0;}
 .list_content_details{ width:80%;}
 .list_icon{ margin-right:10px;}
-.action_group{ padding:15px 0;}
+.action_group, .fontcon-print{ display:none;}/*Can be handled differently when PDF is there*/
 .list_header h2{ padding:5px 10px;}
 .group_colone { width:100%;}
 .long_account_type{ display:none;}
@@ -1116,7 +1134,6 @@ html,body, .easybanking{ width:319px;}
 .intermediate_content h4{ font-size:18px; padding-bottom:15px;}
 .intermediate_btns .btn_default, .intermediate_btns .right_navigation{ margin:0; width:100%;}
 .intermediate_btns .btn_default:first-child{ margin-bottom:12px}
-.new_profile .right_navigation, .new_profile .ucr_btn, .known_profile .right_navigation, .known_profile .ucr_btn{ width:100%; margin:0;} 
 .login_bg .lnk_primary{ padding:13px 0 13px 10px;}
 .login_bg .wcm-btns-zone .lnk_primary{ padding:0;}
 .default_input_field.ucr_signature__input{ margin:0;}
@@ -1124,10 +1141,6 @@ html,body, .easybanking{ width:319px;}
 #metaInfo h3{ font-size:16px;}
 #metaInfo h1{ font-size:28px;}
 .selected_profile_details{font-size:14px;}
-
-/* Log out*/
-#logoutMsg{ width:95%;}
-#logoutMsg h1 { font-size:1.125em;}
 
 /* SEPA */
 .sendmoney .error_summary {margin:0; width:100%;}
@@ -1205,6 +1218,7 @@ html,body, .easybanking{ width:319px;}
 .module_contact { padding:1px 0 0; }
 .module_contact .contact_date span { font-size:12px; }
 .btns_zone{ padding:30px 10px;}
+.btns_zone .right_navigation_btn .left_navigation_btn{}
 
 /* FAQ */
 .search_outer_block { padding:20px 10px 10px; }
@@ -1270,8 +1284,8 @@ html,body, .easybanking{ width:319px;}
 .margin_col{ width:100%; margin:0; padding-top:20px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;;}
 }
-@media all and (min-width:1280px){
-body, .site_header__inner{ max-width:1280px; margin:0 auto;}
+@media all and (min-width:1410px){
+body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 }
 @media all and (min-width: 1510px) {
 .meta_nav_user{ display:block;}	

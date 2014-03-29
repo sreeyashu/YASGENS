@@ -429,11 +429,11 @@
 				value = placeholder;
 			}
 
-			width = measureString(value, $input) + 4;
+			width = measureString(value, $input) ;
 			if (width !== currentWidth) {
 				currentWidth = width;
 				$input.width(width);
-				$input.triggerHandler('resize');
+				//$input.triggerHandler('resize');
 			}
 		};
 
@@ -553,14 +553,14 @@
 
 			$wrapper          = $('<div>').addClass(settings.wrapperClass).addClass(classes).addClass(inputMode);
 			$control          = $('<div>').addClass(settings.inputClass).addClass('items dropdown_arrow input_dropdown').appendTo($wrapper);
-			$control_input    = $('<input type="text" autocomplete="off" />').appendTo($control).attr('tabindex', tab_index);
+			$control_input    = $('<input type="text" autocomplete="off"/>').appendTo($control).attr('tabindex', tab_index).attr("maxlength","35");
 			$dropdown_parent  = $(settings.dropdownParent || $wrapper);
 			$dropdown         = $('<div>').addClass(settings.dropdownClass).addClass(classes).addClass(inputMode).hide().appendTo($dropdown_parent);
 			$dropdown_content = $('<div>').addClass(settings.dropdownContentClass).appendTo($dropdown);
 
-			//$wrapper.css({
-				//width: self.$input[0].style.width
-			//});
+			$wrapper.css({
+				width: self.$input[0].style.width
+			});
 
 			if (self.plugins.names.length) {
 				classes_plugins = 'plugin-' + self.plugins.names.join(' plugin-');
@@ -743,7 +743,6 @@
 		 */
 		onClick: function(e) {
 			var self = this;
-
 			// necessary for mobile webkit devices (manual focus triggering
 			// is ignored unless invoked within a click event)
 			if (!self.isFocused) {
@@ -938,7 +937,6 @@
 		 */
 		onFocus: function(e) {
 			var self = this;
-
 			self.isFocused = true;
 			if (self.isDisabled) {
 				self.blur();
@@ -954,8 +952,8 @@
 				self.setActiveItem(null);
 				self.refreshOptions(!!self.settings.openOnFocus);
 			}
-
 			self.refreshState();
+			this.css('background','red')
 		},
 
 		/**
