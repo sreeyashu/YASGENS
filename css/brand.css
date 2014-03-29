@@ -574,7 +574,7 @@ transition: all .2s ease-in-out;}
 .icon_widget_close { font-size:13px; position:absolute; right:23px; top:26px; cursor:pointer; }
 
 /* Content menu */
-.content_block{ width:100%;}
+.content_block{ width:100%; min-height:150px; background:#ffffff;}
 .content_block #accountList, .content_block #cardList{ margin-left:150px;}
 .content_menu { float:left;}
 .content_menu_items{width:150px; height:150px; cursor:pointer;margin-bottom:0;}
