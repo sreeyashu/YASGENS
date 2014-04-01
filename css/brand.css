@@ -421,6 +421,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .flyout_list_items .list_content_col2{padding-top: 10px}
 .flyout_list_items .listiban_detail{ font-size:14px !important;}
 .flyout_list_items .item_list{height:300px; overflow:scroll; padding:0 20px 0px 20px;}
+.cards_transactions .hello_account .dropdown_arrow:after{ right:42px;}
+.cards_transactions .flyout_active .selected_details{ padding-right:32px;}
+.cards_transactions .hello_account .dropdown-active:after{ right:20px;}
 
 /* standard Tabs */
 .default_tab .eb_tab_txt__inner:hover{ text-decoration:underline;}
@@ -1052,7 +1055,7 @@ html,body, .easybanking{ width:319px;}
 
 .login_bg{ padding:60px 10px 0 10px;}
 .login_bg .content_page, .login_bg #metaInfo, .login_bg .contact_us, .login_bg .faq-page, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
-.intermediate_btns{ width:100%;}
+.intermediate_btns, .wcm-btns-zone{ width:100%;}
 
 .content_row{ margin-left:-300px;}
 /* Standard elements */
