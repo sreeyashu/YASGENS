@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	
-	
 	$('body').removeAttr("style");
 	/* we need this only on touch devices */
 if (Modernizr.touch) {
+	
     /* cache dom references */ 
     var $body = jQuery('body'); 
 
@@ -17,10 +17,10 @@ if (Modernizr.touch) {
     });
 } 
 
-function isTouchDevice(){
+/*function isTouchDevice(){
     return typeof window.ontouchstart !== 'undefined';
 }
-alert(isTouchDevice());
+alert(isTouchDevice());*/
 	
 	
 	
