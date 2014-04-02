@@ -1,5 +1,45 @@
 $(document).ready(function() {
 	
+	
+	$('.faq').click(function () {
+		 $('.widget').addClass('faq-widget');
+		 $('.content_row').addClass('widget_open');
+		 $('.wcm-messages').addClass('widget_open');
+	 });
+	$('.icon_widget_close').click(function () {
+		 $('.widget').removeClass('faq-widget');
+		 $('.content_row').removeClass('widget_open');
+		 $('.wcm-messages').removeClass('widget_open');
+	 });
+	 
+	 var didResize;
+	 hasResized();
+	 $(window).on('resize', function(){
+		didResize = true;
+	 });
+	 $('.login_bg').on('resize', function(){
+		 alert(2);
+		didResize = true;
+	 });
+	 
+	 setInterval(function() {
+		if (didScroll) {
+			hasResized();
+			didResize = false;
+		}
+	}, 250);
+	 
+	 function hasResized(){
+	 	var widgetHeight;
+	 	widgetHeight = $('.login_bg').outerHeight(true) - $('.site_header').outerHeight(true);
+		$('.widget').css('height',widgetHeight);
+	 };
+	 
+	 
+	 
+	
+	
+	
 	$('body').removeAttr("style");
 	/* we need this only on touch devices */
 if (Modernizr.touch) {
@@ -41,12 +81,7 @@ alert(isTouchDevice());*/
   }
 })();
 
-var width = $(window).width();
-$(window).on('resize', function(){
-	width=  $(window).width();
-	if(width <= 767){
-	};
-});
+
 $('.accounts_menu').click(function () {
 		 alert(2);
 		 $('#accountList').css('left','0');

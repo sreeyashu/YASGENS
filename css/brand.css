@@ -121,7 +121,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 #metaInfo h1{ font-size:46px;}
 .login_bg .severity_message .alert_messages{ width:730px; margin:0 auto; padding-bottom:12px;}
 .login_bg .ia_alert{ padding-top:20px;}
-.login_bg .alert_message_content h2{ color:#252429;font-family: 'BnppSans-r', arial;padding:2px 0;}
+.login_bg .alert_message_content h2{ color:#252429;font-family: 'BnppSans-r', arial;padding:2px 0; display:inline-block;}
 .login_bg .contact_us .alert_messages{ color:#ffffff;}
 .login_bg .alert_message_content{ width:90%;float:left;}
 .login_bg .icon_dismiss {padding-top:8px; display:none;}
@@ -144,7 +144,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .service_cmp:last-child{ margin:0;}
 .service_cmp p{ padding-top:5px;}
 .login_bg .service_cmp p{ display:none;}
-.widget_open{ width:84.2%;}
+.widget_open{ width:76.4%;}
 
 
 /* Cookies */
@@ -176,7 +176,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .alert_messages {width: 100%;color: #ffffff;display: none;-webkit-font-smoothing: auto;}
 .login_bg .alert_messages{ color:#e53012;}
 .alert_messages__inner {padding: 20px; width:100%;}
-.alert_messages__inner p {float: left;font-size: 16px;width: 94%;}
+.alert_messages__inner p {font-size: 16px;width: auto;}
 .alert_messages_warning {background: #f66900;}
 .alert_messages_error, .alert_messages_severity {background: #e53012;}
 .alert_messages_information {background: #138ee4;}
@@ -186,7 +186,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .alert_messages_error .alert_message_content, .alert_messages_error .alert_message_content p, .alert_messages_severity .alert_message_content, .alert_messages_severity .alert_message_content p{ width:100% !important;}
 .fade.in {opacity: 1;}
 .fade {opacity: 0;-webkit-transition: opacity .15s linear;transition: opacity .15s linear;}
-.error_icon{ font-size:35px; float:left; width:6%;}
+.error_icon{ font-size:35px; float:left; width:auto; color:#ffffff; margin-right:10px;}
 .severity_message.attempt_error{ margin-top:100px; }
 .attempt_error .alert_messages{ color:#ffffff !important;padding-bottom:0;}
 .attempt_error .error_icon, .attempt_error .fontcon-information{ display:none;}
@@ -1057,8 +1057,6 @@ html,body, .easybanking{ width:319px;}
 .login_bg .content_page, .login_bg #metaInfo, .login_bg .contact_us, .login_bg .faq-page, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
 .intermediate_btns, .wcm-btns-zone{ width:100%;}
 
-.widget_open{ margin-left:-300px;}
-.login_bg .widget{ top:60px;}
 /* Standard elements */
 .home .content_block{ float:left; position:absolute; z-index:999; min-height:0;}
 .content_block #accountList, .content_block #cardList{ margin:0;}
@@ -1070,7 +1068,7 @@ html,body, .easybanking{ width:319px;}
 /** WCM **/
 .wcm-language { padding:12px 0 6px 0;}
 .wcm-faq{ top:60px;}
-.login_bg .alert_message_content{ width:75%;}
+.login_bg .alert_message_content{ width:85%;}
 .service_navigation { display:none;}
 #cookiesMessage{ padding:10px;}
 .cookies_close{ top:10px; right:10px;}
@@ -1293,6 +1291,9 @@ html,body, .easybanking{ width:319px;}
 /* Margin col */
 .margin_col{ width:100%; margin:0; padding-top:20px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;;}
+/* FAQ Widget*/
+.widget_open{ margin-left:-300px; width:100%;}
+.login_bg .widget{ top:60px;}
 }
 @media all and (min-width:1410px){
 body, .site_header__inner{ max-width:1310px; margin:0 auto;}
