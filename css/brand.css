@@ -144,7 +144,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .service_cmp:last-child{ margin:0;}
 .service_cmp p{ padding-top:5px;}
 .login_bg .service_cmp p{ display:none;}
-.content_row{ width:84.2%;}
+.widget_open{ width:84.2%;}
 
 
 /* Cookies */
@@ -398,7 +398,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .selected_details__account{ display:table;}
 .selected_details__account .hello_icon{ margin-top:5px;}
 .accounts_title, .cards_title, .functions_title{font-size: 1.875em;text-transform: uppercase;color: white;line-height: 1.14em; cursor:pointer; float:left; white-space:nowrap; min-width:126px;}
-.flyout_active .flyout_container{ width:100%;background:#ffffff; height:415px; position:absolute; z-index:999;-webkit-transition: height .4s ease-in-out;-moz-transition: height .4s ease-in-out;-o-transition: height .4s ease-in-out;transition: height .4s ease-in-out; top:-20px;left:-20px;border:1px solid #d8dbde; /*min-height:120px;*/ overflow-y:scroll;}
+.flyout_active .flyout_container{ width:100%;background:#ffffff; height:415px; position:absolute; z-index:999;-webkit-transition: height .4s ease-in-out;-moz-transition: height .4s ease-in-out;-o-transition: height .4s ease-in-out;transition: height .4s ease-in-out; top:-20px;left:-20px;border:1px solid #d8dbde; /*min-height:120px;*/}
 .flyout_active .selected_details{ padding:20px 40px 20px 20px;}
 .flyout_active .accounts_info,.flyout_active .accounts_title{ color:#729f08;}
 .flyout_active .cards_info, .flyout_active .cards_title{ color:#009e83}
@@ -572,12 +572,12 @@ transition: all .2s ease-in-out;}
 
 /* FAQ Widget */
 .widget{ background:#ffffff;width:300px; position:relative;height:500px;right:325px; margin-top:-158px; overflow:hidden;top:0;display:none;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
-.login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0;}
+.login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;}
 .faq-widget .faq_answer{ border-bottom:0;}
 .faq-widget .dropdown_arrow:after{ right:25px;}
-.icon_widget_close { font-size:13px; position:absolute; right:23px; top:26px; cursor:pointer; }
+.icon_widget_close { font-size:13px; position:absolute; right:12px; top:12px; cursor:pointer; padding:15px; }
 
 /* Content menu */
 .content_block{ width:100%;}
@@ -1057,7 +1057,8 @@ html,body, .easybanking{ width:319px;}
 .login_bg .content_page, .login_bg #metaInfo, .login_bg .contact_us, .login_bg .faq-page, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
 .intermediate_btns, .wcm-btns-zone{ width:100%;}
 
-.content_row{ margin-left:-300px;}
+.widget_open{ margin-left:-300px;}
+.login_bg .widget{ top:60px;}
 /* Standard elements */
 .home .content_block{ float:left; position:absolute; z-index:999; min-height:0;}
 .content_block #accountList, .content_block #cardList{ margin:0;}
