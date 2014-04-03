@@ -13,9 +13,9 @@ $(document).ready(function() {
 	 });
 	 
 	 var didResize;
-	 hasResized();
+	 //hasResized();
 	 $(window).on('resize', function(){
-		didResize = true;
+		//didResize = true;
 	 });
 	 $('.login_bg').on('resize', function(){
 		 alert(2);

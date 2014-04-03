@@ -326,7 +326,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .default_input_field.has-options.has-items > input{ width:2px !important;}
 
 .default_input_field.dropdown_arrow {background: url(./images/dropdown_strip.png) no-repeat right center, #ffffff;}
-.dropdown_arrow:after {border-color: #252429 transparent transparent transparent;position: absolute;top: 50%;right: 15px;display: block;width: 0;height: 0;margin-top: -3px;border-style: solid;border-width: 6px 6px 0 6px;content: ' ';}
+.dropdown_arrow:after {border-color: #252429 transparent transparent transparent;position: absolute;top: 50%;right: 15px;display: block;width: 0;height: 0;margin-top: -3px;border-style: solid;border-width: 5px 5px 0 5px;content: ' ';}
 .dropdown-active:after {border-color: transparent transparent #252429 transparent;margin-top: -4px;border-width: 0 5px 5px 5px;}
 .dropdown-active::before {position: absolute;right: 0;bottom: 0;left: 0;display: block;height: 1px;content: ' ';}
 
@@ -574,10 +574,15 @@ transition: all .2s ease-in-out;}
 .widget{ background:#ffffff;width:300px; position:relative;height:500px;right:325px; margin-top:-158px; overflow:hidden;top:0;display:none;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
 .login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
-.widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;}
-.faq-widget .faq_answer{ border-bottom:0;}
+.widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;font-family:'BnppSans-r',arial; font-size:18px;}
+.faq-widget .faq_answer, .faq-widget .accordion_main:last-child .list_wrapper, .faq-widget .accordion_main:last-child, .faq-widget .accordion_main:first-child{ border-bottom:0;}
 .faq-widget .dropdown_arrow:after{ right:25px;}
 .icon_widget_close { font-size:13px; position:absolute; right:12px; top:12px; cursor:pointer; padding:15px; }
+.faq-widget .faq_question{ font-size:16px; line-height:1.4;}
+.faq-widget .accordion_l2__inner{ border-bottom:none; padding:14px 0;}
+.faq-widget .list_wrapper{border-bottom:1px solid #d8dbde;}
+.faq-widget .header_l2 h3{ width:92%; display:block;}
+.faq-widget .accordion_main{ border-top:1px solid #d8dbde;}
 
 /* Content menu */
 .content_block{ width:100%;}
@@ -996,7 +1001,6 @@ html,body, .easybanking{ width:319px;}
 }
 @media all and (max-width: 479px) {
 /* WCM */
-.wcm-authentication, .login_bg .severity_message .alert_messages{ width:300px;}
 .login_bg .content_page{margin:20px auto 10px;}
 
 /* buttons */
@@ -1009,7 +1013,7 @@ html,body, .easybanking{ width:319px;}
 #logoutMsg h1 { font-size:1.125em;font-family: 'BnppSans-r', arial;}
 
 /* Login */
-.authentication, .authentication__identification, .identification_contract, .authentication__details, .identification_ucr{ width:300px !important;}
+.authentication, .authentication__identification, .identification_contract, .authentication__details, .identification_ucr, .login_bg #metaInfo, .wcm-authentication, .login_bg .severity_message .alert_messages{ width:300px !important;}
 
 /*Enter details*/
 .selected-item { font-size:12px;}
@@ -1040,7 +1044,7 @@ html,body, .easybanking{ width:319px;}
 .margin_teaser_link .module_icon{ display:none;}
  }
 @media all and (min-width: 480px) and (max-width: 767px) {
-.login_bg .severity_message .alert_messages, .wcm-authentication{  width:365px; margin:20px auto 0 auto;}
+.login_bg .severity_message .alert_messages, .wcm-authentication, .login_bg #metaInfo{  width:365px; margin:20px auto 0 auto;}
 .login_bg .content_page{ margin:20px auto 30px;}
 .home .margin_col .ls-cmp-wrap:nth-child(odd){ padding-left:5px; padding-right:10px;}
 .home .margin_col .ls-cmp-wrap:nth-child(even){ padding-right:5px; padding-left:10px;}
@@ -1054,7 +1058,7 @@ html,body, .easybanking{ width:319px;}
 .fixfixed .warning_area{ position:absolute; top:60px;}
 
 .login_bg{ padding:60px 10px 0 10px;}
-.login_bg .content_page, .login_bg #metaInfo, .login_bg .contact_us, .login_bg .faq-page, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
+.login_bg .content_page, .login_bg .contact_us, .login_bg .faq-page, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
 .intermediate_btns, .wcm-btns-zone{ width:100%;}
 
 /* Standard elements */
