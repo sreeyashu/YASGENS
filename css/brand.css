@@ -58,6 +58,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
         -moz-text-size-adjust: none;
         -webkit-font-smoothing: antialiased;
         font-smoothing: antialiased;	
+		
 }
 .no_scroll{ overflow:hidden; width:100%;}
 /*** WCM Styles ***/
@@ -188,7 +189,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .fade {opacity: 0;-webkit-transition: opacity .15s linear;transition: opacity .15s linear;}
 .error_icon{ font-size:35px; float:left; width:auto; color:#ffffff; margin-right:10px;}
 .severity_message.attempt_error{ margin-top:100px; }
-.attempt_error .alert_messages{ color:#ffffff !important;padding-bottom:0;}
+login_bg .severity_message.attempt_error .alert_messages{ color:#ffffff !important;padding-bottom:0;}
 .attempt_error .error_icon, .attempt_error .fontcon-information{ display:none;}
 .attempt_error .alert_messages__inner p{ width:100%;}
 /** T2 Template non-authenticated part ends **/
@@ -312,6 +313,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .default_input_field > * {display: -moz-inline-stack;display: inline-block;*display: inline;vertical-align: baseline;zoom: 1;}
 .default_input_field.disabled, .default_input_field.disabled * {cursor: default !important;}
 
+.default_input_field{ overflow:hidden;}
 .default_input_field::after {display: block;clear: left;content: ' ';}
 .default_input_field > input {width: 100%;max-height: none !important;min-height: 0 !important;margin: 0!important;text-indent: 0 !important;background: none !important;border: 0 none !important;-webkit-box-shadow: none !important;box-shadow: none !important;-webkit-user-select: auto !important;height: 44px;line-height: 22px;color: #76767b;padding: 11px 12px;}
 ::-webkit-input-placeholder{ line-height:1.625em;}
@@ -321,8 +323,8 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .default_input_field.focus, textarea:focus{ border:#008578 solid 1px !important;}
 input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;}
 
-.select-account .default_input_field{ padding:12px;}
-.select-account .default_input_field > input{ width:auto; padding:0; height:22px;line-height: 22px;}
+.default_input_field.custom_dropdown{ padding:12px;}
+.default_input_field.custom_dropdown > input{ width:auto; padding:0; height:22px;line-height: 22px;}
 .default_input_field.has-options.has-items > input{ width:2px !important;}
 
 .default_input_field.dropdown_arrow {background: url(./images/dropdown_strip.png) no-repeat right center, #ffffff;}
@@ -575,14 +577,15 @@ transition: all .2s ease-in-out;}
 .login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;font-family:'BnppSans-r',arial; font-size:18px;}
-.faq-widget .faq_answer, .faq-widget .accordion_main:last-child .list_wrapper, .faq-widget .accordion_main:last-child, .faq-widget .accordion_main:first-child{ border-bottom:0;}
+.faq-widget .faq_answer, .faq-widget .accordion_main:last-child .list_wrapper, .faq-widget .accordion_main:last-child{ border-bottom:0;}
 .faq-widget .dropdown_arrow:after{ right:25px;}
 .icon_widget_close { font-size:13px; position:absolute; right:12px; top:12px; cursor:pointer; padding:15px; }
 .faq-widget .faq_question{ font-size:16px; line-height:1.4;}
-.faq-widget .accordion_l2__inner{ border-bottom:none; padding:14px 0;}
+.faq-widget .accordion_l2__inner{ border-top:none; padding:14px 0;}
 .faq-widget .list_wrapper{border-bottom:1px solid #d8dbde;}
 .faq-widget .header_l2 h3{ width:92%; display:block;}
 .faq-widget .accordion_main{ border-top:1px solid #d8dbde;}
+.faq-widget .accordion_main .accordion_main:first-child{ border-top:0;}
 
 /* Content menu */
 .content_block{ width:100%;}
@@ -664,7 +667,7 @@ a.btn_default{ display:inline-block;}
 
 
 /* Contract */
-.contract_choice{ border:1px solid #d8dbde;font-family: 'BnppSans-r',arial; height:172px; overflow: scroll;}
+.contract_choice{ border:1px solid #d8dbde;font-family: 'BnppSans-r',arial; height:172px; position:relative; overflow:hidden;}
 .contract_choice li{border-bottom: 1px solid #d8dbde; cursor:pointer;}
 .contract_choice li:last-child{ border:none;}
 .choice__content_input{ padding: 20px;list-style-type: none;}
@@ -1303,7 +1306,7 @@ html,body, .easybanking{ width:319px;}
 body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 }
 @media all and (min-width: 1510px) {
-.meta_nav_user{ display:block;}	
+.meta_nav_user{ display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 300px;}	
 .content_col{ margin-right:-40.65em;}
 .fluid{ margin-right:40.65em;}
 .service_col{ width:300px;}

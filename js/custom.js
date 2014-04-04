@@ -18,7 +18,7 @@ $(document).ready(function() {
 		//didResize = true;
 	 });
 	 $('.login_bg').on('resize', function(){
-		 alert(2);
+		 
 		didResize = true;
 	 });
 	 
@@ -83,7 +83,7 @@ alert(isTouchDevice());*/
 
 
 $('.accounts_menu').click(function () {
-		 alert(2);
+		 
 		 $('#accountList').css('left','0');
 	 });
 $('.viewport_icon').click(function () {
