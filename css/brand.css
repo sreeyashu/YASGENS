@@ -328,7 +328,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .default_input_field.has-options.has-items > input{ width:2px !important;}
 
 .default_input_field.dropdown_arrow {background: url(./images/dropdown_strip.png) no-repeat right center, #ffffff;}
-.dropdown_arrow:after {border-color: #252429 transparent transparent transparent;position: absolute;top: 50%;right: 15px;display: block;width: 0;height: 0;margin-top: -3px;border-style: solid;border-width: 5px 5px 0 5px;content: ' ';}
+.dropdown_arrow:after, .widget .content_l2_list_item:after{border-color: #252429 transparent transparent transparent;position: absolute;top: 50%;right: 15px;display: block;width: 0;height: 0;margin-top: -3px;border-style: solid;border-width: 5px 5px 0 5px;content: ' ';}
 .dropdown-active:after {border-color: transparent transparent #252429 transparent;margin-top: -4px;border-width: 0 5px 5px 5px;}
 .dropdown-active::before {position: absolute;right: 0;bottom: 0;left: 0;display: block;height: 1px;content: ' ';}
 
@@ -574,7 +574,7 @@ transition: all .2s ease-in-out;}
 
 /* FAQ Widget */
 .widget{ background:#ffffff;width:300px; position:relative;height:500px;right:325px; margin-top:-158px; overflow:hidden;top:0;display:none;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
-.login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms;}
+.login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms; height:auto;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;font-family:'BnppSans-r',arial; font-size:18px;}
 .widget .faq_answer, .widget .accordion_main:last-child .list_wrapper, .widget .accordion_main:last-child{ border-bottom:0;}
@@ -586,6 +586,7 @@ transition: all .2s ease-in-out;}
 .widget .accordion_main{ border-top:1px solid #d8dbde;}
 .widget .accordion_main:first-child{ border-top:0;}
 .widget .module_content{ overflow:hidden;}
+.widget .content_l2_list_item{ position:relative;}
 
 /* Content menu */
 .content_block{ width:100%;}
