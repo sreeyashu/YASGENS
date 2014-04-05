@@ -335,7 +335,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* Dropdown box */
 .default_dropdown_box {background: #ffffff;border: 1px solid #d0d0d0;-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);position: absolute;z-index: 10;margin: -1px 0 0 0;color: #76767b;line-height: 22px;}
 .default_dropdown_box [data-selectable] {border-bottom: 1px solid #d8dbde;overflow: hidden;cursor: pointer;padding: 8px 12px;}
-.default_dropdown_content {max-height: 200px;overflow-x: hidden;overflow-y: auto;}
+.default_dropdown_content {max-height: 200px;overflow: hidden; position:relative;}
 .option.active, .list_item.active { background:#f4f5f6;}
 .default_dropdown_box .list_item__header{ padding:0; display:table}
 .highlight{ background:#e5e9ef;font-family: 'BnppSans-r', arial;}
@@ -949,7 +949,8 @@ a.btn_default{ display:inline-block;}
 .rich_text .region table td{text-align: left;padding: 10px;}
 .rich_text .region table tr:nth-child(even){ background:#f4f5f6;}
 .rich_text .region .fancy_content .section{ border-left:4px solid #009966; padding-left:20px;}
-.region ul{ list-style:disc; padding-left:50px;}
+.rich_text .region ul{ list-style:disc; padding-left:20px;}
+.rich_text .region ul li{ padding:5px 0 5px; line-height:1.4;}
 .image_left{ float:left; margin:15px 15px 15px 0;}
 .image_right{ float:right;margin:15px 0 15px 15px;}
 .text_left{ text-align:left;}
