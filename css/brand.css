@@ -905,7 +905,6 @@ a.btn_default{ display:inline-block;}
 .has_foreign_currency{ color:#008578;}
 .date_picker .default_input_field {width: 50%; }
 /* Dependent classes */
-.highlight_txt{font-family: 'BnppSans-r', arial;}
 .show_active,.show {display: block !important;}
 .show_inline{ display:inline-block !important;}
 .hide{ display:none !important;}
@@ -938,23 +937,26 @@ a.btn_default{ display:inline-block;}
 .three_column .section:nth-child(2){ padding-right:15px;}
 .three_column .section:nth-child(3){ padding:0 15px;}
 .three_column .section:nth-child(4){ padding-left:15px;}
-.rich_text .region h1{ font-size:36px; line-height:1; padding-bottom:36px;}
+.rich_text .region h1{ font-size:36px; line-height:1; padding-bottom:32px;}
 .rich_text .region h2{ font-size:28px;line-height:1; padding-bottom:20px;}
 .rich_text .region h3{ font-size:20px;line-height:1;padding-bottom:20px;}
 .rich_text .region h4{ font-size:18px;line-height:1;}
 .rich_text .region h5{ font-size:16px;line-height:1; padding-bottom:10px;}
-.rich_text .region p{ line-height:1.25; padding-bottom:10px;}
+.rich_text .region p{ line-height:1.4; padding-bottom:10px;}
 .rich_text .region p:last-child{ padding:0;}
-.rich_text .region p a{ color:#009966;}
+.rich_text .region a{ color:#009966;}
+.rich_text .region a:hover{ text-decoration:underline;}
 .rich_text .region table td{text-align: left;padding: 10px;}
 .rich_text .region table tr:nth-child(even){ background:#f4f5f6;}
 .rich_text .region .fancy_content .section{ border-left:4px solid #009966; padding-left:20px;}
+.region ul{ list-style:disc; padding-left:50px;}
 .image_left{ float:left; margin:15px 15px 15px 0;}
 .image_right{ float:right;margin:15px 0 15px 15px;}
 .text_left{ text-align:left;}
 .text_right{ text-align:right;}
 .text_justify{ text-align:justify;}
 .text_center{ text-align:center;}
+.highlight_text{font-family: 'BnppSans-r', arial;}
 
 
 /* viewport header */
