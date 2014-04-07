@@ -146,6 +146,8 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .service_cmp p{ padding-top:5px;}
 .login_bg .service_cmp p{ display:none;}
 .widget_open{ width:77.1%;}
+.sticky_fixed{ position:static !important; }
+.home .sticky_fixed{ top:157px !important;}
 
 
 /* Cookies */
@@ -189,7 +191,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .fade {opacity: 0;-webkit-transition: opacity .15s linear;transition: opacity .15s linear;}
 .error_icon{ font-size:35px; float:left; width:auto; color:#ffffff; margin-right:10px;}
 .severity_message.attempt_error{ margin-top:100px; }
-login_bg .severity_message.attempt_error .alert_messages{ color:#ffffff !important;padding-bottom:0;}
+.login_bg .severity_message.attempt_error .alert_messages{ color:#ffffff !important;padding-bottom:0;}
 .attempt_error .error_icon, .attempt_error .fontcon-information{ display:none;}
 .attempt_error .alert_messages__inner p{ width:100%;}
 /** T2 Template non-authenticated part ends **/
@@ -589,7 +591,6 @@ transition: all .2s ease-in-out;}
 .widget .module_content{ overflow:hidden;}
 .widget .header_l2{ position:relative;}
 .widget .header_l2:after{right:28px;}
-.fixed_nav{  right:;}
 
 /* Content menu */
 .content_block{ width:100%;}
@@ -1321,7 +1322,7 @@ body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 /* Service component */
 .meta_nav_logout{ float:left;}
 .widget{ top:-198px;}
-.main_wrapper .service_cmp{ position:relative; margin-bottom:20px; background:#d1d7e1; text-align:left;height: 170px; overflow:hidden; cursor:pointer;}
+.main_wrapper .service_cmp{ position:relative; margin-bottom:20px; background:#d1d7e1; text-align:left;height: 170px; overflow:hidden; cursor:pointer; width:300px;}
 .main_wrapper .service_cmp:hover,.main_wrapper .service_cmp.active { background:#008578;}
 .main_wrapper .service_cmp:hover p,.main_wrapper .service_cmp.active p{ text-decoration:underline; color:#ffffff; padding-bottom:2px;}
 .main_wrapper .service_cmp:hover .fontcon-contactus::before,.main_wrapper .service_cmp.active .fontcon-contactus::before{ content:'\e620';}
