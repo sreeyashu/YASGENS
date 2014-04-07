@@ -6,9 +6,7 @@
       if (this.length === 0) {
         return this;
       }
-	  var stickyheaders = $('.site_header').outerHeight(true) + $('.warning_area').outerHeight(true);
-	  var innerpadding = $('.content_wrapper').innerWidth() - $('.content_wrapper .ls-colo-body').outerWidth();
-	  var topValue = stickyheaders + innerpadding;
+	  
       var settings = $.extend({
         'footerID': '',
         'contentID': '',
@@ -80,9 +78,9 @@
       // Determines the sidebar orientation and sets margins accordingly
       function checkOrientation() {
         if (settings.orientation === "left") {
-         settings.contentID.css('margin-left', sticky.el.outerWidth(true));
+         settings.contentID.css('left', sticky.el.outerWidth(true));
         } else {
-          sticky.el.css('margin-left', settings.contentID.outerWidth(true));
+          sticky.el.css('right', settings.contentID.outerWidth(true));
         }
       }
 
