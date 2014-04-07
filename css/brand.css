@@ -577,7 +577,8 @@ transition: all .2s ease-in-out;}
 .faq_answer { line-height:22px; padding-bottom:20px; padding-left:0; border-bottom:1px solid #d8dbde;}
 
 /* FAQ Widget */
-.widget{ background:#ffffff;width:300px; position:relative;height:500px;right:325px; margin-top:-182px; overflow:hidden;top:0;display:none;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
+.widget{ background:#ffffff;width:300px; position:relative;height:500px; margin-top:-182px;overflow:hidden;top:0;z-index:-999;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
+.faq-widget{opacity:1; z-index:999;right:325px;}
 .login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms; height:auto;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;font-family:'BnppSans-r',arial; font-size:18px;}
@@ -588,7 +589,7 @@ transition: all .2s ease-in-out;}
 .widget .header_l2 h3{ width:92%; display:block;}
 .widget .accordion_main{ border-top:1px solid #d8dbde;}
 .widget .accordion_main:first-child{ border-top:0;}
-.widget .module_content{ overflow:hidden;}
+.widget .module_content{ overflow:hidden; max-height:433px;}
 .widget .header_l2{ position:relative;}
 .widget .header_l2:after{right:28px;}
 
@@ -689,6 +690,7 @@ transition: all .2s ease-in-out;}
 .zone_btn:hover{background: rgba(255,255,255,0.9);}
 .intermediate_btns{ width:730px; margin:0 auto;}
 .intermediate_btns span{padding:9px 20px; line-height:42px;}
+.intermediate_btns .plain_text{ color:#ffffff; text-align:center;}
 
 /* e-statements */
 #estatements{ background:#ffffff; min-height:360px;}
@@ -1070,7 +1072,7 @@ html,body, .easybanking{ width:319px;}
 
 .login_bg{ padding:60px 10px 0 10px;}
 .login_bg .content_page, .login_bg .contact_us, .login_bg .faq-page, #security_msg, .intermediate_messages{ width:100%; margin:20px auto 0;}
-.intermediate_btns, .wcm-btns-zone{ width:100%;}
+.intermediate_btns, .wcm-btns-zone, .intermediate_btns .plain_text{ width:100%;}
 
 /* Standard elements */
 .home .content_block{ float:left; position:absolute; z-index:999; min-height:0;}
