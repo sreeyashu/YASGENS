@@ -139,7 +139,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .login_bg .service__icon{ color:#ffffff;}
 .service__icon{ font-size:62px;}
 .service_navigation .ls-cmp-wrap:first-child{ width:auto; position:absolute; right:30px; top:138px;}
-.service_cmp{ text-align:center;margin-bottom:13px;cursor:pointer;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out;}
+.service_cmp{ text-align:center;margin-bottom:13px;cursor:pointer;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out; float:left;}
 .service_cmp a:hover, .service_cmp.active a{ color:#008578;}
 .service_cmp:last-child{ margin:0;}
 .service_cmp p{ padding-top:5px;}
@@ -1271,6 +1271,13 @@ html,body, .easybanking{ width:319px;}
 .content_page .region h1{ font-size:18px; padding-bottom:30px}
 .content_page .region h2, .content_page .region h3{ font-size:16px;}
 .two_column .content_column, .three_column .content_column{ width:100%; padding:0 !important;}
+
+.widget{ top:66px !important; position:absolute !important; left:0; width:100%; height:100%;}
+.widget_header{ padding:25px 10px;}
+.icon_widget_close{ right:0;}
+.widget .header_l2:after{ right:15px;}
+.service_col{ width:100%; margin-left:0; position: inherit;}
+.module_content{ overflow:auto; max-height:inherit;}
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
 .content_wrapper{ padding:30px;}
@@ -1304,7 +1311,7 @@ html,body, .easybanking{ width:319px;}
 .main_wrapper, .login_bg{ padding-top:60px;}
 .warning_area{ top:60px;}
 .content_col, .fluid{ margin-right:0;}
-.service_col{ display:none;}
+.wcm-service-nav{ display:none;}
 /* Margin col */
 .margin_col{ width:100%; margin:0; padding-top:20px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;;}
@@ -1328,8 +1335,8 @@ body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 .main_wrapper .service_cmp{ position:relative; margin-bottom:20px; background:#d1d7e1; text-align:left;height: 170px; overflow:hidden; cursor:pointer; width:300px;}
 .main_wrapper .service_cmp:hover,.main_wrapper .service_cmp.active { background:#008578;}
 .main_wrapper .service_cmp:hover p,.main_wrapper .service_cmp.active p{ text-decoration:underline; color:#ffffff; padding-bottom:2px;}
-.main_wrapper .service_cmp:hover .fontcon-contactus::before,.main_wrapper .service_cmp.active .fontcon-contactus::before{ content:'\e620';}
-.main_wrapper .service_cmp:hover .fontcon-faq::before, .main_wrapper .service_cmp.active .fontcon-faq::before{ content:'\e618';}
+.main_wrapper .service_cmp:hover .fontcon-contactus::before,.main_wrapper .service_cmp.active .fontcon-contactus::before{ content:'\e620';color:#ffffff;}
+.main_wrapper .service_cmp:hover .fontcon-faq::before, .main_wrapper .service_cmp.active .fontcon-faq::before{ content:'\e618';color:#ffffff;}
 .main_wrapper .service_cmp.selected_service{ background:#009966;}
 .main_wrapper .service_cmp:hover .service__icon{ color:#ffffff;}
 .main_wrapper .service_cmp__links{padding: 25px 15px 15px 25px;display: table;width: 100%;}
