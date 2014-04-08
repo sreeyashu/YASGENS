@@ -105,7 +105,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .meta_nav_user span:first-child{ margin-right:0.25em}
 .meta_nav_service, .meta_nav_logout{ float:left;}
 .meta_nav_logout a{ color:#76767b;}
-.meta_nav_logout a:hover span, .meta_icon:hover,.meta_icons_s.active{ color:#008578;}
+.meta_nav_logout a:hover span, .meta_icon:hover,.meta_icons_s.active .meta_icon{ color:#008578;}
 .meta_logout{ margin-right:10px;}
 .meta_icon{ color:#3a393e;}
 .meta_icons_s{ display:none; float:left; border-right: 1px dotted #d8dbde; padding:0 0.85em;}
@@ -141,8 +141,6 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .service_navigation .ls-cmp-wrap:first-child{ width:auto; position:absolute; right:30px; top:138px;}
 .service_cmp{ text-align:center;margin-bottom:13px;cursor:pointer;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out;}
 .service_cmp a:hover, .service_cmp.active a{ color:#008578;}
-.service_cmp.active .fontcon-contactus::before{ content:'\e620';}
-.service_cmp.active .fontcon-faq::before{ content:'\e618';}
 .service_cmp:last-child{ margin:0;}
 .service_cmp p{ padding-top:5px;}
 .login_bg .service_cmp p{ display:none;}
@@ -1316,6 +1314,7 @@ html,body, .easybanking{ width:319px;}
 }
 @media all and (min-width:1410px){
 body, .site_header__inner{ max-width:1310px; margin:0 auto;}
+.widget{ right:188px;}
 }
 @media all and (min-width: 1510px) {
 .meta_nav_user{ display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 300px;}	
@@ -1325,7 +1324,7 @@ body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 /* Service component */
 .meta_nav_logout{ float:left;}
 .warning_area{ width:1310px;}
-.widget{ right:555px;}
+.widget{ right:473px;}
 .main_wrapper .service_cmp{ position:relative; margin-bottom:20px; background:#d1d7e1; text-align:left;height: 170px; overflow:hidden; cursor:pointer; width:300px;}
 .main_wrapper .service_cmp:hover,.main_wrapper .service_cmp.active { background:#008578;}
 .main_wrapper .service_cmp:hover p,.main_wrapper .service_cmp.active p{ text-decoration:underline; color:#ffffff; padding-bottom:2px;}
