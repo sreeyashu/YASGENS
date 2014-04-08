@@ -1,16 +1,16 @@
 $(document).ready(function() {
 	
 	
-	$('.faq').click(function () {
-		 $('.widget').addClass('faq-widget');
-		 $('.content_row').addClass('widget_open');
-		 $('.wcm-messages').addClass('widget_open');
-	 });
-	$('.icon_widget_close').click(function () {
-		 $('.widget').removeClass('faq-widget');
-		 $('.content_row').removeClass('widget_open');
-		 $('.wcm-messages').removeClass('widget_open');
-	 });
+	//$('.faq').click(function () {
+//		 $('.widget').addClass('faq-widget');
+//		 $('.content_row').addClass('widget_open');
+//		 $('.wcm-messages').addClass('widget_open');
+//	 });
+//	$('.icon_widget_close').click(function () {
+//		 $('.widget').removeClass('faq-widget');
+//		 $('.content_row').removeClass('widget_open');
+//		 $('.wcm-messages').removeClass('widget_open');
+//	 });
 	 
 	 var didResize;
 	 //hasResized();
@@ -63,8 +63,21 @@ if (Modernizr.touch) {
 alert(isTouchDevice());*/
 	
 	
+	$('.faq').click(function (e) {
+		e.preventDefault();
+		$('.widget').addClass('faq-widget');
+		$('.faq').addClass('active');
+		
+	});
+	$('.icon_widget_close').click(function (e) {
+		e.preventDefault();
+		$('.widget').removeClass('faq-widget');
+		$('.faq').removeClass('active');
+		
+	});
+	$('.wcm-service-nav').stickyMojo({footerID: '.footer', contentID: '.content_col'});
+	$('.widget').stickyMojo({footerID: '.footer', contentID: '.content_col'});
 	
-	$('.fixed_nav').stickyMojo({footerID: '.footer', contentID: '.content_col'});
 	$(".f1").mask('++++ 0000/0000/0000/0000/0 ++++');
 	 $(".f2").mask('00000 00000');
 

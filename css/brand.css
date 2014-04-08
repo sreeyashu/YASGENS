@@ -71,6 +71,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 
 .fixfixed .site_header{ position:absolute; top:0;}
 .fixfixed .warning_area{ position:absolute; top:80px;}
+.warning_area .error_icon{ display:none;}
 /* Brand Logo*/
 .site_logotype{ float:left;}
 .brand_logo{ background:url(images/sprite.svg) no-repeat;background-position:-1px 1px; width:11.7em; height:2.5em; display:block;}
@@ -138,7 +139,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .login_bg .service__icon{ color:#ffffff;}
 .service__icon{ font-size:62px;}
 .service_navigation .ls-cmp-wrap:first-child{ width:auto; position:absolute; right:30px; top:138px;}
-.service_cmp{ margin-bottom:13px;cursor:pointer;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out;}
+.service_cmp{ text-align:center;margin-bottom:13px;cursor:pointer;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out;}
 .service_cmp a:hover, .service_cmp.active a{ color:#008578;}
 .service_cmp.active .fontcon-contactus::before{ content:'\e620';}
 .service_cmp.active .fontcon-faq::before{ content:'\e618';}
@@ -577,8 +578,8 @@ transition: all .2s ease-in-out;}
 .faq_answer { line-height:22px; padding-bottom:20px; padding-left:0; border-bottom:1px solid #d8dbde;}
 
 /* FAQ Widget */
-.widget{ background:#ffffff;width:300px; position:relative;height:500px; margin-top:-182px;overflow:hidden;top:0;z-index:-999;-webkit-transition: opacity, 325ms;-moz-transition: opacity, 325ms;-o-transition:opacity, 325ms;transition: opacity, 325ms;}
-.faq-widget{opacity:1; z-index:999;right:325px;}
+.widget{ background:#ffffff;width:300px; position:absolute;height:500px; overflow:hidden;top:0;-webkit-transition: opacity, 125ms;-moz-transition: opacity, 125ms;-o-transition:opacity, 125ms;transition: opacity, 125ms; opacity:0; right:130px; position:fixed !important; z-index:-999;}
+.faq-widget{opacity:1; z-index:999;}
 .login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms; height:auto;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;font-family:'BnppSans-r',arial; font-size:18px;}
@@ -1323,7 +1324,8 @@ body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 .service_col{ width:300px;}
 /* Service component */
 .meta_nav_logout{ float:left;}
-.widget{ top:-198px;}
+.warning_area{ width:1310px;}
+.widget{ right:555px;}
 .main_wrapper .service_cmp{ position:relative; margin-bottom:20px; background:#d1d7e1; text-align:left;height: 170px; overflow:hidden; cursor:pointer; width:300px;}
 .main_wrapper .service_cmp:hover,.main_wrapper .service_cmp.active { background:#008578;}
 .main_wrapper .service_cmp:hover p,.main_wrapper .service_cmp.active p{ text-decoration:underline; color:#ffffff; padding-bottom:2px;}
