@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+	$('.input_card').mask('099 099 0099');
 	
 	//$('.faq').click(function () {
 //		 $('.widget').addClass('faq-widget');

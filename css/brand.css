@@ -144,6 +144,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .service_cmp:last-child{ margin:0;}
 .service_cmp p{ padding-top:5px;}
 .login_bg .service_cmp p{ display:none;}
+.wcm-service-nav{ width:70px;}
 .widget_open{ width:77.1%;}
 .sticky_fixed{ position:static !important; }
 .home .sticky_fixed{ top:157px !important;}
@@ -520,7 +521,7 @@ transition: all .2s ease-in-out;}
 .extra_contentdetails ul{ padding:2px 45px; position:relative; width:100%;}
 .extra_contentdetails li{display:table;position:relative; width:100%;padding:10px 0;}
 .extra_contentdetails label{ width:40%; float:left;}
-.extra_contentdetails p{ width:60%; float:left;}
+.extra_contentdetails p{ width:60%; float:left; line-height:1.2}
 /* Level four */
 .view_more{ position:relative; padding:20px 0;}
 .view_more .dropdown_arrow:after{ right:0; left:0;}
@@ -578,7 +579,7 @@ transition: all .2s ease-in-out;}
 /* FAQ Widget */
 .widget{ background:#ffffff;width:300px; position:absolute;height:500px; overflow:hidden;top:0;-webkit-transition: opacity, 125ms;-moz-transition: opacity, 125ms;-o-transition:opacity, 125ms;transition: opacity, 125ms; opacity:0; right:130px; position:fixed !important; z-index:-999;}
 .faq-widget{opacity:1; z-index:999;}
-.login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms; height:auto;}
+.login_bg .widget{float:right;position:absolute; right:0; opacity:0; top:80px; z-index:-999; margin-top:0; display:block; -webkit-transition: right, 325ms;-moz-transition: right, 325ms;-o-transition:right, 325ms;transition: right, 325ms; height:auto; position:absolute !important;}
 .login_bg .faq-widget{ opacity:1; z-index:999;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;font-family:'BnppSans-r',arial; font-size:18px;}
 .widget .faq_answer, .widget .accordion_main:last-child .list_wrapper, .widget .accordion_main:last-child{ border-bottom:0;}
@@ -588,7 +589,7 @@ transition: all .2s ease-in-out;}
 .widget .header_l2 h3{ width:92%; display:block;}
 .widget .accordion_main{ border-top:1px solid #d8dbde;}
 .widget .accordion_main:first-child{ border-top:0;}
-.widget .module_content{ overflow:hidden; max-height:433px;}
+.widget .module_content{ overflow:hidden; height:433px;}
 .widget .header_l2{ position:relative;}
 .widget .header_l2:after{right:28px;}
 
@@ -694,7 +695,7 @@ transition: all .2s ease-in-out;}
 /* e-statements */
 #estatements{ background:#ffffff; min-height:360px;}
 .showall_months{ text-align:center; color:#009966;cursor:pointer;}
-.showall_months p{ padding:30px 0;border-top:1px solid #d8dbde; }
+.showall_months h3{ padding:30px 0;border-top:1px solid #d8dbde; }
 
 /* Details screen */
 .details{ width:100%; background:#ffffff;}
@@ -727,6 +728,7 @@ transition: all .2s ease-in-out;}
 /* Transaction search */
 .search_block{ padding:25px 30px 20px; display:table; width:100%;}
 .search_field{ width:60%;}
+.search_field input::-ms-clear {display: none;}
 .search_field .default_input_field {padding-right:85px;}
 .search_wipe{border-left: 0;color: #666666;font-size: 10px;right: 42px; position:absolute; top:0; padding:16px; display:none;}
 .search_icon {font-size: 22px; color:#363939;right: 12px; position:absolute; top:0;right:0; padding:10px 10px 10px 0px;}
@@ -1272,12 +1274,7 @@ html,body, .easybanking{ width:319px;}
 .content_page .region h2, .content_page .region h3{ font-size:16px;}
 .two_column .content_column, .three_column .content_column{ width:100%; padding:0 !important;}
 
-.widget{ top:66px !important; position:absolute !important; left:0; width:100%; height:100%;}
-.widget_header{ padding:25px 10px;}
-.icon_widget_close{ right:0;}
-.widget .header_l2:after{ right:15px;}
-.service_col{ width:100%; margin-left:0; position: inherit;}
-.module_content{ overflow:auto; max-height:inherit;}
+
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
 .content_wrapper{ padding:30px;}
@@ -1318,6 +1315,13 @@ html,body, .easybanking{ width:319px;}
 /* FAQ Widget*/
 .widget_open{ margin-left:-300px; width:100%;}
 .login_bg .widget{ top:60px;}
+.widget{ top:66px !important; position:absolute !important; left:0; width:100%; height:100%;}
+.widget_header{ padding:25px 10px;}
+.icon_widget_close{ right:0;}
+.widget .header_l2:after{ right:15px;}
+.service_col{ width:100%; margin-left:0; position: inherit;}
+.module_content{ overflow:auto; max-height:inherit;}
+.home .sticky_fixed{ top:0 !important;}
 }
 @media all and (min-width:1410px){
 body, .site_header__inner{ max-width:1310px; margin:0 auto;}
@@ -1332,6 +1336,7 @@ body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 .meta_nav_logout{ float:left;}
 .warning_area{ width:1310px;}
 .widget{ right:473px;}
+.wcm-service-nav{ width:300px;}
 .main_wrapper .service_cmp{ position:relative; margin-bottom:20px; background:#d1d7e1; text-align:left;height: 170px; overflow:hidden; cursor:pointer; width:300px;}
 .main_wrapper .service_cmp:hover,.main_wrapper .service_cmp.active { background:#008578;}
 .main_wrapper .service_cmp:hover p,.main_wrapper .service_cmp.active p{ text-decoration:underline; color:#ffffff; padding-bottom:2px;}
