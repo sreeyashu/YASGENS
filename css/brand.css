@@ -784,8 +784,8 @@ transition: all .2s ease-in-out;}
 
 /* SEPA Content input details*/
 .sendmoney_content {width: 100%; } 
-.sendmoney_content__inner {padding: 30px;border-top: 1px solid #d2d5da;}
-.sendmoney_content__inner:first-child{ border-top:none;}
+.sendmoney_content__inner {padding: 30px;border-bottom: 1px solid #d2d5da;}
+.sendmoney_content__inner:last-child{ border-bottom:none;}
 .sendmoney_content__inner h5 {text-align: right;width: 80%;padding: 0 0 30px 0;font-family: 'BnppSans-l', arial;font-size: 14px; }
 .sepa_fields {width: 100%;display: table;padding-bottom: 30px; }
 .sepa_labels {font-family: 'BnppSans-r', arial;font-size: 16px;width: 20%;padding: 10px 0;float: left;}
@@ -987,6 +987,7 @@ transition: all .2s ease-in-out;}
 .print .logo:after{ width:11.7em; height:2.5em; content: url('images/print_logo.png');}
 .print .logo img, .print .notavailable, .print .action_group, .print .load_more{ display:none;}
 .print .print_details_inner{width:100%; display: table; padding:20px 0;}
+.print .print_details_inner p{ line-height:1.4;}
 .print .cards_title, .print .accounts_title, .print .selected_details__info{color:#252429 !important;}
 .print .list_item__header{ display:table;}
 .print .collapse{ display:block !important;}
@@ -1000,10 +1001,12 @@ transition: all .2s ease-in-out;}
 .print .flyout_selection{ width:300px;}
 .print .selected_details_account .hello_icon{ padding:0; margin-top:5px;}
 .print .hello_icon:after{ content:url('images/hello_icon.png');}
-.print .print_footer{ padding-top:20px; border-top:1px solid #d8dbde; font-size:10px;}
+.print .print_footer{ padding-top:20px; border-top:1px solid #d8dbde; font-size:10px; line-height:1.4;}
 .print .extra_contentdetails{ border-bottom:none;}
 .print .h_col{ width:50%;}
 .print .print_topic{ font-size:18px;}
+.print .fontcon-circle-done{ color:#d2d8e1;}
+.print .action_icons{ display:none;}
 
 .ucr_img{ background: url(images/ucr_img.png) no-repeat; width:85px; height:80px;position:absolute; right:80px; top:-10px;}
 
