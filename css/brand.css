@@ -65,11 +65,11 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 
 /** Navigation header **/
 .ls-row{ float:left; width:100%;}
-.site_header{ width:100%; height:80px; position:fixed; top:0; left:0;z-index:9999;}
+.site_header{ width:100%; height:80px; position:fixed; top:0; left:0;z-index:9999;-webkit-transition: all 200ms linear 0s;-moz-transition: all 200ms linear 0s;-ms-transition: all 200ms linear 0s;transition: all 200ms linear 0s;}
 .site_header__inner{ padding: 1.25em 2.18em;background:#ffffff;}
 .nav-up {top: -80px;}
 
-.fixfixed .site_header{ position:absolute; top:0;}
+.fixfixed .site_header{ position:absolute; top:0 !important;}
 .fixfixed .warning_area{ position:absolute; top:80px;}
 .warning_area .error_icon{ display:none;}
 /* Brand Logo*/
@@ -145,7 +145,7 @@ html, body {width: 100%;height: 100%; background: #eef1f5;}
 .service_cmp p{ padding-top:5px;}
 .login_bg .service_cmp p{ display:none;}
 .main_wrapper .wcm-service-nav{ width:70px;}
-.widget_open{ width:77.1%;}
+.widget_open{ margin-left:-300px;}
 .sticky_fixed{ position:static !important; }
 .home .sticky_fixed{ top:157px !important;}
 
@@ -385,9 +385,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .module_row label{ float:left; margin:11px 5px 0 0; text-transform:uppercase; white-space:nowrap; min-width:10px;}
 .module_semirow{ text-align:right; color:#ffffff;margin-top: 4px;}
 .module_semirow span{ display:inline-block;}
-.module_title, .module_slected_value{font-size: 2.25em;text-transform: uppercase;color: #ffffff;line-height: 1.14em;font-weight: 100;float: left; }
-.module_slected_value{font-size: 1.875em; float:right;}
-.module_slected_value span{ display:inline-block;}
+.module_title, .module_selected_value{font-size: 2.25em;text-transform: uppercase;color: #ffffff;line-height: 1.14em;font-weight: 100;float: left; }
+.module_selected_value{font-size: 1.875em; float:right;}
+.module_selected_value span{ display:inline-block;}
 .refresh{ cursor:pointer; padding:10px 0;font-weight:600; float:left;}
 .icon_refresh{ color:#ffffff !important; font-size:1em; border-left:1px dotted #ffffff;padding: 2px 4px 2px 10px; margin-left:10px;}
 .refresh_txt{ color:#ffffff; text-decoration:underline; }
@@ -842,7 +842,7 @@ transition: all .2s ease-in-out;}
 .sendmoney_result__content_inner {width: 33.333333%;float: left;}
 .result_content {padding: 14px 30px 14px 30px;text-align: center;border-right: 1px dotted #d8dbde;}
 .result_personicon, .fontcon-send-money-icon {font-size: 60px;color: #d2d8e1;display: inline-block;}
-.fontcon-circle-done {font-size: 30px;color: #85b909;position: relative;top: 3px;right: 13px;}
+.done_icon {font-size: 30px;color: #85b909;position: relative;top: 3px;right: 13px;}
 .resultfrom_info {margin-top: 25px;font-size: 16px;line-height: 26px;}
 .resultfrom_info label {font-family: 'BnppSans-r', arial;display: block;}
 .result_navigation {display: inline-block;width: 100%;}
@@ -997,16 +997,18 @@ transition: all .2s ease-in-out;}
 .print .accounts_title, .print .cards_title, .print .functions_title{ font-size:1.875em;}
 .print .module_selected_value{ width:auto !important; font-size:1.875em !important; color:#252429;}
 .print .module_row{ color:#252429 !important;}
-.print .module_row label1{ float:left; margin:11px 5px 0 0; font-size:16px;}
+.print .module_row label{ float:left; margin:9px 5px 0 0; font-size:16px;}
 .print .flyout_selection{ width:300px;}
 .print .selected_details_account .hello_icon{ padding:0; margin-top:5px;}
 .print .hello_icon:after{ content:url('images/hello_icon.png');}
-.print .print_footer{ padding-top:20px; border-top:1px solid #d8dbde; font-size:10px; line-height:1.4;}
+.print .print_footer{ padding-top:20px; border-top:1px solid #d8dbde; font-size:8px; line-height:1.4;}
 .print .extra_contentdetails{ border-bottom:none;}
 .print .h_col{ width:50%;}
 .print .print_topic{ font-size:18px;}
-.print .fontcon-circle-done{ color:#d2d8e1;}
+.print .done_icon{ color:#d2d8e1;}
 .print .action_icons{ display:none;}
+.print .faq_answer{ border:0;}
+.print .faq_print .accordion_main{ border-bottom:0;}
 
 .ucr_img{ background: url(images/ucr_img.png) no-repeat; width:85px; height:80px;position:absolute; right:80px; top:-10px;}
 
@@ -1097,7 +1099,6 @@ html,body, .easybanking{ width:319px;}
 /* Standard elements */
 .home .content_block{ float:left; position:absolute; z-index:999; min-height:0;}
 .content_block #accountList, .content_block #cardList{ margin:0;}
-.service_navigation .ls-cmp-wrap:first-child{ top:80px;}
 
 .margin_col .ls-cmp-wrap{ padding:0 10px;}
 .home .margin_col{padding-top:0;}
@@ -1126,7 +1127,7 @@ html,body, .easybanking{ width:319px;}
 /* Module Header */
 .module_header{ padding:20px 10px 10px 10px; min-height:84px;}
 .module_row label{ float:right; margin:0; font-size:10px;}
-.module_slected_value{ font-size:1em; width:100%; text-align:right;}
+.module_selected_value{ font-size:1em; width:100%; text-align:right;}
 .module_semirow{ font-size:14px;}
 .module_title{ font-size:18px;}
 .refresh_txt{ display:none;}
@@ -1226,8 +1227,8 @@ html,body, .easybanking{ width:319px;}
 .tab_fst {margin-right: 3px;}
 .result_personicon {float: right;font-size: 40px;}
 .fontcon-send-money-icon {position: absolute;right: 25px;font-size: 40px;}
-.fontcon-circle-done {float: right;font-size: 25px;top: 16px;right: 0px;}
-.date_picker .default_input_field {width: 100%; }
+.done_icon {float: right;font-size: 25px;top: 20px;right: 0px;}
+.date_picker .default_input_field {width: 100%;}
 .date_picker .default_input_field > input {width: 100%; }
 
 /*Transactions */
@@ -1299,7 +1300,7 @@ html,body, .easybanking{ width:319px;}
 .user_message{ padding:30px 30px 0 30px;}
 .margin_col .ls-cmp-wrap:nth-child(odd){ padding-right:5px;}
 .margin_col .ls-cmp-wrap:nth-child(even){ padding-left:5px;}
-.login_bg .service_navigation{ display:none;}
+.service_navigation .ls-cmp-wrap:first-child{ top:80px;}
 }
 @media all and (max-width: 1023px) {
 .site_header{ height:60px;}
@@ -1332,7 +1333,6 @@ html,body, .easybanking{ width:319px;}
 .margin_col{ width:100%; margin:0; padding-top:20px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;;}
 /* FAQ Widget*/
-.widget_open{ margin-left:-300px; width:100%;}
 .login_bg .widget{ top:60px;}
 .widget{ top:66px !important; position:absolute !important; left:0; width:100%; height:100%;}
 .widget_header{ padding:25px 10px;}
