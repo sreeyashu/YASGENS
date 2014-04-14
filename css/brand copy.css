@@ -39,26 +39,34 @@ a{ text-decoration:none; color:#252429;}
 a[href^=tel] { pointer-events: none; cursor: default; text-decoration:none;color:#252429; }
 
 /* Body styles */
-html, body {width: 100%;height: 100%; background: #eef1f5;}
+html, body {width: 100%;height: 100%; 
+background: #eef1f5;
+background: -moz-linear-gradient(top,  #eef1f5 0%, #dde3e6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eef1f5), color-stop(100%,#dde3e6));
+background: -webkit-linear-gradient(top,  #eef1f5 0%,#dde3e6 100%);
+background: -o-linear-gradient(top,  #eef1f5 0%,#dde3e6 100%);
+background: -ms-linear-gradient(top,  #eef1f5 0%,#dde3e6 100%);
+background: linear-gradient(to bottom,  #eef1f5 0%,#dde3e6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef1f5', endColorstr='#dde3e6',GradientType=0 );
+}
 .easybanking {
-        width: 100%;
-        height: 100%;
-        font-size: 1em;
-        line-height: 1.12em;
-        color: #252429;
-        background: #eef1f5;
-        font-family: 'BnppSans-l', arial;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none !important;
-        -moz-user-select: none !important;
-        -khtml-user-select: none;
-        user-select: none;
-        -webkit-text-size-adjust: none;
-        -ms-text-size-adjust: none;
-        -moz-text-size-adjust: none;
-        -webkit-font-smoothing: antialiased;
-        font-smoothing: antialiased;	
-		
+width: 100%;
+height: 100%;
+font-size: 1em;
+line-height: 1.12em;
+color: #252429;
+background: #eef1f5;
+font-family: 'BnppSans-l', arial;
+-webkit-touch-callout: none;
+-webkit-user-select: none !important;
+-moz-user-select: none !important;
+-khtml-user-select: none;
+user-select: none;
+-webkit-text-size-adjust: none;
+-ms-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-webkit-font-smoothing: antialiased;
+font-smoothing: antialiased;		
 }
 .no_scroll{ overflow:hidden; width:100%;}
 /*** WCM Styles ***/
@@ -1328,7 +1336,7 @@ html,body, .easybanking{ width:319px;}
 .main_wrapper, .login_bg{ padding-top:60px;}
 .warning_area{ top:60px;}
 .content_col, .fluid{ margin-right:0;}
-.wcm-service-nav{ display:none;}
+.main_wrapper .wcm-service-nav{ display:none;}
 /* Margin col */
 .margin_col{ width:100%; margin:0; padding-top:20px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;;}

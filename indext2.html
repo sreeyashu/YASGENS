@@ -7,12 +7,14 @@
 		<title>Site Structure</title>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/brand.css">
+        <link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/pattern-lib.css">
 		<link rel="stylesheet" href="css/fonticon.css">
 		<script data-main="js/app" src="js/jquery-1.9.1.js"></script>
 		<script data-main="js/app" src="js/custom.js"></script>
 		<script data-main="js/app" src="js/mask.js"></script>
         <script data-main="js/app" src="js/modrenizr.js"></script>
+        <script data-main="js/app" src="js/browser.js"></script>
 	</head>
 	<body>
    
@@ -70,16 +72,14 @@
                                             <!-- User welcome Message -->
                                             <div class="ls-cmp-wrap">
                                                <div class="iw_component">
-                                                <div class="wcm-meta_info">
-                                                    <div class="user_message rich_text">
-                                                    	<div class="region">
-                                                        	<div class="section">
-                                                                <p>Welcome to your daily</p>
+                                                    <div class="rich_text">
+                                                    	<div class="region" id="metaInfo">
+                                                        	<div class="section level1">
+                                                                <h3>Welcome to your daily</h3>
                                                                 <h1>Easy banking</h1>
                                                             </div>
                                                         </div>
-                                                    </div>  
-                                                </div>
+                                                    </div>
                                                </div>
                                              </div>
                                              <!-- Warning message -->
@@ -201,7 +201,7 @@
                         <div class="identification__navigation">
                             <div class="navigation_btns">
                                 <div class="right_navigation f_right">
-                                    <button class="btn_default identification_btn identification_btn_active">Card reader (UCR)</button>
+                                    <button class="btn_default btn_default_bg identification_btn_active">Card reader (UCR)</button>
                                 </div>
                             </div>
                         </div>
@@ -374,7 +374,7 @@
                                                     </div>
                                                     <ul>
                                                     	<li><a href="#">BNP Paribas Fortis</a></li>
-                                                        <li><a href="#">General Contact</a></li>
+                                                        <li><a href="tel:12345" style="background:red">12345</a></li>
                                                         <li><a href="#">BNP Paribas Fortis group</a></li>
                                                     </ul>
                                                 </div>

@@ -2,7 +2,8 @@ $(document).ready(function () {
 	var didScroll;
 	var lastScrollTop = 0;
 	var delta = 5;
-	var navbarHeight = 0;
+	var navbarHeight = 80;
+	
  (function () {
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
       var msViewportStyle = document.createElement("style");
