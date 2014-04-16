@@ -326,7 +326,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Sticky Service navigation */
 .sticky_fixed{ position:static; }
-.home .sticky_fixed{ top:157px !important;}
+.home .sticky_widget{ top:157px !important;}
 
 /* Content menu */
 .content_block{ width:100%;}
@@ -633,8 +633,8 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* FAQ Widget */
 .wcm-faq{ position:absolute; left:-325px;}
-.widget{ background:#ffffff;width:300px; position:absolute;height:500px; overflow:hidden;-webkit-transition: opacity, 125ms;-moz-transition: opacity, 125ms;-o-transition:opacity, 125ms;transition: opacity, 125ms; opacity:0; z-index:-999;}
-.faq-widget{opacity:1; z-index:999;}
+.widget{ background:#ffffff;width:300px; position:absolute;height:500px; overflow:hidden;display:none;}
+.faq-widget{display: block; z-index:1;}
 .widget_header{ position:relative; padding:25px; border-bottom:1px solid #d8dbde;font-family:'BnppSans-r',arial; font-size:18px;}
 .icon_widget_close { font-size:12px; position:absolute; right:12px; top:12px; cursor:pointer; padding:15px; }
 .widget .faq_answer, .widget .accordion_main:last-child .list_wrapper, .widget .accordion_main:last-child{ border-bottom:0;}
@@ -649,7 +649,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* FAQ Widget Customised for Login */
 .login_bg .wcm-faq{ right:300px; left:auto;}
-.login_bg .widget{ top:80px;display:block; height:auto; box-shadow:none; border:none; position:absolute !important;}
+.login_bg .widget{ top:80px;height:auto; box-shadow:none; border:none; position:absolute !important;}
 .widget_open{ margin-left:-300px;}
 .wcm-messages, .content_row{-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
 /* Sticky widget */
@@ -1415,6 +1415,11 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 /* Margin modules alignment Layout */
 .margin_col{ width:100%; margin:0; padding-top:20px;}
 .margin_col .ls-cmp-wrap{ width:50%; float:left; position:relative;}
+
+/* FAQ Widget */
+.service_col{ top:60px;}
+.home .wcm-faq{ top:30px;}
+.home .sticky_widget{ top:-19px !important;}
 }
 
 @media all and (max-width: 1279px) {
