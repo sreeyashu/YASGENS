@@ -326,7 +326,6 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Sticky Service navigation */
 .sticky_fixed{ position:static; }
-.home .sticky_widget{ top:157px !important;}
 
 /* Content menu */
 .content_block{ width:100%;}
@@ -652,8 +651,10 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .login_bg .widget{ top:80px;height:auto; box-shadow:none; border:none; position:absolute !important;}
 .widget_open{ margin-left:-300px;}
 .wcm-messages, .content_row{-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
+
 /* Sticky widget */
 .widget.sticky_fixed{ position:fixed; top:110px;}
+.home .sticky_widget, .home .wcm-service-nav{ top:157px !important;}
 
 
 /* Function & Service module headers */
@@ -1296,9 +1297,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .faq_answer { line-height:18px; padding-bottom:15px; border-bottom:0; }
 
 /* FAQ Widget */
-.widget{top:0px !important; position:absolute !important;}
 .widget_open{ width:100%; margin:0;}
-.faq_pointer::after{top: -9px;}
 
 /* Products */
 .laccounts .list_content_col1, .lcards .list_content_col1{ width:100%;}
@@ -1418,7 +1417,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 
 /* FAQ Widget */
 .service_col{ top:60px;}
-.home .wcm-faq{ top:30px;}
+.wcm-faq{ top:30px;}
 .home .sticky_widget{ top:-19px !important;}
 }
 

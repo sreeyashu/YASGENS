@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	
 	$('.wcm-service-nav').stickyMojo({
         footerID: '.footer',
         contentID: '.content_col'
@@ -17,6 +18,7 @@ $(document).ready(function () {
     });
     $('.icon_widget_close').click(function (e) {
         e.preventDefault();
+		$('.wcm-faq').removeClass('faq_pointer');
 		$('.wcm-faq').removeClass('yash');
         $('.widget').removeClass('faq-widget');
         $('.faq').removeClass('active');
