@@ -5,8 +5,8 @@ button {border: 0;}
 @-ms-viewport {width: device-width;}
 h1,h2,h3,h4,h5,h6{ font-weight:normal;}
 a{ text-decoration:none; color:#252429;}
-::selection {background: #729f08;text-shadow: none;}
-::-moz-selection {background: #729f08;text-shadow: none;}
+::selection {background: #e5e9ef;text-shadow: none;}
+::-moz-selection {background: #e5e9ef;text-shadow: none;}
 * {-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;}
 input:focus, textarea:focus{outline: none !important;height: auto;}
 caption, th, td {text-align: left;font-weight: normal;vertical-align: middle;}
@@ -281,6 +281,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .alert_messages_error .alert_message_content, .alert_messages_error .alert_message_content p, .alert_messages_severity .alert_message_content, .alert_messages_severity .alert_message_content p{ width:100% !important;}
 .alert_message_content{float:left; padding-right:30px; width:auto}
 
+/* Main wrapper */
+.main_wrapper .error_icon{ display:none;}
+
 /* Alert messages Themes */
 .alert_messages_authentication {background: rgba(255,255,255,0.3);}
 .alert_messages_warning {background: #f66900;}
@@ -300,7 +303,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .attempt_error .alert_message_content{ width:100%;}
 
 /* Layout */
-.main_wrapper{ padding-top:80px;}
+.main_wrapper{ padding-top:80px; min-height:48.17em;}
 .main_wrapper.warningmessage_active{padding-top:136px !important;}
 .content_wrapper{ padding:30px 30px 60px;}
 .content_col{ width:100%; float:left; margin-right: -20.4em;}
@@ -650,11 +653,13 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .login_bg .wcm-faq{ right:300px; left:auto;}
 .login_bg .widget{ top:80px;height:auto; box-shadow:none; border:none; position:absolute !important;}
 .widget_open{ margin-left:-300px;}
+.widget_open #cookiesMessage{ padding:15px; margin-top:4px;}
+.widget_open #cookiesMessage .cookies_close{ top:15px; right:15px;}
 .wcm-messages, .content_row{-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
 
 /* Sticky widget */
 .widget.sticky_fixed{ position:fixed; top:110px;}
-.home .sticky_widget, .home .wcm-service-nav{ top:157px !important;}
+.home .sticky_widget, .home .wcm-service-nav{ margin-top:46px;}
 
 
 /* Function & Service module headers */
@@ -1061,9 +1066,6 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 	html,body, .easybanking{ width:319px;}
 	.siteheader{ width:319px;}
 }
-@media all and (min-width: 320px) and (max-width: 479px) {
-.ucr_action_content{width:75%;}
-}
 
 @media all and (max-width: 479px) {
 /* Stand buttons */
@@ -1137,6 +1139,10 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .service_col{ position:absolute; right:0;}
 .faq_pointer::after{position: absolute;top: -28px;display: block;width: 0;height: 0;border-bottom: 9px solid #008E76;border-right: 9px solid transparent;border-left: 9px solid transparent;content: ""; z-index:999;margin-left: -4px;}
 .login_bg .widget{ margin-top:-20px;}
+}
+@media all and (min-width: 320px) and (max-width: 479px) {
+.ucr_action_content{width:75%;}
+.widget{ right:0px !important;}
 }
 @media all and (max-width: 767px) {
 /* Alignments */
@@ -1305,7 +1311,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .short_account_type{ display:inline-block;}
 
 /* Products SlideIn */
-.home .content_block{ float:left; position:absolute; z-index:999; min-height:0;}
+.home .content_block{ float:left; position:absolute; z-index:1; min-height:0;}
 .content_block #accountList, .content_block #cardList{ margin:0;}
 
 /* Products viewport */
@@ -1446,9 +1452,17 @@ body, .site_header__inner{ max-width:1280px; margin:0 auto;}
 .fluid{ margin-right:26.25em;}
 .meta_nav_user{ display:block;}
 
+/* severity */
+.severity_message{ width:1280px;}
+
+/* FAQ widget */
 .login_bg .wcm-faq{ top:0;}
 .login_bg .widget{ top:80px !important;}
 .widget_open{ margin-left:0; width:76.6%;}
+
+.ls-canvas{-webkit-box-shadow: 0px 0px 6px 0px #999;
+-moz-box-shadow: 0px 0px 6px 0px #999;
+box-shadow: 0px 0px 6px 0px #999;}
 }
 @media print {
 .site_header, .user_message, .wcm-footer, .no_print, .action_btns, .content_btns, .action_icons, .dropdown_arrow::after, .content_menu, .alert_messages, .margin_col{display:none;}
