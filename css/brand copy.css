@@ -1355,7 +1355,7 @@ body, .site_header__inner{ max-width:1310px; margin:0 auto;}
 .widget{ right:188px;}
 }
 @media all and (min-width: 1510px) {
-.meta_nav_user{ display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 300px;}	
+.meta_nav_user{ display:block;}	
 .content_col{ margin-right:-40.65em;}
 .fluid{ margin-right:40.65em;}
 .service_col{ width:300px;}

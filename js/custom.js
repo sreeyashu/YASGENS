@@ -1,4 +1,30 @@
 $(document).ready(function () {
+	$('.wcm-service-nav').stickyMojo({
+        footerID: '.footer',
+        contentID: '.content_col'
+    });
+    $('.widget').stickyMojo({
+        footerID: '.footer',
+        contentID: '.content_col'
+    });
+	$('.faq').click(function (e) {
+        e.preventDefault();
+		$('.wcm-faq').addClass('faq_pointer');
+        $('.widget').addClass('faq-widget');
+        $('.faq').addClass('active');
+		$('.wcm-messages').addClass('widget_open');
+		$('.content_row').addClass('widget_open');
+    });
+    $('.icon_widget_close').click(function (e) {
+        e.preventDefault();
+		$('.wcm-faq').removeClass('yash');
+        $('.widget').removeClass('faq-widget');
+        $('.faq').removeClass('active');
+		$('.wcm-messages').removeClass('widget_open');
+		$('.content_row').removeClass('widget_open');
+
+    });
+  
 	var didScroll;
 	var lastScrollTop = 0;
 	var delta = 5;
@@ -56,7 +82,8 @@ $(document).ready(function () {
     lastScrollTop = st;
   }
   $('.widget .module_listitem').addClass('hide');
-  $('#' + sfNodeId).removeClass('hide');
+  //$('#' + sfNodeId).removeClass('hide');
+  
 });
 
 
@@ -74,3 +101,4 @@ $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
   }
   jqXHR.always(redirectIfNecessary);
 });
+
