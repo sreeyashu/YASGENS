@@ -282,7 +282,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .alert_message_content{float:left; padding-right:30px; width:auto}
 
 /* Main wrapper */
-.main_wrapper .error_icon{ display:none;}
+#webbankingAuthenticated .warning_area .error_icon{ display:none;}
 
 /* Alert messages Themes */
 .alert_messages_authentication {background: rgba(255,255,255,0.3);}
@@ -304,13 +304,12 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Layout */
 .main_wrapper{ padding-top:80px; min-height:48.17em;}
-.main_wrapper.warningmessage_active{padding-top:136px !important;}
 .content_wrapper{ padding:30px 30px 60px;}
 .content_col{ width:100%; float:left; margin-right: -20.4em;}
 .fluid{ margin-right: 20.4em;}
 .margin_col{ width:300px;margin-left:25px; min-height:2px;}
 .service_col{ width:70px; float:left; margin-left:25px; position:relative;}
-.login_bg{ background:url(images/login_background.png) no-repeat;background-attachment:fixed; background-size: cover; padding-top:5em; min-height:48.125em; position:relative;}
+.login_bg{ background:url(images/login_background.png) no-repeat;background-attachment:fixed; background-size: cover; background-position: center center; padding-top:5em; min-height:48.125em; position:relative;}
 
 /* Service navigation */
 .service__icon{ font-size:62px;}
@@ -723,6 +722,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .right_col .flyout_active .flyout_container{ left:20px;}
 .right_col .flyout_active .selected_details__info{ padding-right:0px;}
 .right_col .list_group:first-child .list_header{ border-top:none;}
+.right_col .functions_title{ text-align:right;}
 
 /* Fly out customised for IAs */
 .flyout_active .accounts_info,.flyout_active .accounts_title{ color:#729f08;}
@@ -773,13 +773,14 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .filter_values p {font-family: 'BnppSans-l',arial;padding-right: 20px;line-height: 1;}
 .filter_values .dropdown_arrow:after{right: 13px;top: 9px;}
 .filter_link{border-left: 1px dotted #D8DBDE;left: -2px;padding: 0 10px 0 16px;position: relative;}
+.filter_link p {margin: 0;}
 .filter_values:first-child .filter_link{border: 0;}
 .filter_values.filter_active .filter_link > p, .filter_option_value.filter_active  p{/*font-family: 'BnppSans-r',arial;*/}
 .filter_option{min-width: 180px;position: absolute;top: 44px;z-index: 1;border: 1px solid #D8DBDE; background:#ffffff;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out; display:none;}
 .filter_option_active{display: block;}
 .filter_option_value{border-bottom: 1px solid #D8DBDE;padding: 14px 13px 13px;white-space: nowrap;}
 .filter_option_value:last-child{ border:0;}
-.filter_btn{ padding:15px 0 0;}
+.filter_btn{ padding:30px;}
 
 /* Filter Overlay Popup */
 .filter_popup{ width: 100%; height: 100%; position: absolute; text-align: center; z-index:200; background-color: rgba(255, 255, 255, 0.8); top:0; display:none;}
@@ -795,6 +796,22 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .filter_from{ padding-right:15px;}
 .filter_to{ padding-left:15px;}
 .filter_calendar{ padding-top:15px;}
+
+/* Scroll Menus */
+.scroll_menu_icon{ font-size:12px;}
+.scroll_menu {overflow: hidden;position: relative;padding-left: 30px;padding-right: 30px;}
+.scroll_menu .scroll_btn {position: absolute;background: #fff;height: 100%;top: 0;bottom: 0;width: 30px;color: #252429;z-index: 30;text-align:center;display:none;}
+.scroll_menu .scroll_btn:hover{ cursor:pointer;}
+.scroll_menu .scroll_btn.left {left: 0}
+.scroll_menu .scroll_btn.right {right: 0}
+.scroll_menu .scroll_btn.inactive {color: #e0e0e0;cursor:default;}
+.scroll_menu .scroll_btn div.outer_wrapper {display: table;height: 100%;width: 100%}
+.scroll_menu .scroll_btn div.inner_wrapper {display: table-cell;vertical-align: middle;}
+.scroll_menu.show_buttons .menu_links {display: inline;padding-right: 30px;}
+.scroll_menu.show_buttons .scroll_btn{ display:block;}
+.scroll_menu .scroll_container {width: auto;overflow-x: auto;overflow: hidden;white-space: nowrap;padding-bottom: 20px;margin-bottom: -20px}
+.scroll_menu .scroll_container.momentum {overflow: scroll;-webkit-overflow-scrolling: touch;overflow-scrolling: touch}
+.scroll_menu .scroll_container .scroll_item {display: inline-block;}
 
 /* Navigation UI steps */
 .module_steps {float: right;display: block;}
@@ -1075,7 +1092,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* Stand buttons */
 .right_navigation_btn, .right_navigation_btn .btn_default{ width:100%; margin:0;}
 .right_navigation_btn .btn_default:first-child{ margin-bottom:10px;}
-.identification_ucr .right_navigation_btn{ width:auto;}
+.identification_ucr .right_navigation_btn, .identification_contract .right_navigation_btn{ width:auto;}
 
 /* layout */
 .margin_col .ls-cmp-wrap{ width:100% !important;}
@@ -1100,7 +1117,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Identification alignments */
 .authentication, .authentication__identification, .identification_contract, .authentication__details, .identification_ucr, .login_bg #metaInfo, .wcm-authentication, .login_bg .severity_message .alert_messages{ width:300px !important;}
-.login_bg .alert_message_content{ max-width:80%; padding-right:14px;}
+.login_bg .alert_message_content{ width:80%; padding-right:14px;}
 
 /* SEPA CT Form */
 .selected-item { font-size:12px;}
@@ -1108,7 +1125,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* UCR */
 .m2_icon{ top:44px;}
 .pin_ok{ top:74px;}
-.fr .m1_icon{ top:70px;}
+.fr .m1_icon, .fr .m2_icon{ top:70px;}
 }
 @media all and (min-width: 480px) and (max-width: 640px) {
 /* Teaser with Link */
@@ -1188,8 +1205,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .service_navigation { display:none;}
 .content_wrapper{ padding:10px 0;}
 .home .content_wrapper{ padding-top:0;}
-.linux .login_bg{background-attachment: local;}
-
+.progressing_inner{ margin-top:40%;}
 
 /* Static pages */
 .content_page{ padding:10px;}
@@ -1210,6 +1226,8 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 
 /* Alert error messages */
 .login_bg .alert_message_content{ width:85%;}
+.login_bg .attempt_error{ margin-top:30px;}
+.login_bg .attempt_error .alert_messages{ width:100% !important;}
 
 /* Content menu */
 .content_menu{ width:100%;}
@@ -1241,7 +1259,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .overlay_icon{ font-size:30px;}
 .overlay_header_colone{ margin-right:10px;}
 .overlay_header_coltwo{ font-size:1.125em; padding:5px 0;}
-.overlay_btn .navigation_btns{ width:auto; float:right;}
 .logout_overlay .overlay_btn{ position: relative;}
 .logout_overlay .navigation_btns{ width:100%; float:none;}
 
@@ -1257,9 +1274,12 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 
 /* Filter */
 .search_block{ padding: 25px 10px 20px;}
-.filter_block{ padding:0 10px;}
-.filter_inner_block{ overflow:scroll;}
 .no_filters .search_field{ width:100%;}
+.filter_btn{ padding:10px;}
+
+/* Scroll menu */
+.scroll_menu {padding-left: 10px;padding-right: 10px;}
+.scroll_menu.show_buttons .menu_links{ padding-left:22px;}
 
 /* Flyout */
 .flyout_selection{ width:199px;}
@@ -1392,7 +1412,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 
 /*Button Component alignments*/
 .content_btns{ margin:0;}
-.action_btns, .btns_zone{padding:30px 10px;}
+.action_btns, .btns_zone{padding:30px 0;}
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
 .content_wrapper{ padding:30px;}
@@ -1437,6 +1457,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 @media all and (max-width: 1279px) {
 /* Layout */
 .main_wrapper .wcm-service-nav{ display:none;}
+.linux.safari4 .login_bg{ background-attachment:local;}
 
 /* Meta data */
 .meta_navigation{ padding:10px 0;}
@@ -1458,9 +1479,10 @@ body, .site_header__inner{ max-width:1280px; margin:0 auto;}
 .content_col{ margin-right:-26.25em;}
 .fluid{ margin-right:26.25em;}
 .meta_nav_user{ display:block;}
+.linux.safari4 .login_bg{ background-attachment:local;}
 
 /* severity */
-.main_wrapper .severity_message{ width:1280px;}
+.warning_area .severity_message{ width:1280px;}
 
 /* FAQ widget */
 .login_bg .wcm-faq{ top:0;}

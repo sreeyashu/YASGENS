@@ -1,18 +1,22 @@
 $(document).ready(function () {
-	
-	var $scroller = $(".scroll-container");
-	var scrollContainerWidth = $(".scroll-container").width();
+	updateButtons = function () {
+      $scroller.width() + $scroller.scrollLeft() + 60 >= this.$(".menu_links").outerWidth() ? this.$(".scroll_btn.right").addClass("inactive") : this.$(".scroll_btn.right").removeClass("inactive"), 0 === $scroller.scrollLeft() ? this.$(".scroll_btn.left").addClass("inactive") : this.$(".scroll_btn.left").removeClass("inactive")
+    }
+	var $scroller = $(".scroll_container");
+	var scrollContainerWidth = $(".scroll_container").width();
 	var filterWidth=$('.filter_inner_block').width();
 	if(scrollContainerWidth <= filterWidth){
-		$('.scroll-menu').addClass('show-buttons');
+		
+		$('.scroll_menu').addClass('show_buttons');
+		updateButtons();
 	}
-	$('.scroll-btn.left').click(function(event){
+	$('.scroll_btn.left').click(function(event){
 	
 	onLeft(event);
 	
 	});
 	
-	$('.scroll-btn.right').click(function(event){
+	$('.scroll_btn.right').click(function(event){
 	onRight(event);
 	
 	});
@@ -36,9 +40,7 @@ $(document).ready(function () {
       })
     };
 	
-	updateButtons=function () {
-      $scroller.width() + $scroller.scrollLeft() + 60 >= this.$(".menu-links").outerWidth() ? this.$(".scroll-btn.right").addClass("inactive") : this.$(".scroll-btn.right").removeClass("inactive"), 0 === $scroller.scrollLeft() ? this.$(".scroll-btn.left").addClass("inactive") : this.$(".scroll-btn.left").removeClass("inactive")
-    }
+	
 	
 	//$('.wcm-service-nav').stickyMojo({
 //        footerID: '.footer',
