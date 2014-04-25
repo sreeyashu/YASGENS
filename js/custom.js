@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	$('.yashraja').focus(function(){
+		$('input').blur();
+	});
 	updateButtons = function () {
       $scroller.width() + $scroller.scrollLeft() + 60 >= this.$(".menu_links").outerWidth() ? this.$(".scroll_btn.right").addClass("inactive") : this.$(".scroll_btn.right").removeClass("inactive"), 0 === $scroller.scrollLeft() ? this.$(".scroll_btn.left").addClass("inactive") : this.$(".scroll_btn.left").removeClass("inactive")
     }

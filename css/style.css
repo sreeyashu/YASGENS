@@ -60,6 +60,7 @@ font-family: 'BnppSans-l', arial;
 -webkit-touch-callout: none;
 -webkit-user-select: none !important;
 -moz-user-select: none !important;
+-ms-user-select: none !important;
 -khtml-user-select: none;
 user-select: none;
 -webkit-text-size-adjust: none;
@@ -131,7 +132,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* Custom Dropdown box */
 .default_dropdown_box {background: #ffffff;border: 1px solid #d0d0d0;-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);position: absolute;z-index: 10;margin: -1px 0 0 0;color: #76767b;line-height: 22px;}
 .default_dropdown_box [data-selectable] {border-bottom: 1px solid #d8dbde;overflow: hidden;cursor: pointer;padding: 8px 12px;}
-.dropdown_wrapper {height: 200px;overflow: hidden; position:relative;pointer-events: auto; -ms-touch-action: none;}
+.dropdown_wrapper {max-height: 200px;overflow: hidden; position:relative;pointer-events: auto; -ms-touch-action: none;}
 .default_dropdown_box .list_item__header{ padding:0; display:table}
 
 /* Dropbox groups and Highlight */
@@ -525,7 +526,8 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .headline_sociallink:hover{ text-decoration:underline !important;}
 
 /* Margin module spacings */
-.margin_ad, .teaser_module, .margin_headline{ margin-bottom:20px;}
+.margin_ad, .teaser_module, .margin_headline{ margin-top:20px;}
+.teaser_module:first-child{margin:0;}
 
 /* User Meta name */
 .user_message{ padding:30px 30px 0 30px;font-size:28px;display:none;}
@@ -660,9 +662,13 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .widget_open #cookiesMessage{ padding:15px; margin-top:4px;}
 .widget_open #cookiesMessage .cookies_close{ top:15px; right:15px;}
 .wcm-messages, .content_row{-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
+.widget .lnk_primary,.widget .lnk_primary:hover{ color:#009966;}
 
 /* Sticky widget */
 .home .sticky_widget, .home .wcm-service-nav{ margin-top:46px;}
+
+/* Static link Widget */
+.static_link{ padding:30px;}
 
 /* Function & Service module headers */
 .module_header{ width:100%;min-height:136px;padding:30px;top:0; position:relative;}
@@ -1014,7 +1020,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .ok_icon::after{ content:'OK'; font-size:15px; position:absolute;font-family: 'BnppSans-r', arial; color:#ffffff; top:0.64em; left:0.38em;}
 .pin_ok{ position:absolute; top:45px;}
 .last_ok{ margin:0;}
-.challenge_ok{ top:72px; position:absolute;}
+.challenge_ok{ top:62px; position:absolute;}
 
 /* Customised UCR for Login */
 .login_bg .ucr_code{ float:none;}
@@ -1184,9 +1190,9 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 
 /* Footer */
 .wcm-footer{ padding:30px 10px 10px 10px;}
-.link_list{ width:100%;}
-.link_list li{ float:left; margin: 0 30px 0 0;}
-.link_list li:last-child{ margin: 0;}
+.link_list{ width:100%;padding-bottom: 20px;}
+.link_list li{ float:left; margin: 0 30px 15px 0;}
+.link_list li:last-child{ margin: 0 0 ;}
 .extsocial_icons{ padding:15px 0; border-top:1px dotted #444; border-bottom:1px dotted #444;}
 .legal_msg, .legal_lnks{ width:100%; float:left; padding:10px 0 0 0;}
 .title_txt{ border-bottom:1px dotted #444; padding-bottom:10px;}
@@ -1331,6 +1337,8 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 
 /* FAQ Widget */
 .widget_open{ width:100%; margin:0;}
+.home .sticky_widget{ margin-top:0}
+.widget .header_l2:after{ right:10px;}
 
 /* Products */
 .laccounts .list_content_col1, .lcards .list_content_col1{ width:100%;}
@@ -1413,6 +1421,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 /*Button Component alignments*/
 .content_btns{ margin:0;}
 .action_btns, .btns_zone{padding:30px 0;}
+
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
 .content_wrapper{ padding:30px;}
