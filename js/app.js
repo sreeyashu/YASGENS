@@ -10,7 +10,8 @@ requirejs.config({
       "movement":"../movements",
       "login":"../login",
       "sepa":"../sepa",
-      "stubs":"../stubs"
+      "stubs":"../stubs",
+	  "iScroll":"iscroll"
      
     },
     "shim": {

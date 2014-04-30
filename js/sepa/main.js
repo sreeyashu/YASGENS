@@ -1,9 +1,10 @@
-define(['selectize', 'underscore','picker.date', 'rivets','transition', 'collapse'], function(selectize, _, datepicker,rivets) {
+define(['selectize', 'underscore','picker.date', 'rivets','iScroll','transition','collapse'], function(selectize, _, datepicker,rivets,Iscroll) {
     //console.log(selectize);
 	$('.fieldset__input').pickadate();
     $.getJSON("/rpc/sepa/getFundTransferEntryCharacteristics").done(function(xhr) {
             var items =[];
 			var myApp = {};
+			var isScrollActivated;
         myApp.Accordion = {
             toggle: function() {
                 var $this = $(this).siblings('.accordion_content');
@@ -83,9 +84,15 @@ define(['selectize', 'underscore','picker.date', 'rivets','transition', 'collaps
                     $('.selected-item .amount-label').text(s.balance);
                     console.log(s);
                 },
+				onDropdownOpen:function(){
+					//isScrollActivated=new IScroll('.dropdown_wrapper',{mouseWheel:true,scrollbars:true,tap:true,disablePointer:true});
+					},
+					onDropdownClose:function(){
+					//isScrollActivated.destroy();
+					},
                 render: {
                     option: function(data, escape) {
-                        return '<div><div class="optgroup-option"><span class="optgroup-iban">' + escape(data.iban) +'</span><span class="hello_icon"></span><span class="optgroup-amount"><span>'+ escape(data.balance) +'</span><span>'+ escape(data.currency) +' </span></div><span class="optgroup-name">' + escape(data.alias) + '</span></div>';
+                        return '<div class="list_item"><div class="list_item__header optgroup-option"><div class="list_content_col1"> <div class="listiban_group"><h3 class="optgroup-iban">' + escape(data.iban) + '</h3>' + (data.isBlue ? '<span class="hello_icon show_hello"></span>' : '') + '</div><div class="listiban_detail"><span class="optgroup-name">' + escape(data.alias) + '</span></div></div><div class=" list_content_col2 optgroup-amount"><h3><span>' + escape(data.balance) + '</span><span>' + escape(data.currency) + '</span></h3></div></div></div>';
                     }
                 }
             });

@@ -632,10 +632,15 @@
         self.$dropdown = $dropdown;
         self.$dropdown_content = $dropdown_content;
         $dropdown.on('mouseenter', '[data-selectable]', function () {
+			
+          return self.onOptionHover.apply(self, arguments);
+        });
+		 $dropdown.on('tap', '[data-selectable]', function () {
+		
           return self.onOptionHover.apply(self, arguments);
         });
         $dropdown.on('mousedown', '[data-selectable]', function () {
-			alert('raja');
+		
           return self.onOptionSelect.apply(self, arguments);
         });
         watchChildEvent($control, 'mousedown', '*:not(input)', function () {
@@ -2547,7 +2552,7 @@
       dropdownClass: 'default_dropdown_box',
       dropdownContentClass: 'dropdown_content',
       dropdownParent: null,
-      /*
+      
   
 		  load            : null, // function(query, callback) { ... }
   
@@ -2577,9 +2582,9 @@
   
 		  onDelete        : null, // function(values) { ... }
   
-		  */
+		 
       render: {
-        /*
+        
   
 			  item: null,
   
@@ -2591,7 +2596,7 @@
   
 			  option_create: null
   
-			  */
+			  
       }
     };
     $.fn.selectize = function (settings_user) {
