@@ -49,7 +49,7 @@ jQuery.fn.print = function() {
     // write out the HTML of the current element.
     objDoc.open();
 	var tab = this;
-    objDoc.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
+    objDoc.write("<!DOCTYPE html>");
     objDoc.write("<html class=\"print_main\">");
     objDoc.write("<body class=\"print_main\">");
     objDoc.write("<head>");

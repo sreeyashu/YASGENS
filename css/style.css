@@ -125,9 +125,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* Custom Dropdown box */
 .default_dropdown_box {background: #ffffff;border: 1px solid #d0d0d0;-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);margin: -1px 0 0 0;color: #76767b;line-height: 22px;position:absolute;z-index:999; }
 .default_dropdown_box [data-selectable] {border-bottom: 1px solid #d8dbde;overflow: hidden;cursor: pointer;padding: 8px 12px;}
-.dropdown_wrapper {overflow-x: scroll;height:200px;position:relative;-ms-touch-action:none; pointer-events:auto;}
+.dropdown_wrapper {overflow: hidden;height:200px;position:relative;-ms-touch-action:none; pointer-events:auto;}
 .default_dropdown_box .list_item__header{ padding:0; display:table; width:100%;}
-.dropdown_content{background:pink;}
+
 
 /* Dropbox groups and Highlight */
 .highlight{ background:#e5e9ef;font-family: 'BnppSans-r', arial;}
@@ -1017,7 +1017,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .ok_icon::after{ content:'OK'; font-size:15px; position:absolute;font-family: 'BnppSans-r', arial; color:#ffffff; top:0.64em; left:0.38em;}
 .pin_ok{ position:absolute; top:45px;}
 .last_ok{ margin:0;}
-.challenge_ok{ top:62px; position:absolute;}
+.challenge_ok{ top:72px; position:absolute;}
 
 /* Customised UCR for Login */
 .login_bg .ucr_code{ float:none;}
@@ -1055,16 +1055,16 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /*Print Styles */
 .print_main{ background:#ffffff !important; width:100%; position: inherit;}
-.print .main_wrapper{ pading-top:0; background:red;}
+.print .main_wrapper{ pading-top:0; }
 .print{ margin:0; padding:0; font-size:14px;font-family: 'BnppSans-l', arial; width:100%;}
 .print .print_inner{ padding:5px;}
-.print .print_header{ width:100%; display: table; margin-bottom:60px; background:red;}
+.print .print_header{ width:100%; display: table; margin-bottom:60px;}
 .print .logo:after{ width:11.7em; height:2.5em; content: url('images/print_logo.png');}
-.print .logo img, .print .notavailable, .print .action_group, .print .load_more{ display:none;background:red;}
+.print .logo img, .print .notavailable, .print .action_group, .print .load_more{ display:none;}
 .print .print_details_inner{width:100%; display: table; padding:20px 0;background:red;}
-.print .print_details_inner p{ line-height:1.4;background:red;}
+.print .print_details_inner p{ line-height:1.4;}
 .print .cards_title, .print .accounts_title, .print .selected_details__info{color:#252429 !important;}
-.print .list_item__header{ display:table;background:red;}
+.print .list_item__header{ display:table;}
 .print .collapse{ display:block !important;}
 .print .list_content_col1{ width:70%;}
 .print .list_content_col2{ width:30%;padding:0;}
@@ -1073,7 +1073,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .print .module_selected_value{ width:auto !important; font-size:1.875em !important; color:#252429;}
 .print .module_row{ color:#252429 !important;}
 .print .module_row label{ float:left; margin:9px 5px 0 0; font-size:16px;}
-.print .flyout_selection{ width:300px;}
+.print .flyout_selection{ width:380px;}
 .print .selected_details_account .hello_icon{ padding:0; margin-top:5px;}
 .print .hello_icon:after{ content:url('images/hello_icon.png');}
 .print .print_footer{ padding-top:20px; border-top:1px solid #d8dbde; font-size:8px; line-height:1.4;}
@@ -1296,8 +1296,10 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .flyout_list_items{ top:90px;}
 .flyout_active .flyout_container{ left:-10px;}
 .flyout_selection .item_list{ padding:0 10px 0 10px;}
-.hello_account .dropdown_arrow{right:22px;}
-.hello_account .dropdown-active{ right:60px;}
+.flyout_selection .hello_account .dropdown_arrow:after, .card_transactions .hello_account .dropdown_arrow:after{right:18px;}
+.flyout_selection .hello_account .dropdown-active:after, .card_transactions .hello_account .dropdown-active:after{ right:56px;}
+
+
 
 /* Right aligned Flyout */
 .right_col .selected_details__account{ padding-right:12px;}
