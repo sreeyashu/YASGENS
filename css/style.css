@@ -1057,11 +1057,10 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .print_main{ background:#ffffff !important; width:100%; position: inherit;}
 .print .main_wrapper{ pading-top:0; }
 .print{ margin:0; padding:0; font-size:14px;font-family: 'BnppSans-l', arial; width:100%;}
-.print .print_inner{ padding:5px;}
 .print .print_header{ width:100%; display: table; margin-bottom:60px;}
 .print .logo:after{ width:11.7em; height:2.5em; content: url('images/print_logo.png');}
 .print .logo img, .print .notavailable, .print .action_group, .print .load_more{ display:none;}
-.print .print_details_inner{width:100%; display: table; padding:20px 0;background:red;}
+.print .print_details_inner{width:100%; display: table; padding:20px 0;}
 .print .print_details_inner p{ line-height:1.4;}
 .print .cards_title, .print .accounts_title, .print .selected_details__info{color:#252429 !important;}
 .print .list_item__header{ display:table;}
@@ -1074,7 +1073,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .print .module_row{ color:#252429 !important;}
 .print .module_row label{ float:left; margin:9px 5px 0 0; font-size:16px;}
 .print .flyout_selection{ width:380px;}
-.print .selected_details_account .hello_icon{ padding:0; margin-top:5px;}
+.print .selected_details__account .hello_icon{ padding:0; margin-top:5px;}
 .print .hello_icon:after{ content:url('images/hello_icon.png');}
 .print .print_footer{ padding-top:20px; border-top:1px solid #d8dbde; font-size:8px; line-height:1.4;}
 .print .extra_contentdetails{ border-bottom:none;}
