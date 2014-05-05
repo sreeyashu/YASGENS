@@ -2,7 +2,15 @@ $(document).ready(function () {
 	$('.yashraja').focus(function(){
 		$('input').blur();
 	});
-	
+	$('.filter_period').click(function(){
+			$('.option_period').toggleClass('show_active');
+			$('.filter_values').css('position', 'inherit');
+		});
+		
+		$('.filter_transaction').click(function(){
+			$('.option_transaction').toggleClass('show_active');
+			$('.filter_values').css('position', 'inherit');
+		});
 	customPrint =  function (event) {
 		$('<div>').addClass('printbabes').appendTo('body');
 		
