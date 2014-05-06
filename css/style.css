@@ -124,7 +124,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* Custom Dropdown box */
 .default_dropdown_box {background: #ffffff;border: 1px solid #d0d0d0;-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);margin: -1px 0 0 0;color: #76767b;line-height: 22px;position:absolute;z-index:999;}
 .default_dropdown_box [data-selectable] {border-bottom: 1px solid #d8dbde;cursor: pointer;padding: 8px 12px;}
-.dropdown_wrapper {overflow: scroll;max-height:200px;position:relative;-ms-touch-action:none; pointer-events:auto; }
+.dropdown_wrapper {overflow: hidden;max-height:200px;position:relative;-ms-touch-action:none; pointer-events:auto; }
 .default_dropdown_box .list_item__header{ padding:0; display:table; width:100%;}
 
 
@@ -327,7 +327,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .sticky_fixed{ position:fixed; top:110px; }
 
 /* Content menu */
-.content_block{ width:100%; height:1px; display:table;}
+.content_block{ width:100%; height:1px; display:inline-block;}
 .content_block #accountList, .content_block #cardList{ margin-left:150px;}
 .content_menu { float:left;}
 .content_menu_items{width:150px; height:150px; cursor:pointer;margin-bottom:0;}
@@ -335,7 +335,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .content_menu_items p{font-size: 24px;color: #ffffff;line-height: 1; text-transform:uppercase; padding:0; text-align:left;}
 
 /* Content menu Customised for Home */
-.home .content_block{ height:auto; display:block;}
+.home .content_block{  display:block;}
 
 /* Content menu theme */
 .accounts_menu{background:#729F08;}
@@ -607,7 +607,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .extra_contentdetails ul{ padding:2px 45px; position:relative; width:100%;}
 .extra_contentdetails li{display:table;position:relative; width:100%;padding:10px 0;}
 .extra_contentdetails label{ width:40%; float:left;}
-.extra_contentdetails p{ width:60%; float:left; line-height:1.2}
+.extra_contentdetails p{ width:50%; float:left; line-height:1.2; margin-left:25px;}
 
 /* L4 */
 .view_more{ position:relative; padding:20px 0;}
@@ -736,7 +736,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Details screen */
 .details{ width:100%; background:#ffffff;}
-.details_inner{ padding:40px 30px;}
+.details_inner{ padding:40px 30px; display:table; width:100%;}
 .details_title{ padding-bottom:25px; font-size:2em; line-height:1em}
 .detail_group{ padding:30px 0; border-top: 1px solid #d8dbde;}
 .detail_group_title{font-family: 'BnppSans-r', arial; font-size:18px;}
@@ -940,6 +940,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .iban-label{ float:left;}
 .sendmoney .default_input_field span {border-left: 1px solid #d8dbde;background: #ffffff;float: right;padding-left: 12px;position: absolute;right: 12px;top: 9px;z-index: -999;}
 .amount_field .default_input_field span {color: #76767b;padding-top: 5px; border:none;}
+.amount_field input::-ms-clear {display: none;}
 .sepa_fields.to_field {padding-bottom: 0;}
 .to_field .show_active {display: inline-block !important; }
 .to_field .selected_amount {display: none;}
@@ -1423,7 +1424,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 
 /*Button Component alignments*/
 .content_btns{ margin:0;}
-.action_btns, .btns_zone{padding:30px 0;}
+.action_btns, .btns_zone{padding:30px 10px;}
 
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
