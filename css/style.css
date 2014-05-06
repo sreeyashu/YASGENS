@@ -258,7 +258,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 #cookiesMessage a:hover{ text-decoration:underline;}
 
 /* Welcome message */
-#metaInfo{ width:730px; margin:0 auto;color:#ffffff;}
+#metaInfo{ width:730px; margin:0 auto;color:#ffffff; position:relative;}
 #metaInfo .level1{ padding-top:2.2em;}
 #metaInfo h3{ font-size:25px; padding-bottom:6px;}
 #metaInfo h1{ font-size:46px;}
@@ -830,7 +830,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Identification alignment */
 .wcm-authentication{ padding-bottom:60px; min-height:319px;margin:0 auto;}
-.authentication{ width:730px; background-color:transparent; margin:auto; display:table;}
+.authentication{ width:730px; background-color:transparent; margin:auto; display:table; position:relative;}
 .identification__inner{ padding:30px;}
 
 /* Box1 */
