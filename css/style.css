@@ -335,7 +335,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .content_menu_items p{font-size: 24px;color: #ffffff;line-height: 1; text-transform:uppercase; padding:0; text-align:left;}
 
 /* Content menu Customised for Home */
-.home .content_block{  display:block;}
+.home .content_block{ display:block;}
 
 /* Content menu theme */
 .accounts_menu{background:#729F08;}
@@ -813,7 +813,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .scroll_menu .scroll_btn div.inner_wrapper {display: table-cell;vertical-align: middle;}
 .scroll_menu.show_buttons .menu_links {display: inline;padding-right: 30px;}
 .scroll_menu.show_buttons .scroll_btn{ display:block;}
-.scroll_menu .scroll_container {width: auto;overflow-x: auto;overflow: hidden;white-space: nowrap;padding-bottom: 20px;margin-bottom: -20px}
+.scroll_menu .scroll_container {width: auto;overflow-x: auto;overflow: hidden;white-space: nowrap;margin-bottom: -20px}
 .scroll_menu .scroll_container.momentum {overflow-x: scroll;-webkit-overflow-scrolling: touch;overflow-scrolling: touch}
 .scroll_menu .scroll_container .scroll_item {display: inline-block;}
 
