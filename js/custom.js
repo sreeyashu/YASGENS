@@ -3,6 +3,7 @@ $(document).ready(function () {
 	$('.yashraja').focus(function(){
 		$('input').blur();
 	});
+	document.ontouchmove = function(e) {e.preventDefault()};
 	alert($.browser.name);alert($.browser.version);alert($.browser.versionNumber);alert($.os.name); 
 	
 	$('.filter_period').click(function(){
