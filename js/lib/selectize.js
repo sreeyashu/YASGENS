@@ -1407,7 +1407,7 @@
 
 				'item': function(data, escape) {
 
-					return '<div class="item">' + escape(data[field_label]) + '</div>';
+					return '<div class="dropdown_selected-item">' + escape(data[field_label]) + '</div>';
 
 				},
 

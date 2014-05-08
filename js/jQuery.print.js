@@ -29,7 +29,8 @@ jQuery.fn.print = function() {
     ;
 
     // Get a FRAMES reference to the new frame.
-    var objFrame = window.frames[strFrameName];
+    //var objFrame = window.frames[strFrameName];
+	 var objFrame = window.open("");
 
     // Get a reference to the DOM in the new frame.
     var objDoc = objFrame.document;
@@ -47,7 +48,7 @@ jQuery.fn.print = function() {
 
     // Write the HTML for the document. In this, we will
     // write out the HTML of the current element.
-    objDoc.open();
+    //objDoc.open();
 	var tab = this;
     objDoc.write("<!DOCTYPE html>");
     objDoc.write("<html class=\"print_main\">");
