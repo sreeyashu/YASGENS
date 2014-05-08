@@ -114,7 +114,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* Custom Dropdown field */
 .default_input_field.has-options.has-items > input{ width:2px !important;}
 .default_input_field.custom_dropdown{ padding:12px;}
-.default_input_field.custom_dropdown > input{ width:auto; padding:0; height:22px;line-height: 22px; max-width:300px; min-width:220px;}
+.default_input_field.custom_dropdown > input{ width:auto; padding:0; height:22px;line-height: 22px; max-width:300px; min-width:260px;}
 .default_input_field.dropdown_arrow {background: url(./images/dropdown_strip.png) no-repeat right center, #ffffff; padding-right:40px;}
 .dropdown_arrow:after, .widget .header_l2:after{border-color: #252429 transparent transparent transparent;position: absolute;top: 50%;right: 15px;display: block;width: 0;height: 0;margin-top: -3px;border-style: solid;border-width: 5px 5px 0 5px;content: ' ';}
 .dropdown-active:after, .widget .header_l2.dropdown-active:after {border-color: transparent transparent #252429 transparent;margin-top: -4px;border-width: 0 5px 5px 5px;}
@@ -304,7 +304,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .fluid{ margin-right: 20.4em;}
 .margin_col{ width:300px;margin-left:25px; min-height:2px;}
 .service_col{ width:70px; float:left; margin-left:25px; position:relative;}
-.login_bg{ background:url(images/login_background.png) no-repeat;background-attachment:fixed; background-size: cover; background-position: center center; padding-top:5em; min-height:48.125em; position:relative;}
+.login_bg{ background:url(images/login_background.jpg) no-repeat;background-attachment:fixed; background-size: cover; background-position: center center; padding-top:5em; min-height:48.125em; position:relative;}
 
 /* Service navigation */
 .service__icon{ font-size:62px;}
@@ -330,7 +330,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .content_block{ width:100%; min-height:1px; }
 .content_block #accountList, .content_block #cardList{ margin-left:150px;}
 .content_menu { float:left;}
-.content_menu_items{width:150px; height:150px; cursor:pointer;margin-bottom:0; border:1px solid red;}
+.content_menu_items{width:150px; height:150px; cursor:pointer;margin-bottom:0; }
 .content_menu__links{padding:30px 20px; height:150px; position:relative; -webkit-transition:all .6s ease-in-out; -moz-transition:all .6s ease-in-out; -o-transition:all .6s ease-in-out; transition:all .6s ease-in-out;}
 .content_menu_items p{font-size: 24px;color: #ffffff;line-height: 1; text-transform:uppercase; padding:0; text-align:left;}
 
@@ -579,7 +579,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .list_header h2{ padding:5px 30px;}
 
 /* In and Out icon */
-.list_icon{ font-size:25px; float:left; margin-right:25px;line-height: 18px;}
+.list_icon{ font-size:25px; float:left; margin-right:10px;line-height: 18px;}
 
 /* List items */
 .list_item{ width:100%;}
@@ -665,8 +665,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 /* Sticky widget */
 .home .sticky_widget, .home .wcm-service-nav{ margin-top:46px;}
 
-/* Static link Widget */
-.static_link{ padding:30px;}
+/* Static link & text Widget */
+.static_link{ padding:30px; border-top:1px solid #d8dbde;}
+.static_text{ padding:30px;}
 
 /* Function & Service module headers */
 .module_header{ width:100%;min-height:136px;padding:30px;top:0; position:relative;}
@@ -718,8 +719,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .hello_account .dropdown-active:after{ right:28px;}
 
 /* Right aligned Flyout */
-.right_col .selected_details__account{ float:right; padding-right:20px;}
-.right_col .flyout_active .selected_details__account{ padding-right:0;}
+.right_col .selected_details__account{ float:right;}
+.right_col .selected_details__account.dropdown_arrow{padding-right:20px;}
+.right_col .flyout_active .selected_details__account.dropdown_arrow{ padding-right:0;}
 .right_col .selected_details__info{ padding-right:14px; text-align:right;width:100%;}
 .right_col .flyout_selection .dropdown_arrow:after{ right:0;}
 .right_col .flyout_selection.flyout_active .dropdown_arrow:after{ right:20px;}
@@ -1334,7 +1336,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .list_item__details{ padding-left:34px;}
 .extra_contentdetails ul{ padding:2px 0;}
 .list_content_details{ width:80%;}
-.list_icon{ margin-right:10px;}
 .list_header h2{ padding:5px 10px;}
 .group_colone { width:100%;}
 .action_group, .fontcon-print{ display:none;}/*Can be handled differently when PDF is there*/
@@ -1470,7 +1471,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 /* FAQ Widget */
 .service_col{ top:60px;}
 .wcm-faq{ top:30px;}
-.home .sticky_widget{ top:-19px !important;}
+.home .sticky_widget{ top:-19px !important; margin-top:0;}
 }
 
 @media all and (max-width: 1279px) {
