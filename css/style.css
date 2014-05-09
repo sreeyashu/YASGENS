@@ -411,14 +411,14 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .content_page_title{ width:100%; display:table; height:60px;}
 .content_page .module_header{ min-height:100px;}
 .content_page_detail{ display:table;}
-.content_page .level1{ margin-bottom:40px; display:table;}
+.content_page .level1{ margin-bottom:40px; display:table; width:100%;}
 .content_page .level1:last-child{ margin-bottom:0;}
 .section img{ max-width:400px;}
 .section embed{ width:100% !important; height:280px !important;}
 .two_column .section{ width:50%; float:left;}
 .three_column .section{ width:33.33%; float:left;}
-.two_column .section:nth-child(3){ padding-left:15px;}
-.two_column .section:nth-child(2){ padding-right:15px;}
+.two_column .section:nth-child(2){ padding-left:15px;}
+.two_column .section:nth-child(1){ padding-right:15px;}
 .three_column .section:nth-child(2){ padding-right:15px;}
 .three_column .section:nth-child(3){ padding:0 15px;}
 .three_column .section:nth-child(4){ padding-left:15px;}
@@ -617,7 +617,6 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .view_more__content p{ padding:20px 0;border-bottom:1px solid #d8dbde; line-height:20px;white-space: pre-wrap;}
 .view_more__content p:first-child{ padding-top:0;}
 .view_more__content p:last-child{ border:none;}
-.show_filters p{ width:110px;}
 
 /* action Icons inside content (Print, PDF, Download)*/
 .action_group {width: 100%;padding: 25px 0;display: table;}
@@ -941,8 +940,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .selected_iban{display: inline-block;float: left;}
 .selected_amount span:nth-child(2){ margin-right:5px;}
 .iban-label{ float:left;}
-.sendmoney .default_input_field span {border-left: 1px solid #d8dbde;background: #ffffff;float: right;padding-left: 12px;position: absolute;right: 12px;top: 9px;z-index: -999;}
-.amount_field .default_input_field span {color: #76767b;padding-top: 5px; border:none;}
+.trig_datepicker {background: #ffffff;float: right;padding:9px 0;position: absolute;right: 0px;top: 0px;z-index: 999;}
+.trig_datepicker span{border-left: 1px solid #d8dbde; padding:0 12px;}
+.amount_field .default_input_field span {color: #76767b;padding-top: 5px; background: #ffffff;float: right;padding-left: 12px;position: absolute;right: 12px;top: 9px;z-index: 999;}
 .amount_field input::-ms-clear {display: none;}
 .sepa_fields.to_field {padding-bottom: 0;}
 .to_field .show_active {display: inline-block !important; }
@@ -1120,6 +1120,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .filter_content_inner{padding: 10px;}
 .filter_content__range, .filter_popup .datepicker{ width:280px;}
 .filter_content__specific, .filter_content__range{ padding-top:20px;}
+.show_filters p{ width:110px;}
 
 /* Non 100% buttons */
 .zoomit_map .right_navigation_btn, .zoomit_map .right_navigation_btn button, .sendmoney_confirmation .right_navigation_btn, .sendmoney_confirmation .right_navigation_btn button{ width:auto;}
@@ -1176,6 +1177,10 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 @media all and (min-width: 320px) and (max-width: 479px) {
 .ucr_action_content{width:75%;}
 .widget{ right:0px !important;}
+
+/* Static content pages Xopus */
+.table { width:300px; overflow:scroll; margin:auto;}
+.table table{ width:600px;}
 }
 @media all and (max-width: 767px) {
 /* Alignments */
@@ -1264,6 +1269,10 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .module_contact { padding:1px 0 0; }
 .module_contact .contact_date span { font-size:12px; }
 
+/* Static content pages Xopus */
+.two_column .section, .three_column .section{ width:100%;}
+.two_column .section:nth-child(2), .two_column .section:nth-child(1), .three_column .section:nth-child(2), .three_column .section:nth-child(3), .three_column .section:nth-child(4){ padding:0px;}
+
 /* BNP Overlay */
 .overlay_inner{ padding:0;}
 .overlay_header_inner{ padding:10px;}
@@ -1344,6 +1353,9 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 .faq .accordion_l2__inner { padding:15px 0; }
 .faq_question { font-size:14px; }
 .faq_answer { line-height:18px; padding-bottom:15px; border-bottom:0; }
+
+/* FAQ Static link & text Widget */
+.static_link, .static_text{ padding:10px;}
 
 /* FAQ Widget */
 .widget_open{ width:100%; margin:0;}
