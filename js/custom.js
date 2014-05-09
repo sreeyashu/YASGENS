@@ -1,10 +1,11 @@
 $(document).ready(function () {
+	new IScroll('.dropdown_wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
 	//$('.select_message__structured input').mask('000 / 0000 / 00000')
 	$('.yashraja').focus(function(){
 		$('input').blur();
 	});
 	
-	alert($.browser.name);alert($.browser.version);alert($.browser.versionNumber);alert($.os.name); 
+	//alert($.browser.name);alert($.browser.version);alert($.browser.versionNumber);alert($.os.name); 
 	
 	$('.filter_period').click(function(){
 			$('.option_period').toggleClass('show_active');

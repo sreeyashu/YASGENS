@@ -331,8 +331,8 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .content_block #accountList, .content_block #cardList{ margin-left:150px;}
 .content_menu { float:left;}
 .content_menu_items{width:150px; height:150px; cursor:pointer;margin-bottom:0; }
-.content_menu__links{padding:30px 20px; height:150px; position:relative; -webkit-transition:all .6s ease-in-out; -moz-transition:all .6s ease-in-out; -o-transition:all .6s ease-in-out; transition:all .6s ease-in-out;}
-.content_menu_items p{font-size: 24px;color: #ffffff;line-height: 1; text-transform:uppercase; padding:0; text-align:left;}
+.content_menu__links{padding:30px 16px; height:150px; position:relative; -webkit-transition:all .6s ease-in-out; -moz-transition:all .6s ease-in-out; -o-transition:all .6s ease-in-out; transition:all .6s ease-in-out;}
+.content_menu_items p{font-size: 20px;color: #ffffff;line-height: 1; text-transform:uppercase; padding:0; text-align:left;}
 
 /* Content menu Customised for Home */
 .home .content_block{ display:block;}
@@ -459,9 +459,9 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 
 /* Margin Module Teasers Services */
 .mainfeature_teaser{ width:100%; display:table;}
-.margin_teaser{background:#861a61;min-height:170px; padding:25px;cursor:pointer; position:relative;-webkit-transition: all .4s ease-in-out;-moz-transition: all .4s ease-in-out;-o-transition: all .4s ease-in-out;transition: all .4s ease-in-out;}
+.margin_teaser{background:#861a61;min-height:170px; padding:25px 16px;cursor:pointer; position:relative;-webkit-transition: all .4s ease-in-out;-moz-transition: all .4s ease-in-out;-o-transition: all .4s ease-in-out;transition: all .4s ease-in-out;}
 .ls-cmp-wrap:last-child .margin_teaser{ margin:0;}
-.margin_teaser p, .margin_teaser_link p{text-transform:uppercase; font-size:24px; line-height:28px; color:#ffffff;}
+.margin_teaser p, .margin_teaser_link p{text-transform:uppercase; font-size:20px; line-height:28px; color:#ffffff;}
 .module_icon{ position:absolute; right:30px;bottom:25px; font-size:62px;color:#d12668 !important;-webkit-transition: all .4s ease-in-out;-moz-transition: all .4s ease-in-out;-o-transition: all .4s ease-in-out;transition: all .4s ease-in-out;}
 .teaser_image{position: absolute;right: 30px;bottom: 25px; width:75px; height:60px;}
 
@@ -952,6 +952,11 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .select_message__structured, .select_message__freetext, .select_message__eurostructured {margin-top: 30px; }
 .select_message__struct input {height: 44px;}
 
+/* Struct pattern input*/
+.lstruct_pattern{ padding-left:12px;}
+.rstruct_pattern{ padding-right:12px; margin-left:-3px;}
+input.mask_pattern{ width:125px; padding:11px 0; display:inline-block;}
+
 /* To field with Tabs */
 .optgroup-option .listiban_group h3, .optgroup-amount h3{ font-size:16px;}
 .to_field .optgroup {padding: 0; }
@@ -1066,11 +1071,11 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .print .print_header{ width:100%; display: table; margin-bottom:60px;}
 .print .logo:after{ width:11.7em; height:2.5em; content: url('images/print_logo.png');}
 .print .logo img, .print .notavailable, .print .action_group, .print .load_more{ display:none;}
-.print .print_details_inner{width:100%; display: table; padding:20px 0;}
+.print .print_details_inner{width:100%; display: inline-block; padding:20px 0;}
 .print .print_details_inner p{ line-height:1.4;}
 .print .cards_title, .print .accounts_title, .print .selected_details__info{color:#252429 !important;}
 .print .list_item__header{ display:table;}
-.print .collapse{ display:block !important;}
+.print .collapse.in{ display:block !important;}
 .print .list_content_col1{ width:70%;}
 .print .list_content_col2{ width:30%;padding:0;}
 .print .list_item__content, .print .list_header{ font-size:14px;}
@@ -1526,5 +1531,5 @@ body, .site_header__inner, #siteHeaderErrorInner{ max-width:1280px; margin:0 aut
 box-shadow: 0px 0px 1px 0px #999; display:table;}
 }
 @media print {
-.site_header, .user_message, .wcm-footer, .no_print, .action_btns, .content_btns, .action_icons, .dropdown_arrow::after, .content_menu, .alert_messages, .margin_col{display:none;}
+.site_header, .user_message, .wcm-footer, .no_print, .action_btns, .content_btns, .action_icons, .dropdown_arrow::after, .content_menu, .alert_messages, .margin_col, .viewport_header{display:none;}
 }
