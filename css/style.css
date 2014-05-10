@@ -1531,5 +1531,7 @@ body, .site_header__inner, #siteHeaderErrorInner{ max-width:1280px; margin:0 aut
 box-shadow: 0px 0px 1px 0px #999; display:table;}
 }
 @media print {
-.site_header, .user_message, .wcm-footer, .no_print, .action_btns, .content_btns, .action_icons, .dropdown_arrow::after, .content_menu, .alert_messages, .margin_col, .viewport_header{display:none;}
+.no_print, .service_col, .navigation{ display:none;}
+.brand_logo, #brandLogo{width: 11.7em;height: 2.5em;}
+.menu_nav_small{ display:block;}
 }
