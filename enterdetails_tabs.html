@@ -24,40 +24,14 @@
         <script src="js/modrenizr.js"></script>
         <script src="js/jQuery.print.js"></script>
          <script src="js/mask.js"></script>
-		<script>
-			$(document).ready(function(){
-				
-				 require(['lib/rivetsconfig'], function(rivets) {
-					 var Tab = Backbone.Model.extend({
-			  defaults: {
-			      current: 1
-			  },
-			  initialize: function () {
-			      this.on("change:current", this.changetab);
-			  },
-			  changetab: function () {
-			      console.log(this.get("current"));
-			  }
-			});
-			var tab = new Tab();
-			var $el = $('.beneficiary');
-			rivets.bind($el, {
-			  tab: tab
-			});
-				 });
-				
-				
-			       });
-			 
-		</script>
         <script language="javascript" type="text/javascript">
 		
     </script>
 	</head>
 	<body>
     	<div class="easybanking">
-            <div class="sendmoney">
-                <div class="sendmoney_inner">
+            <div class="trnsfr">
+                <div class="trnsfr_inner">
                     <!-- Sepa Header -->
                     <div class="module_main_header">
 						<div class="module_header h_functions">
@@ -90,36 +64,35 @@
 						
 					</div>
                     <!-- Sepa Content -->
-                    <div class="sendmoney_content">
+                    <div class="form_container trnsfr_content">
                         <!-- Sepa Enter details -->
-                        <div class="sendmoney_enterdetails">
-                            <div class="sendmoney_content__inner">
+                            <div class="form_inner">
                                 <h5><span>*</span><span>Mandatory fields</span></h5>
                                 <div class="error_summary">
                                     <p class="field_error_message" style="display:block;">Please select the valid Account</p>
                                 </div>
-                                <div class="sepa_fields from_field field_error">
-                                    <div class="sepa_labels">
-                                        <label for="select-account" >From</label>
+                                <div class="form_fields from_field field_error">
+                                    <div class="form_labels">
+                                        <label for="select-account">From</label>
                                         <span>*</span>
                                     </div>
-                                    <div class="sendmoney_details">
+                                    <div class="form_details">
                                         <p class="field_error_message">Please select the valid Account</p>
-                                        <div class="details_content">
+                                        <div class="selectize_field">
                                             <select  class="select-account" placeholder="Choose your own account...">
                                             </select>
                                         </div>
                                         <div class="selected-item"> <span class="iban-label"></span> <span>-</span> <span class="amount-label"></span> </div>
                                     </div>
                                 </div>
-                                <div class="sepa_fields amount_field field_error">
-                                    <div class="sepa_labels">
+                                <div class="form_fields text_input amount_field field_error">
+                                    <div class="form_labels">
                                         <label for="select-account" >Amount</label>
                                         *
                                     </div>
-                                    <div class="sendmoney_details">
+                                    <div class="form_details">
                                         <p class="field_error_message">Please enter valid amount</p>
-                                        <div class="default_input_control">
+                                        <div class="form_input default_input_control">
                                             <div class="default_input_field">
                                                 <input type="text"/>
                                                 <span>EUR</span> 
@@ -127,13 +100,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sepa_fields to_field field_error">
-                                    <div class="sepa_labels">
+                                <div class="form_fields optgroup_field to_field field_error">
+                                    <div class="form_labels">
                                         <label for="select-account">To</label>
                                         <span style="margin-left:4px">beneficiary*</span>
                                         </label>
                                     </div>
-                                    <div class="sendmoney_details beneficiary">
+                                    <div class="form_details beneficiary">
                                         <!-- Tabs -->
                                         <div class="eb_tabs" data-tabtoggle="tab.current">
                                             <div class="eb_tab_txt tab_fst active default_tab" data-tab-index="1">
@@ -203,14 +176,11 @@
                                         <!-- Tabs --> 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="sendmoney_content__inner printable">
-                                <div class="details-content">
-                                    <div class="sepa_fields date_picker field_error">
-                                        <div class="sepa_labels">
+                                <div class="form_fields date_picker field_error">
+                                        <div class="form_labels">
                                             <label for="select-account">Date</label>
                                         </div>
-                                        <div class="sendmoney_details">
+                                        <div class="form_details">
                                             <p class="field_error_message">Please select the valid date</p>
                                             <div class="default_input_control">
                                                 <div class="default_input_field input_dropdown">
@@ -223,11 +193,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="sepa_fields message_field select_message field_error">
-                                        <div class="sepa_labels">
+                                <div class="form_fields message_field select_message field_error">
+                                        <div class="form_labels">
                                             <label for="select-message">Message</label>
                                         </div>
-                                        <div class="sendmoney_details">
+                                        <div class="form_details">
                                             <!-- Input -->
                                            <div class="details_content select_message__type yashraja">
                                                 <select class="select-message" style="border:0; background-color:transparent;">
@@ -259,17 +229,18 @@
                                                 <span class="message_length"><span class="text_count">characters left</span><span class="eurostructured_remaining">23</span></span></span> 
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> 
                             </div>
-                            <div class="sendmoney_content__inner">
+                            <div class="form_inner form_btns action_btns">
                                 <div class="navigation_btns">
                                     <div class="right_navigation_btn f_right">
-                                        <button class="btn_default btn_primary btn_arrow_right">Next<i class="fontcon-arrow-right arrow-right"></i></button>
+                                        <button class="btn_default btn_primary btn_arrow_right">
+                                            <span>Next</span>
+                                            <i class="fontcon-arrow-right arrow-right"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

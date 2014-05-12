@@ -6,7 +6,7 @@ define(function() {
             "ownOriginatorAccounts": {
                 "currentAccounts": [
                     {
-                        "alias": "Bert hfhhfhds hjsdf hjfsd  jhjshshjhhs",
+                        "alias": "12345678901234567890123456789012345",
                         "balance": "60.05",
                         "iban": "BE96001123145687",
                         "currency":"EUR",

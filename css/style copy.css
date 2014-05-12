@@ -131,16 +131,10 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .highlight{ background:#e5e9ef;font-family: 'BnppSans-r', arial;}
 .option.active, .list_item.active { background:#f4f5f6;}
 .default_dropdown_box .main-group {background: #f4f5f6;border-bottom: 1px solid #d8dbde;padding: 8px 12px 6px 12px; font-size:16px;text-transform:uppercase;color: #252429;font-family: 'BnppSans-r', arial;}
-
-/* optgroups Dropdown */
 .optgroup:first-child {padding-top: 3px;border-top: 0 none;}
 .optgroup-header {color: #252429;border-bottom: 1px solid #d8dbde;font-size: 16px;text-transform: uppercase;cursor: default;padding: 10px 8px 6px 8px; text-transform:uppercase;}
 .optgroup-option{padding:0;}
 .optgroup-iban{ float:left;}
-.optgroup-option .listiban_group h3, .optgroup-amount h3{ font-size:16px;}
-.optgroup_field .optgroup {padding: 0; }
-.optgroup_field .optgroup-header{padding-left: 12px; }
-.optgroup_field .default_dropdown_box [data-selectable] {padding-left: 20px; }
 
 /* Text area */
 .default_text_area {width: 100%;}
@@ -183,8 +177,8 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .error_summary .field_error_message {display: block; }
 .field_error .default_input_field, .field_error textarea {border: 1px solid #e53012;}
 .message_field.field_error .default_input_field:nth-child(1) {border: 1px solid #d8dbde;}
-.field_error .form_labels {margin-top: 35px; }
-.message_field.field_error .form_labels {margin-top: 0px;}
+.field_error .sepa_labels {margin-top: 35px; }
+.message_field.field_error .sepa_labels {margin-top: 0px;}
 
 
 /* WCM - Elements, components, Pages, static pages */
@@ -585,7 +579,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .list_header h2{ padding:5px 30px;}
 
 /* In and Out icon */
-.list_icon{ font-size:18px; float:left; margin-right:10px;line-height: 18px;}
+.list_icon{ font-size:25px; float:left; margin-right:10px;line-height: 18px;}
 
 /* List items */
 .list_item{ width:100%;}
@@ -786,7 +780,8 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .filter_link{border-left: 1px dotted #D8DBDE;left: -2px;padding: 0 10px 0 16px;position: relative;}
 .filter_link p {margin: 0;}
 .filter_values:first-child .filter_link{border: 0;}
-.filter_option{min-width: 180px;position: absolute;top: 44px;z-index:999;border: 1px solid #D8DBDE; background:#ffffff; display:none;}
+.filter_values.filter_active .filter_link > p, .filter_option_value.filter_active  p{/*font-family: 'BnppSans-r',arial;*/}
+.filter_option{min-width: 180px;position: absolute;top: 44px;z-index: 1;border: 1px solid #D8DBDE; background:#ffffff;-webkit-transition: all .6s ease-in-out;-moz-transition: all .6s ease-in-out;-o-transition: all .6s ease-in-out;transition: all .6s ease-in-out; display:none;}
 .filter_option_active{display: block;}
 .filter_option_value{border-bottom: 1px solid #D8DBDE;padding: 14px 13px 13px;white-space: nowrap;}
 .filter_option_value:last-child{ border:0;}
@@ -820,7 +815,7 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .scroll_menu .scroll_btn div.inner_wrapper {display: table-cell;vertical-align: middle;}
 .scroll_menu.show_buttons .menu_links {display: inline;padding-right: 30px;}
 .scroll_menu.show_buttons .scroll_btn{ display:block;}
-.scroll_menu .scroll_container {width: auto;overflow-x: auto;overflow: hidden;white-space: nowrap; padding-bottom:10px;margin-bottom: -20px;}
+.scroll_menu .scroll_container {width: auto;overflow-x: auto;overflow: hidden;white-space: nowrap; padding-bottom:10px;margin-bottom: -20px}
 .scroll_menu .scroll_container.momentum {overflow-x: scroll;}
 .scroll_menu .scroll_container .scroll_item {display: inline-block;}
 
@@ -931,33 +926,28 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .showall_months{ text-align:center; color:#009966;cursor:pointer;}
 .showall_months h3{ padding:30px 0;border-top:1px solid #d8dbde; }
 
-/* Form Standards */
-.form_container {width: 100%;} 
+/* Sepa CT Form */
+.sendmoney {background: #ffffff;}
 .form_container .error_summary{margin-left: 20%; width:80%;}
-.form_inner {padding: 30px;}
-.form_inner h5 {text-align: right;width: 80%;padding: 0 0 30px 0;font-family: 'BnppSans-l', arial;font-size: 14px; }
-.form_fields {width: 100%;display: table;padding-bottom: 30px; }
-.form_labels {font-family: 'BnppSans-r', arial;font-size: 16px;width: 20%;padding: 10px 0;float: left;}
-.form_details {float: left;width: 60%; }
-.form_btns{ border-top:1px solid #d8dbde;}
-
-/* Select field selected items */
-.form_details .selected-item {padding-top: 12px;display: none;color: #76767b;line-height: 1em;}
-.form_details .selected_iban{display: inline-block;float: left;}
+.sendmoney_content {width: 100%; } 
+.sendmoney_content__inner {padding: 30px;border-bottom: 1px solid #d2d5da;}
+.sendmoney_content__inner:last-child{ border-bottom:none;}
+.sendmoney_content__inner h5 {text-align: right;width: 80%;padding: 0 0 30px 0;font-family: 'BnppSans-l', arial;font-size: 14px; }
+.sepa_fields {width: 100%;display: table;padding-bottom: 30px; }
+.sepa_labels {font-family: 'BnppSans-r', arial;font-size: 16px;width: 20%;padding: 10px 0;float: left;}
+.sendmoney_details {float: left;width: 60%; }
+.selected-item {padding-top: 12px;display: none;color: #76767b;line-height: 1em;}
+.selected_iban{display: inline-block;float: left;}
+.selected_amount span:nth-child(2){ margin-right:5px;}
 .iban-label{ float:left;}
-
-/* Calendar icon and input */
 .trig_datepicker {background: #ffffff;float: right;padding:9px 0;position: absolute;right: 0px;top: 0px;z-index: 999;}
 .trig_datepicker span{border-left: 1px solid #d8dbde; padding:0 12px;}
-
-/* ISO or text and input */
-.text_input input::-ms-clear {display: none;}
-.text_input .default_input_field span {color: #76767b;padding-top: 5px; background: #ffffff;float: right;padding-left: 12px;position: absolute;right: 12px;top: 9px;z-index: 999;}
-
-/* Customized for SEPA */
-.trnsfr{ background:#ffffff;}
-.form_fields.to_field { border-bottom:1px solid #d8dbde; margin-bottom:30px;}
-.form_fields.message_field {padding-bottom: 10px;}
+.amount_field .default_input_field span {color: #76767b;padding-top: 5px; background: #ffffff;float: right;padding-left: 12px;position: absolute;right: 12px;top: 9px;z-index: 999;}
+.amount_field input::-ms-clear {display: none;}
+.sepa_fields.to_field {padding-bottom: 0;}
+.to_field .show_active {display: inline-block !important; }
+.to_field .selected_amount {display: none;}
+.sepa_fields.message_field {padding-bottom: 0;}
 .select_message__type input[type="text"] { width:0px !important; opacity:0 !important; cursor:pointer;}
 .select_message__structured, .select_message__freetext, .select_message__eurostructured {margin-top: 30px; }
 .select_message__struct input {height: 44px;}
@@ -967,12 +957,11 @@ input[type="checkbox"]:focus, button:focus{outline:#008578 solid 1px !important;
 .rstruct_pattern{ padding-right:12px; margin-left:-3px;}
 input.mask_pattern{ width:125px; padding:11px 0; display:inline-block;}
 
-/* Unwanted */
-.to_field .show_active {display: inline-block !important; }
-.to_field .selected_amount {display: none;}
-.selected_amount span:nth-child(2){ margin-right:5px;}
-
-/* Form field with Tabs */
+/* To field with Tabs */
+.optgroup-option .listiban_group h3, .optgroup-amount h3{ font-size:16px;}
+.to_field .optgroup {padding: 0; }
+.to_field .optgroup-header{padding-left: 12px; }
+.to_field .default_dropdown_box [data-selectable] {padding-left: 20px; }
 .eb_tab_content {border: 1px solid #d2d8e1;}
 .eb_tab_content__inner {padding: 20px 10px;}
 .eb_unknown_content {display: table;width: 100%;}
@@ -1000,10 +989,11 @@ input.mask_pattern{ width:125px; padding:11px 0; display:inline-block;}
 
 /* Result screen */
 .border_none {border:none !important;}
-.acknowledge_info h2 {font-size: 36px;display: inline-table;line-height: 36px;}
-.acknowledge_info p {font-size: 16px;margin-top: 4px;}
-.acknowledge_content_inner {width: 100%;display: inline-table; padding-bottom:50px;}
-.acknowledge_blocks {width: 33.333333%;float: left;}
+.sendmoney_result h2 {font-size: 36px;display: inline-table;line-height: 36px;}
+.sendmoney_result__info.sendmoney_content__inner {border: none;}
+.sendmoney_result__info p {font-size: 16px;margin-top: 4px;}
+.sendmoney_result__content {width: 100%;display: inline-table;}
+.sendmoney_result__content_inner {width: 33.333333%;float: left;}
 .result_content {padding: 14px 30px 14px 30px;text-align: center;border-right: 1px dotted #d8dbde;}
 .result_personicon, .fontcon-send-money-icon {font-size: 60px;color: #d2d8e1;display: inline-block;}
 .done_icon {font-size: 30px;color: #85b909;position: relative;top: 3px;right: 13px;}
@@ -1063,7 +1053,6 @@ input.mask_pattern{ width:125px; padding:11px 0; display:inline-block;}
 /* Commons colors/borders/style */
 .has_foreign_currency{ color:#008578;}
 .date_picker .default_input_field {width: 50%; min-width:300px;}
-
 /* Dependent classes */
 .show_active,.show {display: block !important;}
 .show_inline{ display:inline-block !important;}
@@ -1139,7 +1128,7 @@ input.mask_pattern{ width:125px; padding:11px 0; display:inline-block;}
 .show_filters p{ width:110px;}
 
 /* Non 100% buttons */
-.zoomit_map .right_navigation_btn, .zoomit_map .right_navigation_btn button, .trnsfr_confirm .right_navigation_btn, .trnsfr_confirm .right_navigation_btn button{ width:auto;}
+.zoomit_map .right_navigation_btn, .zoomit_map .right_navigation_btn button, .sendmoney_confirmation .right_navigation_btn, .sendmoney_confirmation .right_navigation_btn button{ width:auto;}
 
 /* Login buttons & text */
 .intermediate_btns .plain_text{ width:100%; display:block; margin:0 0 8px 0;}
@@ -1404,25 +1393,28 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); border-top:3px solid #009966;}
 /* Intermediate */
 .intermediate_content{ padding:10px;}
 .intermediate_content h4{ font-size:18px; padding-bottom:15px;}
+/*.intermediate_btns .btn_default, .intermediate_btns .right_navigation{ margin:0; width:100%;}
+.intermediate_btns .btn_default:first-child{ margin-bottom:10px}*/
 
 /*Transactions */
 .transactions .list_content_col1 h3, .transactions .listiban_detail{ font-size:16px;}
 .statements_tab{ display:none;}
 
-/* Form Standards */
-.form_inner{ padding:10px;}
-.form_inner h5 {width: 100%; padding: 0; }
-.field_error .form_labels {margin-top: 0; }
-.form_container .error_summary {margin:0; width:100%;}
-
 /* SEPA */
-.acknowledge_info h2 {font-size: 18px;line-height: 18px;}
-.acknowledge_blocks {width: 100%;}
-.form_details,.eb_unknown_input {width: 100%; }
+.sendmoney .error_summary {margin:0; width:100%;}
+.sendmoney_header__inner {padding: 20px 10px;}
+.sendmoney_header strong {font-size: 18px;min-width: 106px;}
+.sendmoney_result h2 {font-size: 18px;line-height: 18px;}
+.sendmoney_result__content_inner {width: 100%;}
+.sendmoney_content__inner{ padding:10px;}
+.sendmoney_content__inner h5 {width: 100%; }
+.sendmoney_content__inner h5 {padding: 0; }
+.sendmoney_details {width: 100%; }
+.eb_unknown_input {width: 100%;}
 
 /*Confirm Screen*/
-.trnsfr .details_label{ width:30%;}
-.trnsfr .listitem_details{ width:60%; padding-top:0;}
+.sendmoney .details_label{ width:30%;}
+.sendmoney .listitem_details{ width:70%; padding-top:0;}
 
 /* Sepa CT Result page*/
 .result_content {text-align: left;padding: 12px 0;border-bottom: 1px solid #d8dbde;border-right: none;width: 100%;display: table;}

@@ -1,5 +1,26 @@
 $(document).ready(function () {
-	new IScroll('.dropdown_wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	
+	 //require(['lib/rivetsconfig'], function(rivets) {
+//					 var Tab = Backbone.Model.extend({
+//			  defaults: {
+//			      current: 1
+//			  },
+//			  initialize: function () {
+//			      this.on("change:current", this.changetab);
+//			  },
+//			  changetab: function () {
+//			      console.log(this.get("current"));
+//			  }
+//			});
+//			var tab = new Tab();
+//			var $el = $('.beneficiary');
+//			rivets.bind($el, {
+//			  tab: tab
+//			});
+//				 });
+				
+				
+	//new IScroll('.dropdown_wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
 	//$('.select_message__structured input').mask('000 / 0000 / 00000')
 	$('.yashraja').focus(function(){
 		$('input').blur();
@@ -9,12 +30,12 @@ $(document).ready(function () {
 	
 	$('.filter_period').click(function(){
 			$('.option_period').toggleClass('show_active');
-			$('.filter_values').css('position', 'inherit');
+			$('.filter_values').css('position', 'initial');
 		});
 		
 		$('.filter_transaction').click(function(){
 			$('.option_transaction').toggleClass('show_active');
-			$('.filter_values').css('position', 'inherit');
+			$('.filter_values').css('position', 'initial');
 		});
 	customPrint =  function (event) {
 		$('<div>').addClass('printbabes').appendTo('body');
